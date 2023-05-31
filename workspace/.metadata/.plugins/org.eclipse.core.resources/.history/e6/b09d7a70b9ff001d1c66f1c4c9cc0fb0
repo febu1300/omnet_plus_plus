@@ -1,0 +1,4 @@
+[General]
+network = Tictoc
+
+record-eventlog = true

@@ -16,42 +16,47 @@
 //
 // TODO auto-generated type
 //
-simple Knot1{
-	gates: 
-    	input in;
-    	output out;
-}
-simple Knot2{
-	gates: 
-    	input in;
-    	output out;
-}
-simple Knot3{
-	gates: 
-    	input in;
-    	output out;
+simple Knot
+{
+
+        
+    gates:
+        input in;
+
+
+        output out;
+    
 }
 
+
 network Net1
-{ 
-	submodules:
-    	k12: Knot1 {}
-    	k21: Knot1 {}
-    
-   		k23: Knot2 {}
-    	k32: Knot2 {}
-    
-   		k13: Knot3 {}
-    	k31: Knot3 {}
-    	
-	connections:
-	    k12.out --> { delay = 100ms; } --> k21.in;
-	    k12.in <-- { delay = 100ms; } <-- k21.out;
-	  	
-	  	k23.out --> { delay = 100ms; } --> k32.in;
-	    k23.in <-- { delay = 100ms; } <-- k32.out;
-	    
-	   	k13.out --> { delay = 100ms; } --> k31.in;
-	    k13.in <-- { delay = 100ms; } <-- k31.out;
-	 
+{
+    @display("bgb=715,408");
+    submodules:
+        k1: Knot {
+            @display("p=497,221");
+        }
+
+
+        k2: Knot {
+            @display("p=334,95");
+        }
+
+
+        k3: Knot {
+            @display("p=204,221");
+        }
+
+
+    connections:
+        k1.out --> {  delay = 80ms; } --> k2.in;
+        //k2.out --> {  delay = 100ms; } --> k1.in;
+        k2.out --> {  delay = 80ms; } --> k3.in;
+        //k3.out --> {  delay = 100ms; } --> k2.in;
+
+        k3.out --> {  delay = 80ms; } --> k1.in;
+        //k1.out --> {  delay = 100ms; } --> k3.in;
+
+
+
 }

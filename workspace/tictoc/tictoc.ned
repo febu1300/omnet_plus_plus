@@ -18,14 +18,13 @@
 //
 simple Knot
 {
-
+	parameters:
+	     bool isMaster = default(false); 
+	   
         
     gates:
-        input in;
-
-
-        output out;
-    
+        input in[];
+        output out[];
 }
 
 
@@ -49,13 +48,14 @@ network Net1
 
 
     connections:
-        k1.out --> {  delay = 80ms; } --> k2.in;
-        //k2.out --> {  delay = 100ms; } --> k1.in;
-        k2.out --> {  delay = 80ms; } --> k3.in;
-        //k3.out --> {  delay = 100ms; } --> k2.in;
-
-        k3.out --> {  delay = 80ms; } --> k1.in;
-        //k1.out --> {  delay = 100ms; } --> k3.in;
+        k1.out++ --> k2.in++;
+        k2.out++ --> k1.in++;
+        
+        k1.out++ --> k3.in++;
+        k3.out++ --> k1.in++;
+        
+        k2.out++ --> k3.in++;
+        k3.out++ --> k2.in++;
 
 
 

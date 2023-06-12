@@ -16,6 +16,9 @@ using namespace omnetpp;
 
 class Knot : public cSimpleModule
 {
+  private:
+   // bool role;
+
   protected:
     // The following redefined virtual function holds the algorithm.
     virtual void initialize() override;
@@ -27,18 +30,35 @@ Define_Module(Knot);
 
 void Knot::initialize()
 {
+  //  role = par("isMaster");
 
+    if (par("isMaster")) {
 
-    if (strcmp("k1", getName()) == 0) {
+        cMessage *msg = new cMessage("hi");
 
-        cMessage *msg = new cMessage("the Message");
-        send(msg, "out");
+        send(msg, "out", 0);
+
+    } else if(!par("isMaster")){
+
     }
+
+
 }
 
 void Knot::handleMessage(cMessage *msg)
-{
 
-    send(msg, "out"); // send out the message
+{
+    int n = gateSize("out");
+    int k = intuniform(0, n-1);
+
+    msg->addPar("isMaster");
+    msg->setTimestamp();
+
+    EV << "Forwarding message " << msg->getName() << msg->getArrivalTime() <<" on gate[" << k+1 << "]\n";
+
+    send(msg, "out",k); // send out the message–
+
+
+
 }
 

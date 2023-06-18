@@ -14,7 +14,7 @@
 using namespace omnetpp;
 
 
-class Knot : public cSimpleModule
+class Knoten : public cSimpleModule
 {
   private:
    // bool role;
@@ -27,9 +27,9 @@ class Knot : public cSimpleModule
 };
 
 // The module class needs to be registered with OMNeT++
-Define_Module(Knot);
+Define_Module(Knoten);
 
-void Knot::initialize()
+void Knoten::initialize()
 {
   //  role = par("isMaster");
   // If you are a master (isMaster==true), then you should schedule yourself to send messages every 80 ms
@@ -46,7 +46,7 @@ void Knot::initialize()
 
 }
 
-void Knot::handleMessage(cMessage *msg){
+void Knoten::handleMessage(cMessage *msg){
 
     // If the msg is sendNewMsg, new messages have to be sent to the slaves
     // We need a priority for each message and send it directly

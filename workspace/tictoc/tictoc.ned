@@ -16,7 +16,7 @@
 //
 // TODO auto-generated type
 //
-simple Knot
+simple Knoten
 {
 	parameters:
 	     bool isMaster = default(false); 
@@ -32,17 +32,17 @@ network Net1
 {
     @display("bgb=715,408");
     submodules:
-        k1: Knot {
+        k1: Knoten {
             @display("p=497,221");
         }
 
 
-        k2: Knot {
+        k2: Knoten {
             @display("p=334,95");
         }
 
 
-        k3: Knot {
+        k3: Knoten {
             @display("p=204,221");
         }
 

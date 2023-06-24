@@ -1,0 +1,2658 @@
+SB ov 1536 ev 2 rid General-0-20230527-17:23:48-72164
+
+E # 0 t 0 m 1 ce -1 msg -1
+MC id 1 c omnetpp::cModule t Network n Network cm 1
+MDC id 1 d bgb=234,159
+MC id 2 c omnetpp::cModule t ComMoudle pid 1 n comMoudle[0] cm 1
+MDC id 2 d p=76.159996,54.739998;i=device/pc4;bgb=346,212
+MC id 3 c omnetpp::cModule t ComMoudle pid 1 n comMoudle[1] cm 1
+MDC id 3 d p=76.159996,54.739998;i=device/pc4;bgb=346,212
+MC id 4 c omnetpp::cModule t ComMoudle pid 1 n comMoudle[2] cm 1
+MDC id 4 d p=76.159996,54.739998;i=device/pc4;bgb=346,212
+GC m 3 g 2621440 n out i 0 o 1
+GC m 4 g 1048576 n in i 0 o 0
+CC sm 3 sg 2621440 dm 4 dg 1048576
+GC m 4 g 2621440 n out i 0 o 1
+GC m 3 g 1048576 n in i 0 o 0
+CC sm 4 sg 2621440 dm 3 dg 1048576
+GC m 2 g 2621440 n out i 0 o 1
+GC m 3 g 1048577 n in i 1 o 0
+CC sm 2 sg 2621440 dm 3 dg 1048577
+GC m 3 g 2621441 n out i 1 o 1
+GC m 2 g 1048576 n in i 0 o 0
+CC sm 3 sg 2621441 dm 2 dg 1048576
+GC m 2 g 2621441 n out i 1 o 1
+GC m 4 g 1048577 n in i 1 o 0
+CC sm 2 sg 2621441 dm 4 dg 1048577
+GC m 4 g 2621441 n out i 1 o 1
+GC m 2 g 1048577 n in i 1 o 0
+CC sm 4 sg 2621441 dm 2 dg 1048577
+MC id 5 c AppL t AppL pid 2 n appL
+MDC id 5 d p=86,106;i=block/routing,cyan
+MC id 6 c TimeL t TimeL pid 2 n timeL
+MDC id 6 d p=183,90;i=block/routing,gold
+GC m 5 g 2621440 n appLOut i 0 o 1
+GC m 6 g 1048576 n timeLIn i 0 o 0
+CC sm 5 sg 2621440 dm 6 dg 1048576
+CDC sm 5 sg 2621440 d ""
+GC m 6 g 2621440 n timeLOut i 0 o 1
+GC m 5 g 1048576 n appLIn i 0 o 0
+CC sm 6 sg 2621440 dm 5 dg 1048576
+CDC sm 6 sg 2621440 d ""
+GC m 5 g 2621441 n appLOut i 1 o 1
+GC m 6 g 1048577 n timeLIn i 1 o 0
+CC sm 5 sg 2621441 dm 6 dg 1048577
+CDC sm 5 sg 2621441 d ""
+GC m 6 g 2621441 n timeLOut i 1 o 1
+GC m 5 g 1048577 n appLIn i 1 o 0
+CC sm 6 sg 2621441 dm 5 dg 1048577
+CDC sm 6 sg 2621441 d ""
+GC m 6 g 2621442 n timeLOut i 2 o 1
+CC sm 6 sg 2621442 dm 2 dg 2621440
+CDC sm 6 sg 2621442 d ""
+GC m 6 g 1048578 n timeLIn i 2 o 0
+CC sm 2 sg 1048576 dm 6 dg 1048578
+CDC sm 2 sg 1048576 d ""
+GC m 6 g 2621443 n timeLOut i 3 o 1
+CC sm 6 sg 2621443 dm 2 dg 2621441
+CDC sm 6 sg 2621443 d ""
+GC m 6 g 1048579 n timeLIn i 3 o 0
+CC sm 2 sg 1048577 dm 6 dg 1048579
+CDC sm 2 sg 1048577 d ""
+MC id 15 c AppL t AppL pid 3 n appL
+MDC id 15 d p=86,106;i=block/routing,cyan
+MC id 16 c TimeL t TimeL pid 3 n timeL
+MDC id 16 d p=183,90;i=block/routing,gold
+GC m 15 g 2621440 n appLOut i 0 o 1
+GC m 16 g 1048576 n timeLIn i 0 o 0
+CC sm 15 sg 2621440 dm 16 dg 1048576
+CDC sm 15 sg 2621440 d ""
+GC m 16 g 2621440 n timeLOut i 0 o 1
+GC m 15 g 1048576 n appLIn i 0 o 0
+CC sm 16 sg 2621440 dm 15 dg 1048576
+CDC sm 16 sg 2621440 d ""
+GC m 15 g 2621441 n appLOut i 1 o 1
+GC m 16 g 1048577 n timeLIn i 1 o 0
+CC sm 15 sg 2621441 dm 16 dg 1048577
+CDC sm 15 sg 2621441 d ""
+GC m 16 g 2621441 n timeLOut i 1 o 1
+GC m 15 g 1048577 n appLIn i 1 o 0
+CC sm 16 sg 2621441 dm 15 dg 1048577
+CDC sm 16 sg 2621441 d ""
+GC m 16 g 2621442 n timeLOut i 2 o 1
+CC sm 16 sg 2621442 dm 3 dg 2621440
+CDC sm 16 sg 2621442 d ""
+GC m 16 g 1048578 n timeLIn i 2 o 0
+CC sm 3 sg 1048576 dm 16 dg 1048578
+CDC sm 3 sg 1048576 d ""
+GC m 16 g 2621443 n timeLOut i 3 o 1
+CC sm 16 sg 2621443 dm 3 dg 2621441
+CDC sm 16 sg 2621443 d ""
+GC m 16 g 1048579 n timeLIn i 3 o 0
+CC sm 3 sg 1048577 dm 16 dg 1048579
+CDC sm 3 sg 1048577 d ""
+MC id 25 c AppL t AppL pid 4 n appL
+MDC id 25 d p=86,106;i=block/routing,cyan
+MC id 26 c TimeL t TimeL pid 4 n timeL
+MDC id 26 d p=183,90;i=block/routing,gold
+GC m 25 g 2621440 n appLOut i 0 o 1
+GC m 26 g 1048576 n timeLIn i 0 o 0
+CC sm 25 sg 2621440 dm 26 dg 1048576
+CDC sm 25 sg 2621440 d ""
+GC m 26 g 2621440 n timeLOut i 0 o 1
+GC m 25 g 1048576 n appLIn i 0 o 0
+CC sm 26 sg 2621440 dm 25 dg 1048576
+CDC sm 26 sg 2621440 d ""
+GC m 25 g 2621441 n appLOut i 1 o 1
+GC m 26 g 1048577 n timeLIn i 1 o 0
+CC sm 25 sg 2621441 dm 26 dg 1048577
+CDC sm 25 sg 2621441 d ""
+GC m 26 g 2621441 n timeLOut i 1 o 1
+GC m 25 g 1048577 n appLIn i 1 o 0
+CC sm 26 sg 2621441 dm 25 dg 1048577
+CDC sm 26 sg 2621441 d ""
+GC m 26 g 2621442 n timeLOut i 2 o 1
+CC sm 26 sg 2621442 dm 4 dg 2621440
+CDC sm 26 sg 2621442 d ""
+GC m 26 g 1048578 n timeLIn i 2 o 0
+CC sm 4 sg 1048576 dm 26 dg 1048578
+CDC sm 4 sg 1048576 d ""
+GC m 26 g 2621443 n timeLOut i 3 o 1
+CC sm 26 sg 2621443 dm 4 dg 2621441
+CDC sm 26 sg 2621443 d ""
+GC m 26 g 1048579 n timeLIn i 3 o 0
+CC sm 4 sg 1048577 dm 26 dg 1048579
+CDC sm 4 sg 1048577 d ""
+CMB sm 1 tm 2 m initialize(0)
+CME
+CMB sm 1 tm 5 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n selfMsg pe -1
+- INFO:Master send a message to 2 Slaves
+BS id 0 tid 0 eid 0 etid 0 c MyMessage n selfMsg sm 5 st 0 am 5 at 0.08 pe 0
+ES id 0 tid 0 eid 0 etid 0 c MyMessage n selfMsg sm 5 st 0 am 5 at 0.08 pe 0
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD m 5 pe 0
+SH sm 5 sg 2621440
+ES id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0 am 6 ag 1048576 at 0 pe 0
+CL id 2 tid 1 eid 2 etid 1 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 1
+CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD m 5 pe 0
+SH sm 5 sg 2621441
+ES id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0 am 6 ag 1048577 at 0 pe 0
+CL id 3 tid 2 eid 3 etid 2 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 2
+CME
+CMB sm 1 tm 6 m initialize(0)
+CME
+CMB sm 1 tm 3 m initialize(0)
+CME
+CMB sm 1 tm 15 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n selfMsg pe -1
+CME
+CMB sm 1 tm 16 m initialize(0)
+CME
+CMB sm 1 tm 4 m initialize(0)
+CME
+CMB sm 1 tm 25 m initialize(0)
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n selfMsg pe -1
+CME
+CMB sm 1 tm 26 m initialize(0)
+CME
+
+E # 1 t 0 m 6 ce 0 msg 1
+- INFO:the message has timestamp, do nothing
+BS id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD m 6 pe 1
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0 am 16 ag 1048579 at 0 pe 1
+CL id 5 tid 1 eid 5 etid 1 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 1
+
+E # 2 t 0 m 6 ce 0 msg 2
+- INFO:the message has timestamp, do nothing
+BS id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD m 6 pe 2
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0 am 26 ag 1048579 at 0 pe 2
+CL id 5 tid 2 eid 5 etid 2 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 2
+
+E # 3 t 0 m 16 ce 1 msg 1
+BS id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD m 16 pe 3
+SH sm 16 sg 2621441
+ES id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0 am 15 ag 1048577 at 0 pe 3
+CL id 5 tid 1 eid 5 etid 1 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 1
+
+E # 4 t 0 m 26 ce 2 msg 2
+BS id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD m 26 pe 4
+SH sm 26 sg 2621441
+ES id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0 am 25 ag 1048577 at 0 pe 4
+CL id 5 tid 2 eid 5 etid 2 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 2
+
+E # 5 t 0 m 15 ce 3 msg 1
+- INFO:Message arrived, after Processing delay0.000094700983and Response delay0.03secs... send message back so Master
+BS id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD m 15 pe 5 sd 0.030094700983
+SH sm 15 sg 2621441
+ES id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.030094700983 am 16 ag 1048577 at 0.030094700983 pe 5
+CL id 5 tid 1 eid 5 etid 1 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 1
+
+E # 6 t 0 m 25 ce 4 msg 2
+- INFO:Message arrived, after Processing delay0.000288478078and Response delay0.03secs... send message back so Master
+BS id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD m 25 pe 6 sd 0.030288478078
+SH sm 25 sg 2621441
+ES id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.030288478078 am 26 ag 1048577 at 0.030288478078 pe 6
+CL id 5 tid 2 eid 5 etid 2 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 2
+
+E # 7 t 0.030094700983 m 16 ce 5 msg 1
+- INFO:the message has timestamp, do nothing
+BS id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD m 16 pe 7
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.030094700983 am 6 ag 1048578 at 0.030094700983 pe 7
+CL id 5 tid 1 eid 5 etid 1 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 1
+
+E # 8 t 0.030094700983 m 6 ce 7 msg 1
+BS id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD m 6 pe 8
+SH sm 6 sg 2621440
+ES id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.030094700983 am 5 ag 1048576 at 0.030094700983 pe 8
+CL id 5 tid 1 eid 5 etid 1 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 1
+
+E # 9 t 0.030094700983 m 5 ce 8 msg 1
+- INFO:Master received message, the delivery is over.
+
+E # 10 t 0.030288478078 m 26 ce 6 msg 2
+- INFO:the message has timestamp, do nothing
+BS id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD m 26 pe 10
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.030288478078 am 6 ag 1048579 at 0.030288478078 pe 10
+CL id 5 tid 2 eid 5 etid 2 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 2
+
+E # 11 t 0.030288478078 m 6 ce 10 msg 2
+BS id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD m 6 pe 11
+SH sm 6 sg 2621441
+ES id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.030288478078 am 5 ag 1048577 at 0.030288478078 pe 11
+CL id 5 tid 2 eid 5 etid 2 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 2
+
+E # 12 t 0.030288478078 m 5 ce 11 msg 2
+- INFO:Master received message, the delivery is over.
+
+E # 13 t 0.08 m 5 ce 0 msg 0
+CM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n selfMsg pe -1
+BS id 5 tid 5 eid 5 etid 5 c MyMessage n selfMsg sm 5 st 0.08 am 5 at 0.16 pe 13
+ES id 5 tid 5 eid 5 etid 5 c MyMessage n selfMsg sm 5 st 0.08 am 5 at 0.16 pe 13
+- INFO:Master send a new message to 2 Slaves
+CM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD m 5 pe 13
+SH sm 5 sg 2621440
+ES id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.08 am 6 ag 1048576 at 0.08 pe 13
+CL id 7 tid 6 eid 7 etid 6 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 6
+CM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD m 5 pe 13
+SH sm 5 sg 2621441
+ES id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.08 am 6 ag 1048577 at 0.08 pe 13
+CL id 8 tid 7 eid 8 etid 7 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 7
+
+E # 14 t 0.08 m 6 ce 13 msg 6
+- INFO:the message has timestamp, do nothing
+BS id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD m 6 pe 14
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.08 am 16 ag 1048579 at 0.08 pe 14
+CL id 8 tid 6 eid 8 etid 6 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 6
+
+E # 15 t 0.08 m 6 ce 13 msg 7
+- INFO:the message has timestamp, do nothing
+BS id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD m 6 pe 15
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.08 am 26 ag 1048579 at 0.08 pe 15
+CL id 8 tid 7 eid 8 etid 7 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 7
+
+E # 16 t 0.08 m 16 ce 14 msg 6
+BS id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD m 16 pe 16
+SH sm 16 sg 2621441
+ES id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.08 am 15 ag 1048577 at 0.08 pe 16
+CL id 8 tid 6 eid 8 etid 6 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 6
+
+E # 17 t 0.08 m 26 ce 15 msg 7
+BS id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD m 26 pe 17
+SH sm 26 sg 2621441
+ES id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.08 am 25 ag 1048577 at 0.08 pe 17
+CL id 8 tid 7 eid 8 etid 7 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 7
+
+E # 18 t 0.08 m 15 ce 16 msg 6
+- INFO:Message arrived, after Processing delay0.000285257068and Response delay0.03secs... send message back so Master
+BS id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD m 15 pe 18 sd 0.030285257068
+SH sm 15 sg 2621441
+ES id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.110285257068 am 16 ag 1048577 at 0.110285257068 pe 18
+CL id 8 tid 6 eid 8 etid 6 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 6
+
+E # 19 t 0.08 m 25 ce 17 msg 7
+- INFO:Message arrived, after Processing delay0.000271988671and Response delay0.03secs... send message back so Master
+BS id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD m 25 pe 19 sd 0.030271988671
+SH sm 25 sg 2621441
+ES id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.110271988671 am 26 ag 1048577 at 0.110271988671 pe 19
+CL id 8 tid 7 eid 8 etid 7 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 7
+
+E # 20 t 0.110271988671 m 26 ce 19 msg 7
+- INFO:the message has timestamp, do nothing
+BS id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD m 26 pe 20
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.110271988671 am 6 ag 1048579 at 0.110271988671 pe 20
+CL id 8 tid 7 eid 8 etid 7 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 7
+
+E # 21 t 0.110271988671 m 6 ce 20 msg 7
+BS id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD m 6 pe 21
+SH sm 6 sg 2621441
+ES id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.110271988671 am 5 ag 1048577 at 0.110271988671 pe 21
+CL id 8 tid 7 eid 8 etid 7 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 7
+
+E # 22 t 0.110271988671 m 5 ce 21 msg 7
+- INFO:Master received message, the delivery is over.
+
+E # 23 t 0.110285257068 m 16 ce 18 msg 6
+- INFO:the message has timestamp, do nothing
+BS id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD m 16 pe 23
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.110285257068 am 6 ag 1048578 at 0.110285257068 pe 23
+CL id 8 tid 6 eid 8 etid 6 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 6
+
+E # 24 t 0.110285257068 m 6 ce 23 msg 6
+BS id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD m 6 pe 24
+SH sm 6 sg 2621440
+ES id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.110285257068 am 5 ag 1048576 at 0.110285257068 pe 24
+CL id 8 tid 6 eid 8 etid 6 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 6
+
+E # 25 t 0.110285257068 m 5 ce 24 msg 6
+- INFO:Master received message, the delivery is over.
+
+E # 26 t 0.16 m 5 ce 13 msg 5
+CM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n selfMsg pe -1
+BS id 8 tid 8 eid 8 etid 8 c MyMessage n selfMsg sm 5 st 0.16 am 5 at 0.24 pe 26
+ES id 8 tid 8 eid 8 etid 8 c MyMessage n selfMsg sm 5 st 0.16 am 5 at 0.24 pe 26
+- INFO:Master send a new message to 2 Slaves
+CM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD m 5 pe 26
+SH sm 5 sg 2621440
+ES id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.16 am 6 ag 1048576 at 0.16 pe 26
+CL id 10 tid 9 eid 10 etid 9 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 9
+CM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD m 5 pe 26
+SH sm 5 sg 2621441
+ES id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.16 am 6 ag 1048577 at 0.16 pe 26
+CL id 11 tid 10 eid 11 etid 10 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 10
+
+E # 27 t 0.16 m 6 ce 26 msg 9
+- INFO:the message has timestamp, do nothing
+BS id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD m 6 pe 27
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.16 am 16 ag 1048579 at 0.16 pe 27
+CL id 11 tid 9 eid 11 etid 9 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 9
+
+E # 28 t 0.16 m 6 ce 26 msg 10
+- INFO:the message has timestamp, do nothing
+BS id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD m 6 pe 28
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.16 am 26 ag 1048579 at 0.16 pe 28
+CL id 11 tid 10 eid 11 etid 10 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 10
+
+E # 29 t 0.16 m 16 ce 27 msg 9
+BS id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD m 16 pe 29
+SH sm 16 sg 2621441
+ES id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.16 am 15 ag 1048577 at 0.16 pe 29
+CL id 11 tid 9 eid 11 etid 9 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 9
+
+E # 30 t 0.16 m 26 ce 28 msg 10
+BS id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD m 26 pe 30
+SH sm 26 sg 2621441
+ES id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.16 am 25 ag 1048577 at 0.16 pe 30
+CL id 11 tid 10 eid 11 etid 10 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 10
+
+E # 31 t 0.16 m 15 ce 29 msg 9
+- INFO:Message arrived, after Processing delay0.000125100475and Response delay0.03secs... send message back so Master
+BS id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD m 15 pe 31 sd 0.030125100475
+SH sm 15 sg 2621441
+ES id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.190125100475 am 16 ag 1048577 at 0.190125100475 pe 31
+CL id 11 tid 9 eid 11 etid 9 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 9
+
+E # 32 t 0.16 m 25 ce 30 msg 10
+- INFO:Message arrived, after Processing delay0.000092284228and Response delay0.03secs... send message back so Master
+BS id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD m 25 pe 32 sd 0.030092284228
+SH sm 25 sg 2621441
+ES id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.190092284228 am 26 ag 1048577 at 0.190092284228 pe 32
+CL id 11 tid 10 eid 11 etid 10 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 10
+
+E # 33 t 0.190092284228 m 26 ce 32 msg 10
+- INFO:the message has timestamp, do nothing
+BS id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD m 26 pe 33
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.190092284228 am 6 ag 1048579 at 0.190092284228 pe 33
+CL id 11 tid 10 eid 11 etid 10 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 10
+
+E # 34 t 0.190092284228 m 6 ce 33 msg 10
+BS id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD m 6 pe 34
+SH sm 6 sg 2621441
+ES id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.190092284228 am 5 ag 1048577 at 0.190092284228 pe 34
+CL id 11 tid 10 eid 11 etid 10 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 10
+
+E # 35 t 0.190092284228 m 5 ce 34 msg 10
+- INFO:Master received message, the delivery is over.
+
+E # 36 t 0.190125100475 m 16 ce 31 msg 9
+- INFO:the message has timestamp, do nothing
+BS id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD m 16 pe 36
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.190125100475 am 6 ag 1048578 at 0.190125100475 pe 36
+CL id 11 tid 9 eid 11 etid 9 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 9
+
+E # 37 t 0.190125100475 m 6 ce 36 msg 9
+BS id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD m 6 pe 37
+SH sm 6 sg 2621440
+ES id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.190125100475 am 5 ag 1048576 at 0.190125100475 pe 37
+CL id 11 tid 9 eid 11 etid 9 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 9
+
+E # 38 t 0.190125100475 m 5 ce 37 msg 9
+- INFO:Master received message, the delivery is over.
+
+E # 39 t 0.24 m 5 ce 26 msg 8
+CM id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n selfMsg pe -1
+BS id 11 tid 11 eid 11 etid 11 c MyMessage n selfMsg sm 5 st 0.24 am 5 at 0.32 pe 39
+ES id 11 tid 11 eid 11 etid 11 c MyMessage n selfMsg sm 5 st 0.24 am 5 at 0.32 pe 39
+- INFO:Master send a new message to 2 Slaves
+CM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD m 5 pe 39
+SH sm 5 sg 2621440
+ES id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.24 am 6 ag 1048576 at 0.24 pe 39
+CL id 13 tid 12 eid 13 etid 12 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 12
+CM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD m 5 pe 39
+SH sm 5 sg 2621441
+ES id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.24 am 6 ag 1048577 at 0.24 pe 39
+CL id 14 tid 13 eid 14 etid 13 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 13
+
+E # 40 t 0.24 m 6 ce 39 msg 12
+- INFO:the message has timestamp, do nothing
+BS id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD m 6 pe 40
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.24 am 16 ag 1048579 at 0.24 pe 40
+CL id 14 tid 12 eid 14 etid 12 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 12
+
+E # 41 t 0.24 m 6 ce 39 msg 13
+- INFO:the message has timestamp, do nothing
+BS id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD m 6 pe 41
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.24 am 26 ag 1048579 at 0.24 pe 41
+CL id 14 tid 13 eid 14 etid 13 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 13
+
+E # 42 t 0.24 m 16 ce 40 msg 12
+BS id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD m 16 pe 42
+SH sm 16 sg 2621441
+ES id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.24 am 15 ag 1048577 at 0.24 pe 42
+CL id 14 tid 12 eid 14 etid 12 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 12
+
+E # 43 t 0.24 m 26 ce 41 msg 13
+BS id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD m 26 pe 43
+SH sm 26 sg 2621441
+ES id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.24 am 25 ag 1048577 at 0.24 pe 43
+CL id 14 tid 13 eid 14 etid 13 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 13
+
+E # 44 t 0.24 m 15 ce 42 msg 12
+- INFO:Message arrived, after Processing delay0.00016843116and Response delay0.02secs... send message back so Master
+BS id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD m 15 pe 44 sd 0.02016843116
+SH sm 15 sg 2621441
+ES id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.26016843116 am 16 ag 1048577 at 0.26016843116 pe 44
+CL id 14 tid 12 eid 14 etid 12 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 12
+
+E # 45 t 0.24 m 25 ce 43 msg 13
+- INFO:Message arrived, after Processing delay0.000397632883and Response delay0.03secs... send message back so Master
+BS id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD m 25 pe 45 sd 0.030397632883
+SH sm 25 sg 2621441
+ES id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.270397632883 am 26 ag 1048577 at 0.270397632883 pe 45
+CL id 14 tid 13 eid 14 etid 13 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 13
+
+E # 46 t 0.26016843116 m 16 ce 44 msg 12
+- INFO:the message has timestamp, do nothing
+BS id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD m 16 pe 46
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.26016843116 am 6 ag 1048578 at 0.26016843116 pe 46
+CL id 14 tid 12 eid 14 etid 12 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 12
+
+E # 47 t 0.26016843116 m 6 ce 46 msg 12
+BS id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD m 6 pe 47
+SH sm 6 sg 2621440
+ES id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.26016843116 am 5 ag 1048576 at 0.26016843116 pe 47
+CL id 14 tid 12 eid 14 etid 12 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 12
+
+E # 48 t 0.26016843116 m 5 ce 47 msg 12
+- INFO:Master received message, the delivery is over.
+
+E # 49 t 0.270397632883 m 26 ce 45 msg 13
+- INFO:the message has timestamp, do nothing
+BS id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD m 26 pe 49
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.270397632883 am 6 ag 1048579 at 0.270397632883 pe 49
+CL id 14 tid 13 eid 14 etid 13 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 13
+
+E # 50 t 0.270397632883 m 6 ce 49 msg 13
+BS id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD m 6 pe 50
+SH sm 6 sg 2621441
+ES id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.270397632883 am 5 ag 1048577 at 0.270397632883 pe 50
+CL id 14 tid 13 eid 14 etid 13 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 13
+
+E # 51 t 0.270397632883 m 5 ce 50 msg 13
+- INFO:Master received message, the delivery is over.
+
+E # 52 t 0.32 m 5 ce 39 msg 11
+CM id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n selfMsg pe -1
+BS id 14 tid 14 eid 14 etid 14 c MyMessage n selfMsg sm 5 st 0.32 am 5 at 0.4 pe 52
+ES id 14 tid 14 eid 14 etid 14 c MyMessage n selfMsg sm 5 st 0.32 am 5 at 0.4 pe 52
+- INFO:Master send a new message to 2 Slaves
+CM id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD m 5 pe 52
+SH sm 5 sg 2621440
+ES id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.32 am 6 ag 1048576 at 0.32 pe 52
+CL id 16 tid 15 eid 16 etid 15 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 15
+CM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD m 5 pe 52
+SH sm 5 sg 2621441
+ES id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.32 am 6 ag 1048577 at 0.32 pe 52
+CL id 17 tid 16 eid 17 etid 16 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 16
+
+E # 53 t 0.32 m 6 ce 52 msg 15
+- INFO:the message has timestamp, do nothing
+BS id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD m 6 pe 53
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.32 am 16 ag 1048579 at 0.32 pe 53
+CL id 17 tid 15 eid 17 etid 15 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 15
+
+E # 54 t 0.32 m 6 ce 52 msg 16
+- INFO:the message has timestamp, do nothing
+BS id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD m 6 pe 54
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.32 am 26 ag 1048579 at 0.32 pe 54
+CL id 17 tid 16 eid 17 etid 16 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 16
+
+E # 55 t 0.32 m 16 ce 53 msg 15
+BS id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD m 16 pe 55
+SH sm 16 sg 2621441
+ES id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.32 am 15 ag 1048577 at 0.32 pe 55
+CL id 17 tid 15 eid 17 etid 15 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 15
+
+E # 56 t 0.32 m 26 ce 54 msg 16
+BS id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD m 26 pe 56
+SH sm 26 sg 2621441
+ES id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.32 am 25 ag 1048577 at 0.32 pe 56
+CL id 17 tid 16 eid 17 etid 16 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 16
+
+E # 57 t 0.32 m 15 ce 55 msg 15
+- INFO:Message arrived, after Processing delay0.000163469806and Response delay0.03secs... send message back so Master
+BS id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD m 15 pe 57 sd 0.030163469806
+SH sm 15 sg 2621441
+ES id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.350163469806 am 16 ag 1048577 at 0.350163469806 pe 57
+CL id 17 tid 15 eid 17 etid 15 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 15
+
+E # 58 t 0.32 m 25 ce 56 msg 16
+- INFO:Message arrived, after Processing delay0.000102620275and Response delay0.03secs... send message back so Master
+BS id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD m 25 pe 58 sd 0.030102620275
+SH sm 25 sg 2621441
+ES id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.350102620275 am 26 ag 1048577 at 0.350102620275 pe 58
+CL id 17 tid 16 eid 17 etid 16 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 16
+
+E # 59 t 0.350102620275 m 26 ce 58 msg 16
+- INFO:the message has timestamp, do nothing
+BS id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD m 26 pe 59
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.350102620275 am 6 ag 1048579 at 0.350102620275 pe 59
+CL id 17 tid 16 eid 17 etid 16 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 16
+
+E # 60 t 0.350102620275 m 6 ce 59 msg 16
+BS id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD m 6 pe 60
+SH sm 6 sg 2621441
+ES id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.350102620275 am 5 ag 1048577 at 0.350102620275 pe 60
+CL id 17 tid 16 eid 17 etid 16 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 16
+
+E # 61 t 0.350102620275 m 5 ce 60 msg 16
+- INFO:Master received message, the delivery is over.
+
+E # 62 t 0.350163469806 m 16 ce 57 msg 15
+- INFO:the message has timestamp, do nothing
+BS id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD m 16 pe 62
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.350163469806 am 6 ag 1048578 at 0.350163469806 pe 62
+CL id 17 tid 15 eid 17 etid 15 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 15
+
+E # 63 t 0.350163469806 m 6 ce 62 msg 15
+BS id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD m 6 pe 63
+SH sm 6 sg 2621440
+ES id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.350163469806 am 5 ag 1048576 at 0.350163469806 pe 63
+CL id 17 tid 15 eid 17 etid 15 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 15
+
+E # 64 t 0.350163469806 m 5 ce 63 msg 15
+- INFO:Master received message, the delivery is over.
+
+E # 65 t 0.4 m 5 ce 52 msg 14
+CM id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n selfMsg pe -1
+BS id 17 tid 17 eid 17 etid 17 c MyMessage n selfMsg sm 5 st 0.4 am 5 at 0.48 pe 65
+ES id 17 tid 17 eid 17 etid 17 c MyMessage n selfMsg sm 5 st 0.4 am 5 at 0.48 pe 65
+- INFO:Master send a new message to 2 Slaves
+CM id 18 tid 18 eid 18 etid 18 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD m 5 pe 65
+SH sm 5 sg 2621440
+ES id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.4 am 6 ag 1048576 at 0.4 pe 65
+CL id 19 tid 18 eid 19 etid 18 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 18
+CM id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD m 5 pe 65
+SH sm 5 sg 2621441
+ES id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.4 am 6 ag 1048577 at 0.4 pe 65
+CL id 20 tid 19 eid 20 etid 19 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 19
+
+E # 66 t 0.4 m 6 ce 65 msg 18
+- INFO:the message has timestamp, do nothing
+BS id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD m 6 pe 66
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.4 am 16 ag 1048579 at 0.4 pe 66
+CL id 20 tid 18 eid 20 etid 18 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 18
+
+E # 67 t 0.4 m 6 ce 65 msg 19
+- INFO:the message has timestamp, do nothing
+BS id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD m 6 pe 67
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.4 am 26 ag 1048579 at 0.4 pe 67
+CL id 20 tid 19 eid 20 etid 19 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 19
+
+E # 68 t 0.4 m 16 ce 66 msg 18
+BS id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD m 16 pe 68
+SH sm 16 sg 2621441
+ES id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.4 am 15 ag 1048577 at 0.4 pe 68
+CL id 20 tid 18 eid 20 etid 18 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 18
+
+E # 69 t 0.4 m 26 ce 67 msg 19
+BS id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD m 26 pe 69
+SH sm 26 sg 2621441
+ES id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.4 am 25 ag 1048577 at 0.4 pe 69
+CL id 20 tid 19 eid 20 etid 19 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 19
+
+E # 70 t 0.4 m 15 ce 68 msg 18
+- INFO:Message arrived, after Processing delay0.000267447048and Response delay0.02secs... send message back so Master
+BS id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD m 15 pe 70 sd 0.020267447048
+SH sm 15 sg 2621441
+ES id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.420267447048 am 16 ag 1048577 at 0.420267447048 pe 70
+CL id 20 tid 18 eid 20 etid 18 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 18
+
+E # 71 t 0.4 m 25 ce 69 msg 19
+- INFO:Message arrived, after Processing delay0.000078277042and Response delay0.01secs... send message back so Master
+BS id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD m 25 pe 71 sd 0.010078277042
+SH sm 25 sg 2621441
+ES id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.410078277042 am 26 ag 1048577 at 0.410078277042 pe 71
+CL id 20 tid 19 eid 20 etid 19 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 19
+
+E # 72 t 0.410078277042 m 26 ce 71 msg 19
+- INFO:the message has timestamp, do nothing
+BS id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD m 26 pe 72
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.410078277042 am 6 ag 1048579 at 0.410078277042 pe 72
+CL id 20 tid 19 eid 20 etid 19 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 19
+
+E # 73 t 0.410078277042 m 6 ce 72 msg 19
+BS id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD m 6 pe 73
+SH sm 6 sg 2621441
+ES id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.410078277042 am 5 ag 1048577 at 0.410078277042 pe 73
+CL id 20 tid 19 eid 20 etid 19 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 19
+
+E # 74 t 0.410078277042 m 5 ce 73 msg 19
+- INFO:Master received message, the delivery is over.
+
+E # 75 t 0.420267447048 m 16 ce 70 msg 18
+- INFO:the message has timestamp, do nothing
+BS id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD m 16 pe 75
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.420267447048 am 6 ag 1048578 at 0.420267447048 pe 75
+CL id 20 tid 18 eid 20 etid 18 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 18
+
+E # 76 t 0.420267447048 m 6 ce 75 msg 18
+BS id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD m 6 pe 76
+SH sm 6 sg 2621440
+ES id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.420267447048 am 5 ag 1048576 at 0.420267447048 pe 76
+CL id 20 tid 18 eid 20 etid 18 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 18
+
+E # 77 t 0.420267447048 m 5 ce 76 msg 18
+- INFO:Master received message, the delivery is over.
+
+E # 78 t 0.48 m 5 ce 65 msg 17
+CM id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n selfMsg pe -1
+BS id 20 tid 20 eid 20 etid 20 c MyMessage n selfMsg sm 5 st 0.48 am 5 at 0.56 pe 78
+ES id 20 tid 20 eid 20 etid 20 c MyMessage n selfMsg sm 5 st 0.48 am 5 at 0.56 pe 78
+- INFO:Master send a new message to 2 Slaves
+CM id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD m 5 pe 78
+SH sm 5 sg 2621440
+ES id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.48 am 6 ag 1048576 at 0.48 pe 78
+CL id 22 tid 21 eid 22 etid 21 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 21
+CM id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD m 5 pe 78
+SH sm 5 sg 2621441
+ES id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.48 am 6 ag 1048577 at 0.48 pe 78
+CL id 23 tid 22 eid 23 etid 22 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 22
+
+E # 79 t 0.48 m 6 ce 78 msg 21
+- INFO:the message has timestamp, do nothing
+BS id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD m 6 pe 79
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.48 am 16 ag 1048579 at 0.48 pe 79
+CL id 23 tid 21 eid 23 etid 21 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 21
+
+E # 80 t 0.48 m 6 ce 78 msg 22
+- INFO:the message has timestamp, do nothing
+BS id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD m 6 pe 80
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.48 am 26 ag 1048579 at 0.48 pe 80
+CL id 23 tid 22 eid 23 etid 22 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 22
+
+E # 81 t 0.48 m 16 ce 79 msg 21
+BS id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD m 16 pe 81
+SH sm 16 sg 2621441
+ES id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.48 am 15 ag 1048577 at 0.48 pe 81
+CL id 23 tid 21 eid 23 etid 21 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 21
+
+E # 82 t 0.48 m 26 ce 80 msg 22
+BS id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD m 26 pe 82
+SH sm 26 sg 2621441
+ES id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.48 am 25 ag 1048577 at 0.48 pe 82
+CL id 23 tid 22 eid 23 etid 22 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 22
+
+E # 83 t 0.48 m 15 ce 81 msg 21
+- INFO:Message arrived, after Processing delay0.000098734009and Response delay0.01secs... send message back so Master
+BS id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD m 15 pe 83 sd 0.010098734009
+SH sm 15 sg 2621441
+ES id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.490098734009 am 16 ag 1048577 at 0.490098734009 pe 83
+CL id 23 tid 21 eid 23 etid 21 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 21
+
+E # 84 t 0.48 m 25 ce 82 msg 22
+- INFO:Message arrived, after Processing delay0.000317367602and Response delay0.01secs... send message back so Master
+BS id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD m 25 pe 84 sd 0.010317367602
+SH sm 25 sg 2621441
+ES id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.490317367602 am 26 ag 1048577 at 0.490317367602 pe 84
+CL id 23 tid 22 eid 23 etid 22 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 22
+
+E # 85 t 0.490098734009 m 16 ce 83 msg 21
+- INFO:the message has timestamp, do nothing
+BS id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD m 16 pe 85
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.490098734009 am 6 ag 1048578 at 0.490098734009 pe 85
+CL id 23 tid 21 eid 23 etid 21 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 21
+
+E # 86 t 0.490098734009 m 6 ce 85 msg 21
+BS id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD m 6 pe 86
+SH sm 6 sg 2621440
+ES id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.490098734009 am 5 ag 1048576 at 0.490098734009 pe 86
+CL id 23 tid 21 eid 23 etid 21 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 21
+
+E # 87 t 0.490098734009 m 5 ce 86 msg 21
+- INFO:Master received message, the delivery is over.
+
+E # 88 t 0.490317367602 m 26 ce 84 msg 22
+- INFO:the message has timestamp, do nothing
+BS id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD m 26 pe 88
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.490317367602 am 6 ag 1048579 at 0.490317367602 pe 88
+CL id 23 tid 22 eid 23 etid 22 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 22
+
+E # 89 t 0.490317367602 m 6 ce 88 msg 22
+BS id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD m 6 pe 89
+SH sm 6 sg 2621441
+ES id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.490317367602 am 5 ag 1048577 at 0.490317367602 pe 89
+CL id 23 tid 22 eid 23 etid 22 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 22
+
+E # 90 t 0.490317367602 m 5 ce 89 msg 22
+- INFO:Master received message, the delivery is over.
+
+E # 91 t 0.56 m 5 ce 78 msg 20
+CM id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n selfMsg pe -1
+BS id 23 tid 23 eid 23 etid 23 c MyMessage n selfMsg sm 5 st 0.56 am 5 at 0.64 pe 91
+ES id 23 tid 23 eid 23 etid 23 c MyMessage n selfMsg sm 5 st 0.56 am 5 at 0.64 pe 91
+- INFO:Master send a new message to 2 Slaves
+CM id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD m 5 pe 91
+SH sm 5 sg 2621440
+ES id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.56 am 6 ag 1048576 at 0.56 pe 91
+CL id 25 tid 24 eid 25 etid 24 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 24
+CM id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD m 5 pe 91
+SH sm 5 sg 2621441
+ES id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.56 am 6 ag 1048577 at 0.56 pe 91
+CL id 26 tid 25 eid 26 etid 25 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 25
+
+E # 92 t 0.56 m 6 ce 91 msg 24
+- INFO:the message has timestamp, do nothing
+BS id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD m 6 pe 92
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.56 am 16 ag 1048579 at 0.56 pe 92
+CL id 26 tid 24 eid 26 etid 24 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 24
+
+E # 93 t 0.56 m 6 ce 91 msg 25
+- INFO:the message has timestamp, do nothing
+BS id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD m 6 pe 93
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.56 am 26 ag 1048579 at 0.56 pe 93
+CL id 26 tid 25 eid 26 etid 25 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 25
+
+E # 94 t 0.56 m 16 ce 92 msg 24
+BS id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD m 16 pe 94
+SH sm 16 sg 2621441
+ES id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.56 am 15 ag 1048577 at 0.56 pe 94
+CL id 26 tid 24 eid 26 etid 24 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 24
+
+E # 95 t 0.56 m 26 ce 93 msg 25
+BS id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD m 26 pe 95
+SH sm 26 sg 2621441
+ES id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.56 am 25 ag 1048577 at 0.56 pe 95
+CL id 26 tid 25 eid 26 etid 25 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 25
+
+E # 96 t 0.56 m 15 ce 94 msg 24
+- INFO:Message arrived, after Processing delay0.000179963218and Response delay0.03secs... send message back so Master
+BS id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD m 15 pe 96 sd 0.030179963218
+SH sm 15 sg 2621441
+ES id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.590179963218 am 16 ag 1048577 at 0.590179963218 pe 96
+CL id 26 tid 24 eid 26 etid 24 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 24
+
+E # 97 t 0.56 m 25 ce 95 msg 25
+- INFO:Message arrived, after Processing delay0.000174506921and Response delay0.01secs... send message back so Master
+BS id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD m 25 pe 97 sd 0.010174506921
+SH sm 25 sg 2621441
+ES id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.570174506921 am 26 ag 1048577 at 0.570174506921 pe 97
+CL id 26 tid 25 eid 26 etid 25 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 25
+
+E # 98 t 0.570174506921 m 26 ce 97 msg 25
+- INFO:the message has timestamp, do nothing
+BS id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD m 26 pe 98
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.570174506921 am 6 ag 1048579 at 0.570174506921 pe 98
+CL id 26 tid 25 eid 26 etid 25 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 25
+
+E # 99 t 0.570174506921 m 6 ce 98 msg 25
+BS id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD m 6 pe 99
+SH sm 6 sg 2621441
+ES id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.570174506921 am 5 ag 1048577 at 0.570174506921 pe 99
+CL id 26 tid 25 eid 26 etid 25 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 25
+
+E # 100 t 0.570174506921 m 5 ce 99 msg 25
+- INFO:Master received message, the delivery is over.
+
+E # 101 t 0.590179963218 m 16 ce 96 msg 24
+- INFO:the message has timestamp, do nothing
+BS id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD m 16 pe 101
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.590179963218 am 6 ag 1048578 at 0.590179963218 pe 101
+CL id 26 tid 24 eid 26 etid 24 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 24
+
+E # 102 t 0.590179963218 m 6 ce 101 msg 24
+BS id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD m 6 pe 102
+SH sm 6 sg 2621440
+ES id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.590179963218 am 5 ag 1048576 at 0.590179963218 pe 102
+CL id 26 tid 24 eid 26 etid 24 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 24
+
+E # 103 t 0.590179963218 m 5 ce 102 msg 24
+- INFO:Master received message, the delivery is over.
+
+E # 104 t 0.64 m 5 ce 91 msg 23
+CM id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n selfMsg pe -1
+BS id 26 tid 26 eid 26 etid 26 c MyMessage n selfMsg sm 5 st 0.64 am 5 at 0.72 pe 104
+ES id 26 tid 26 eid 26 etid 26 c MyMessage n selfMsg sm 5 st 0.64 am 5 at 0.72 pe 104
+- INFO:Master send a new message to 2 Slaves
+CM id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD m 5 pe 104
+SH sm 5 sg 2621440
+ES id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.64 am 6 ag 1048576 at 0.64 pe 104
+CL id 28 tid 27 eid 28 etid 27 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 27
+CM id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD m 5 pe 104
+SH sm 5 sg 2621441
+ES id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.64 am 6 ag 1048577 at 0.64 pe 104
+CL id 29 tid 28 eid 29 etid 28 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 28
+
+E # 105 t 0.64 m 6 ce 104 msg 27
+- INFO:the message has timestamp, do nothing
+BS id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD m 6 pe 105
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.64 am 16 ag 1048579 at 0.64 pe 105
+CL id 29 tid 27 eid 29 etid 27 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 27
+
+E # 106 t 0.64 m 6 ce 104 msg 28
+- INFO:the message has timestamp, do nothing
+BS id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD m 6 pe 106
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.64 am 26 ag 1048579 at 0.64 pe 106
+CL id 29 tid 28 eid 29 etid 28 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 28
+
+E # 107 t 0.64 m 16 ce 105 msg 27
+BS id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD m 16 pe 107
+SH sm 16 sg 2621441
+ES id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.64 am 15 ag 1048577 at 0.64 pe 107
+CL id 29 tid 27 eid 29 etid 27 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 27
+
+E # 108 t 0.64 m 26 ce 106 msg 28
+BS id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD m 26 pe 108
+SH sm 26 sg 2621441
+ES id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.64 am 25 ag 1048577 at 0.64 pe 108
+CL id 29 tid 28 eid 29 etid 28 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 28
+
+E # 109 t 0.64 m 15 ce 107 msg 27
+- INFO:Message arrived, after Processing delay0.000186327787and Response delay0.01secs... send message back so Master
+BS id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD m 15 pe 109 sd 0.010186327787
+SH sm 15 sg 2621441
+ES id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.650186327787 am 16 ag 1048577 at 0.650186327787 pe 109
+CL id 29 tid 27 eid 29 etid 27 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 27
+
+E # 110 t 0.64 m 25 ce 108 msg 28
+- INFO:Message arrived, after Processing delay0.000382266178and Response delay0.03secs... send message back so Master
+BS id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD m 25 pe 110 sd 0.030382266178
+SH sm 25 sg 2621441
+ES id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.670382266178 am 26 ag 1048577 at 0.670382266178 pe 110
+CL id 29 tid 28 eid 29 etid 28 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 28
+
+E # 111 t 0.650186327787 m 16 ce 109 msg 27
+- INFO:the message has timestamp, do nothing
+BS id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD m 16 pe 111
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.650186327787 am 6 ag 1048578 at 0.650186327787 pe 111
+CL id 29 tid 27 eid 29 etid 27 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 27
+
+E # 112 t 0.650186327787 m 6 ce 111 msg 27
+BS id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD m 6 pe 112
+SH sm 6 sg 2621440
+ES id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.650186327787 am 5 ag 1048576 at 0.650186327787 pe 112
+CL id 29 tid 27 eid 29 etid 27 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 27
+
+E # 113 t 0.650186327787 m 5 ce 112 msg 27
+- INFO:Master received message, the delivery is over.
+
+E # 114 t 0.670382266178 m 26 ce 110 msg 28
+- INFO:the message has timestamp, do nothing
+BS id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD m 26 pe 114
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.670382266178 am 6 ag 1048579 at 0.670382266178 pe 114
+CL id 29 tid 28 eid 29 etid 28 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 28
+
+E # 115 t 0.670382266178 m 6 ce 114 msg 28
+BS id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD m 6 pe 115
+SH sm 6 sg 2621441
+ES id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.670382266178 am 5 ag 1048577 at 0.670382266178 pe 115
+CL id 29 tid 28 eid 29 etid 28 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 28
+
+E # 116 t 0.670382266178 m 5 ce 115 msg 28
+- INFO:Master received message, the delivery is over.
+
+E # 117 t 0.72 m 5 ce 104 msg 26
+CM id 29 tid 29 eid 29 etid 29 c omnetpp::cMessage n selfMsg pe -1
+BS id 29 tid 29 eid 29 etid 29 c MyMessage n selfMsg sm 5 st 0.72 am 5 at 0.8 pe 117
+ES id 29 tid 29 eid 29 etid 29 c MyMessage n selfMsg sm 5 st 0.72 am 5 at 0.8 pe 117
+- INFO:Master send a new message to 2 Slaves
+CM id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD m 5 pe 117
+SH sm 5 sg 2621440
+ES id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.72 am 6 ag 1048576 at 0.72 pe 117
+CL id 31 tid 30 eid 31 etid 30 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 30
+CM id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD m 5 pe 117
+SH sm 5 sg 2621441
+ES id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.72 am 6 ag 1048577 at 0.72 pe 117
+CL id 32 tid 31 eid 32 etid 31 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 31
+
+E # 118 t 0.72 m 6 ce 117 msg 30
+- INFO:the message has timestamp, do nothing
+BS id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD m 6 pe 118
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.72 am 16 ag 1048579 at 0.72 pe 118
+CL id 32 tid 30 eid 32 etid 30 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 30
+
+E # 119 t 0.72 m 6 ce 117 msg 31
+- INFO:the message has timestamp, do nothing
+BS id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD m 6 pe 119
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.72 am 26 ag 1048579 at 0.72 pe 119
+CL id 32 tid 31 eid 32 etid 31 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 31
+
+E # 120 t 0.72 m 16 ce 118 msg 30
+BS id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD m 16 pe 120
+SH sm 16 sg 2621441
+ES id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.72 am 15 ag 1048577 at 0.72 pe 120
+CL id 32 tid 30 eid 32 etid 30 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 30
+
+E # 121 t 0.72 m 26 ce 119 msg 31
+BS id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD m 26 pe 121
+SH sm 26 sg 2621441
+ES id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.72 am 25 ag 1048577 at 0.72 pe 121
+CL id 32 tid 31 eid 32 etid 31 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 31
+
+E # 122 t 0.72 m 15 ce 120 msg 30
+- INFO:Message arrived, after Processing delay0.000310322766and Response delay0.03secs... send message back so Master
+BS id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD m 15 pe 122 sd 0.030310322766
+SH sm 15 sg 2621441
+ES id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.750310322766 am 16 ag 1048577 at 0.750310322766 pe 122
+CL id 32 tid 30 eid 32 etid 30 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 30
+
+E # 123 t 0.72 m 25 ce 121 msg 31
+- INFO:Message arrived, after Processing delay0.000338363094and Response delay0.03secs... send message back so Master
+BS id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD m 25 pe 123 sd 0.030338363094
+SH sm 25 sg 2621441
+ES id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.750338363094 am 26 ag 1048577 at 0.750338363094 pe 123
+CL id 32 tid 31 eid 32 etid 31 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 31
+
+E # 124 t 0.750310322766 m 16 ce 122 msg 30
+- INFO:the message has timestamp, do nothing
+BS id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD m 16 pe 124
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.750310322766 am 6 ag 1048578 at 0.750310322766 pe 124
+CL id 32 tid 30 eid 32 etid 30 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 30
+
+E # 125 t 0.750310322766 m 6 ce 124 msg 30
+BS id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD m 6 pe 125
+SH sm 6 sg 2621440
+ES id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.750310322766 am 5 ag 1048576 at 0.750310322766 pe 125
+CL id 32 tid 30 eid 32 etid 30 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 30
+
+E # 126 t 0.750310322766 m 5 ce 125 msg 30
+- INFO:Master received message, the delivery is over.
+
+E # 127 t 0.750338363094 m 26 ce 123 msg 31
+- INFO:the message has timestamp, do nothing
+BS id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD m 26 pe 127
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.750338363094 am 6 ag 1048579 at 0.750338363094 pe 127
+CL id 32 tid 31 eid 32 etid 31 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 31
+
+E # 128 t 0.750338363094 m 6 ce 127 msg 31
+BS id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD m 6 pe 128
+SH sm 6 sg 2621441
+ES id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.750338363094 am 5 ag 1048577 at 0.750338363094 pe 128
+CL id 32 tid 31 eid 32 etid 31 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 31
+
+E # 129 t 0.750338363094 m 5 ce 128 msg 31
+- INFO:Master received message, the delivery is over.
+
+E # 130 t 0.8 m 5 ce 117 msg 29
+CM id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n selfMsg pe -1
+BS id 32 tid 32 eid 32 etid 32 c MyMessage n selfMsg sm 5 st 0.8 am 5 at 0.88 pe 130
+ES id 32 tid 32 eid 32 etid 32 c MyMessage n selfMsg sm 5 st 0.8 am 5 at 0.88 pe 130
+- INFO:Master send a new message to 2 Slaves
+CM id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD m 5 pe 130
+SH sm 5 sg 2621440
+ES id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.8 am 6 ag 1048576 at 0.8 pe 130
+CL id 34 tid 33 eid 34 etid 33 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 33
+CM id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD m 5 pe 130
+SH sm 5 sg 2621441
+ES id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.8 am 6 ag 1048577 at 0.8 pe 130
+CL id 35 tid 34 eid 35 etid 34 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 34
+
+E # 131 t 0.8 m 6 ce 130 msg 33
+- INFO:the message has timestamp, do nothing
+BS id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD m 6 pe 131
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.8 am 16 ag 1048579 at 0.8 pe 131
+CL id 35 tid 33 eid 35 etid 33 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 33
+
+E # 132 t 0.8 m 6 ce 130 msg 34
+- INFO:the message has timestamp, do nothing
+BS id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD m 6 pe 132
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.8 am 26 ag 1048579 at 0.8 pe 132
+CL id 35 tid 34 eid 35 etid 34 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 34
+
+E # 133 t 0.8 m 16 ce 131 msg 33
+BS id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD m 16 pe 133
+SH sm 16 sg 2621441
+ES id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.8 am 15 ag 1048577 at 0.8 pe 133
+CL id 35 tid 33 eid 35 etid 33 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 33
+
+E # 134 t 0.8 m 26 ce 132 msg 34
+BS id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD m 26 pe 134
+SH sm 26 sg 2621441
+ES id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.8 am 25 ag 1048577 at 0.8 pe 134
+CL id 35 tid 34 eid 35 etid 34 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 34
+
+E # 135 t 0.8 m 15 ce 133 msg 33
+- INFO:Message arrived, after Processing delay0.000256343316and Response delay0.01secs... send message back so Master
+BS id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD m 15 pe 135 sd 0.010256343316
+SH sm 15 sg 2621441
+ES id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.810256343316 am 16 ag 1048577 at 0.810256343316 pe 135
+CL id 35 tid 33 eid 35 etid 33 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 33
+
+E # 136 t 0.8 m 25 ce 134 msg 34
+- INFO:Message arrived, after Processing delay0.000089660534and Response delay0.01secs... send message back so Master
+BS id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD m 25 pe 136 sd 0.010089660534
+SH sm 25 sg 2621441
+ES id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.810089660534 am 26 ag 1048577 at 0.810089660534 pe 136
+CL id 35 tid 34 eid 35 etid 34 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 34
+
+E # 137 t 0.810089660534 m 26 ce 136 msg 34
+- INFO:the message has timestamp, do nothing
+BS id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD m 26 pe 137
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.810089660534 am 6 ag 1048579 at 0.810089660534 pe 137
+CL id 35 tid 34 eid 35 etid 34 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 34
+
+E # 138 t 0.810089660534 m 6 ce 137 msg 34
+BS id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD m 6 pe 138
+SH sm 6 sg 2621441
+ES id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.810089660534 am 5 ag 1048577 at 0.810089660534 pe 138
+CL id 35 tid 34 eid 35 etid 34 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 34
+
+E # 139 t 0.810089660534 m 5 ce 138 msg 34
+- INFO:Master received message, the delivery is over.
+
+E # 140 t 0.810256343316 m 16 ce 135 msg 33
+- INFO:the message has timestamp, do nothing
+BS id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD m 16 pe 140
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.810256343316 am 6 ag 1048578 at 0.810256343316 pe 140
+CL id 35 tid 33 eid 35 etid 33 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 33
+
+E # 141 t 0.810256343316 m 6 ce 140 msg 33
+BS id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD m 6 pe 141
+SH sm 6 sg 2621440
+ES id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.810256343316 am 5 ag 1048576 at 0.810256343316 pe 141
+CL id 35 tid 33 eid 35 etid 33 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 33
+
+E # 142 t 0.810256343316 m 5 ce 141 msg 33
+- INFO:Master received message, the delivery is over.
+
+E # 143 t 0.88 m 5 ce 130 msg 32
+CM id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n selfMsg pe -1
+BS id 35 tid 35 eid 35 etid 35 c MyMessage n selfMsg sm 5 st 0.88 am 5 at 0.96 pe 143
+ES id 35 tid 35 eid 35 etid 35 c MyMessage n selfMsg sm 5 st 0.88 am 5 at 0.96 pe 143
+- INFO:Master send a new message to 2 Slaves
+CM id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD m 5 pe 143
+SH sm 5 sg 2621440
+ES id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.88 am 6 ag 1048576 at 0.88 pe 143
+CL id 37 tid 36 eid 37 etid 36 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 36
+CM id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD m 5 pe 143
+SH sm 5 sg 2621441
+ES id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.88 am 6 ag 1048577 at 0.88 pe 143
+CL id 38 tid 37 eid 38 etid 37 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 37
+
+E # 144 t 0.88 m 6 ce 143 msg 36
+- INFO:the message has timestamp, do nothing
+BS id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD m 6 pe 144
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.88 am 16 ag 1048579 at 0.88 pe 144
+CL id 38 tid 36 eid 38 etid 36 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 36
+
+E # 145 t 0.88 m 6 ce 143 msg 37
+- INFO:the message has timestamp, do nothing
+BS id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD m 6 pe 145
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.88 am 26 ag 1048579 at 0.88 pe 145
+CL id 38 tid 37 eid 38 etid 37 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 37
+
+E # 146 t 0.88 m 16 ce 144 msg 36
+BS id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD m 16 pe 146
+SH sm 16 sg 2621441
+ES id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.88 am 15 ag 1048577 at 0.88 pe 146
+CL id 38 tid 36 eid 38 etid 36 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 36
+
+E # 147 t 0.88 m 26 ce 145 msg 37
+BS id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD m 26 pe 147
+SH sm 26 sg 2621441
+ES id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.88 am 25 ag 1048577 at 0.88 pe 147
+CL id 38 tid 37 eid 38 etid 37 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 37
+
+E # 148 t 0.88 m 15 ce 146 msg 36
+- INFO:Message arrived, after Processing delay0.000124739937and Response delay0.03secs... send message back so Master
+BS id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD m 15 pe 148 sd 0.030124739937
+SH sm 15 sg 2621441
+ES id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.910124739937 am 16 ag 1048577 at 0.910124739937 pe 148
+CL id 38 tid 36 eid 38 etid 36 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 36
+
+E # 149 t 0.88 m 25 ce 147 msg 37
+- INFO:Message arrived, after Processing delay0.00019079421and Response delay0.03secs... send message back so Master
+BS id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD m 25 pe 149 sd 0.03019079421
+SH sm 25 sg 2621441
+ES id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.91019079421 am 26 ag 1048577 at 0.91019079421 pe 149
+CL id 38 tid 37 eid 38 etid 37 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 37
+
+E # 150 t 0.910124739937 m 16 ce 148 msg 36
+- INFO:the message has timestamp, do nothing
+BS id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD m 16 pe 150
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.910124739937 am 6 ag 1048578 at 0.910124739937 pe 150
+CL id 38 tid 36 eid 38 etid 36 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 36
+
+E # 151 t 0.910124739937 m 6 ce 150 msg 36
+BS id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD m 6 pe 151
+SH sm 6 sg 2621440
+ES id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.910124739937 am 5 ag 1048576 at 0.910124739937 pe 151
+CL id 38 tid 36 eid 38 etid 36 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 36
+
+E # 152 t 0.910124739937 m 5 ce 151 msg 36
+- INFO:Master received message, the delivery is over.
+
+E # 153 t 0.91019079421 m 26 ce 149 msg 37
+- INFO:the message has timestamp, do nothing
+BS id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD m 26 pe 153
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.91019079421 am 6 ag 1048579 at 0.91019079421 pe 153
+CL id 38 tid 37 eid 38 etid 37 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 37
+
+E # 154 t 0.91019079421 m 6 ce 153 msg 37
+BS id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD m 6 pe 154
+SH sm 6 sg 2621441
+ES id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.91019079421 am 5 ag 1048577 at 0.91019079421 pe 154
+CL id 38 tid 37 eid 38 etid 37 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 37
+
+E # 155 t 0.91019079421 m 5 ce 154 msg 37
+- INFO:Master received message, the delivery is over.
+
+E # 156 t 0.96 m 5 ce 143 msg 35
+CM id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n selfMsg pe -1
+BS id 38 tid 38 eid 38 etid 38 c MyMessage n selfMsg sm 5 st 0.96 am 5 at 1.04 pe 156
+ES id 38 tid 38 eid 38 etid 38 c MyMessage n selfMsg sm 5 st 0.96 am 5 at 1.04 pe 156
+- INFO:Master send a new message to 2 Slaves
+CM id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD m 5 pe 156
+SH sm 5 sg 2621440
+ES id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 0.96 am 6 ag 1048576 at 0.96 pe 156
+CL id 40 tid 39 eid 40 etid 39 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 39
+CM id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD m 5 pe 156
+SH sm 5 sg 2621441
+ES id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 0.96 am 6 ag 1048577 at 0.96 pe 156
+CL id 41 tid 40 eid 41 etid 40 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 40
+
+E # 157 t 0.96 m 6 ce 156 msg 39
+- INFO:the message has timestamp, do nothing
+BS id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD m 6 pe 157
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 0.96 am 16 ag 1048579 at 0.96 pe 157
+CL id 41 tid 39 eid 41 etid 39 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 39
+
+E # 158 t 0.96 m 6 ce 156 msg 40
+- INFO:the message has timestamp, do nothing
+BS id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD m 6 pe 158
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 0.96 am 26 ag 1048579 at 0.96 pe 158
+CL id 41 tid 40 eid 41 etid 40 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 40
+
+E # 159 t 0.96 m 16 ce 157 msg 39
+BS id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD m 16 pe 159
+SH sm 16 sg 2621441
+ES id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 0.96 am 15 ag 1048577 at 0.96 pe 159
+CL id 41 tid 39 eid 41 etid 39 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 39
+
+E # 160 t 0.96 m 26 ce 158 msg 40
+BS id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD m 26 pe 160
+SH sm 26 sg 2621441
+ES id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 0.96 am 25 ag 1048577 at 0.96 pe 160
+CL id 41 tid 40 eid 41 etid 40 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 40
+
+E # 161 t 0.96 m 15 ce 159 msg 39
+- INFO:Message arrived, after Processing delay0.000075634452and Response delay0.03secs... send message back so Master
+BS id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD m 15 pe 161 sd 0.030075634452
+SH sm 15 sg 2621441
+ES id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 0.990075634452 am 16 ag 1048577 at 0.990075634452 pe 161
+CL id 41 tid 39 eid 41 etid 39 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 39
+
+E # 162 t 0.96 m 25 ce 160 msg 40
+- INFO:Message arrived, after Processing delay0.000145897637and Response delay0.01secs... send message back so Master
+BS id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD m 25 pe 162 sd 0.010145897637
+SH sm 25 sg 2621441
+ES id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 0.970145897637 am 26 ag 1048577 at 0.970145897637 pe 162
+CL id 41 tid 40 eid 41 etid 40 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 40
+
+E # 163 t 0.970145897637 m 26 ce 162 msg 40
+- INFO:the message has timestamp, do nothing
+BS id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD m 26 pe 163
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 0.970145897637 am 6 ag 1048579 at 0.970145897637 pe 163
+CL id 41 tid 40 eid 41 etid 40 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 40
+
+E # 164 t 0.970145897637 m 6 ce 163 msg 40
+BS id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD m 6 pe 164
+SH sm 6 sg 2621441
+ES id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 0.970145897637 am 5 ag 1048577 at 0.970145897637 pe 164
+CL id 41 tid 40 eid 41 etid 40 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 40
+
+E # 165 t 0.970145897637 m 5 ce 164 msg 40
+- INFO:Master received message, the delivery is over.
+
+E # 166 t 0.990075634452 m 16 ce 161 msg 39
+- INFO:the message has timestamp, do nothing
+BS id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD m 16 pe 166
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 0.990075634452 am 6 ag 1048578 at 0.990075634452 pe 166
+CL id 41 tid 39 eid 41 etid 39 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 39
+
+E # 167 t 0.990075634452 m 6 ce 166 msg 39
+BS id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD m 6 pe 167
+SH sm 6 sg 2621440
+ES id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 0.990075634452 am 5 ag 1048576 at 0.990075634452 pe 167
+CL id 41 tid 39 eid 41 etid 39 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 39
+
+E # 168 t 0.990075634452 m 5 ce 167 msg 39
+- INFO:Master received message, the delivery is over.
+
+E # 169 t 1.04 m 5 ce 156 msg 38
+CM id 41 tid 41 eid 41 etid 41 c omnetpp::cMessage n selfMsg pe -1
+BS id 41 tid 41 eid 41 etid 41 c MyMessage n selfMsg sm 5 st 1.04 am 5 at 1.12 pe 169
+ES id 41 tid 41 eid 41 etid 41 c MyMessage n selfMsg sm 5 st 1.04 am 5 at 1.12 pe 169
+- INFO:Master send a new message to 2 Slaves
+CM id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD m 5 pe 169
+SH sm 5 sg 2621440
+ES id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.04 am 6 ag 1048576 at 1.04 pe 169
+CL id 43 tid 42 eid 43 etid 42 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 42
+CM id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD m 5 pe 169
+SH sm 5 sg 2621441
+ES id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.04 am 6 ag 1048577 at 1.04 pe 169
+CL id 44 tid 43 eid 44 etid 43 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 43
+
+E # 170 t 1.04 m 6 ce 169 msg 42
+- INFO:the message has timestamp, do nothing
+BS id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD m 6 pe 170
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.04 am 16 ag 1048579 at 1.04 pe 170
+CL id 44 tid 42 eid 44 etid 42 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 42
+
+E # 171 t 1.04 m 6 ce 169 msg 43
+- INFO:the message has timestamp, do nothing
+BS id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD m 6 pe 171
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.04 am 26 ag 1048579 at 1.04 pe 171
+CL id 44 tid 43 eid 44 etid 43 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 43
+
+E # 172 t 1.04 m 16 ce 170 msg 42
+BS id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD m 16 pe 172
+SH sm 16 sg 2621441
+ES id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.04 am 15 ag 1048577 at 1.04 pe 172
+CL id 44 tid 42 eid 44 etid 42 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 42
+
+E # 173 t 1.04 m 26 ce 171 msg 43
+BS id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD m 26 pe 173
+SH sm 26 sg 2621441
+ES id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.04 am 25 ag 1048577 at 1.04 pe 173
+CL id 44 tid 43 eid 44 etid 43 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 43
+
+E # 174 t 1.04 m 15 ce 172 msg 42
+- INFO:Message arrived, after Processing delay0.000213018175and Response delay0.03secs... send message back so Master
+BS id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD m 15 pe 174 sd 0.030213018175
+SH sm 15 sg 2621441
+ES id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.070213018175 am 16 ag 1048577 at 1.070213018175 pe 174
+CL id 44 tid 42 eid 44 etid 42 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 42
+
+E # 175 t 1.04 m 25 ce 173 msg 43
+- INFO:Message arrived, after Processing delay0.000295559141and Response delay0.01secs... send message back so Master
+BS id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD m 25 pe 175 sd 0.010295559141
+SH sm 25 sg 2621441
+ES id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.050295559141 am 26 ag 1048577 at 1.050295559141 pe 175
+CL id 44 tid 43 eid 44 etid 43 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 43
+
+E # 176 t 1.050295559141 m 26 ce 175 msg 43
+- INFO:the message has timestamp, do nothing
+BS id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD m 26 pe 176
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.050295559141 am 6 ag 1048579 at 1.050295559141 pe 176
+CL id 44 tid 43 eid 44 etid 43 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 43
+
+E # 177 t 1.050295559141 m 6 ce 176 msg 43
+BS id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD m 6 pe 177
+SH sm 6 sg 2621441
+ES id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.050295559141 am 5 ag 1048577 at 1.050295559141 pe 177
+CL id 44 tid 43 eid 44 etid 43 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 43
+
+E # 178 t 1.050295559141 m 5 ce 177 msg 43
+- INFO:Master received message, the delivery is over.
+
+E # 179 t 1.070213018175 m 16 ce 174 msg 42
+- INFO:the message has timestamp, do nothing
+BS id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD m 16 pe 179
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.070213018175 am 6 ag 1048578 at 1.070213018175 pe 179
+CL id 44 tid 42 eid 44 etid 42 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 42
+
+E # 180 t 1.070213018175 m 6 ce 179 msg 42
+BS id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD m 6 pe 180
+SH sm 6 sg 2621440
+ES id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.070213018175 am 5 ag 1048576 at 1.070213018175 pe 180
+CL id 44 tid 42 eid 44 etid 42 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 42
+
+E # 181 t 1.070213018175 m 5 ce 180 msg 42
+- INFO:Master received message, the delivery is over.
+
+E # 182 t 1.12 m 5 ce 169 msg 41
+CM id 44 tid 44 eid 44 etid 44 c omnetpp::cMessage n selfMsg pe -1
+BS id 44 tid 44 eid 44 etid 44 c MyMessage n selfMsg sm 5 st 1.12 am 5 at 1.2 pe 182
+ES id 44 tid 44 eid 44 etid 44 c MyMessage n selfMsg sm 5 st 1.12 am 5 at 1.2 pe 182
+- INFO:Master send a new message to 2 Slaves
+CM id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD m 5 pe 182
+SH sm 5 sg 2621440
+ES id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.12 am 6 ag 1048576 at 1.12 pe 182
+CL id 46 tid 45 eid 46 etid 45 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 45
+CM id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD m 5 pe 182
+SH sm 5 sg 2621441
+ES id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.12 am 6 ag 1048577 at 1.12 pe 182
+CL id 47 tid 46 eid 47 etid 46 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 46
+
+E # 183 t 1.12 m 6 ce 182 msg 45
+- INFO:the message has timestamp, do nothing
+BS id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD m 6 pe 183
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.12 am 16 ag 1048579 at 1.12 pe 183
+CL id 47 tid 45 eid 47 etid 45 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 45
+
+E # 184 t 1.12 m 6 ce 182 msg 46
+- INFO:the message has timestamp, do nothing
+BS id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD m 6 pe 184
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.12 am 26 ag 1048579 at 1.12 pe 184
+CL id 47 tid 46 eid 47 etid 46 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 46
+
+E # 185 t 1.12 m 16 ce 183 msg 45
+BS id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD m 16 pe 185
+SH sm 16 sg 2621441
+ES id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.12 am 15 ag 1048577 at 1.12 pe 185
+CL id 47 tid 45 eid 47 etid 45 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 45
+
+E # 186 t 1.12 m 26 ce 184 msg 46
+BS id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD m 26 pe 186
+SH sm 26 sg 2621441
+ES id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.12 am 25 ag 1048577 at 1.12 pe 186
+CL id 47 tid 46 eid 47 etid 46 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 46
+
+E # 187 t 1.12 m 15 ce 185 msg 45
+- INFO:Message arrived, after Processing delay0.000097925046and Response delay0.01secs... send message back so Master
+BS id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD m 15 pe 187 sd 0.010097925046
+SH sm 15 sg 2621441
+ES id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.130097925046 am 16 ag 1048577 at 1.130097925046 pe 187
+CL id 47 tid 45 eid 47 etid 45 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 45
+
+E # 188 t 1.12 m 25 ce 186 msg 46
+- INFO:Message arrived, after Processing delay0.000230530607and Response delay0.02secs... send message back so Master
+BS id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD m 25 pe 188 sd 0.020230530607
+SH sm 25 sg 2621441
+ES id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.140230530607 am 26 ag 1048577 at 1.140230530607 pe 188
+CL id 47 tid 46 eid 47 etid 46 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 46
+
+E # 189 t 1.130097925046 m 16 ce 187 msg 45
+- INFO:the message has timestamp, do nothing
+BS id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD m 16 pe 189
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.130097925046 am 6 ag 1048578 at 1.130097925046 pe 189
+CL id 47 tid 45 eid 47 etid 45 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 45
+
+E # 190 t 1.130097925046 m 6 ce 189 msg 45
+BS id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD m 6 pe 190
+SH sm 6 sg 2621440
+ES id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.130097925046 am 5 ag 1048576 at 1.130097925046 pe 190
+CL id 47 tid 45 eid 47 etid 45 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 45
+
+E # 191 t 1.130097925046 m 5 ce 190 msg 45
+- INFO:Master received message, the delivery is over.
+
+E # 192 t 1.140230530607 m 26 ce 188 msg 46
+- INFO:the message has timestamp, do nothing
+BS id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD m 26 pe 192
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.140230530607 am 6 ag 1048579 at 1.140230530607 pe 192
+CL id 47 tid 46 eid 47 etid 46 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 46
+
+E # 193 t 1.140230530607 m 6 ce 192 msg 46
+BS id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD m 6 pe 193
+SH sm 6 sg 2621441
+ES id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.140230530607 am 5 ag 1048577 at 1.140230530607 pe 193
+CL id 47 tid 46 eid 47 etid 46 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 46
+
+E # 194 t 1.140230530607 m 5 ce 193 msg 46
+- INFO:Master received message, the delivery is over.
+
+E # 195 t 1.2 m 5 ce 182 msg 44
+CM id 47 tid 47 eid 47 etid 47 c omnetpp::cMessage n selfMsg pe -1
+BS id 47 tid 47 eid 47 etid 47 c MyMessage n selfMsg sm 5 st 1.2 am 5 at 1.28 pe 195
+ES id 47 tid 47 eid 47 etid 47 c MyMessage n selfMsg sm 5 st 1.2 am 5 at 1.28 pe 195
+- INFO:Master send a new message to 2 Slaves
+CM id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD m 5 pe 195
+SH sm 5 sg 2621440
+ES id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.2 am 6 ag 1048576 at 1.2 pe 195
+CL id 49 tid 48 eid 49 etid 48 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 48
+CM id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD m 5 pe 195
+SH sm 5 sg 2621441
+ES id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.2 am 6 ag 1048577 at 1.2 pe 195
+CL id 50 tid 49 eid 50 etid 49 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 49
+
+E # 196 t 1.2 m 6 ce 195 msg 48
+- INFO:the message has timestamp, do nothing
+BS id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD m 6 pe 196
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.2 am 16 ag 1048579 at 1.2 pe 196
+CL id 50 tid 48 eid 50 etid 48 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 48
+
+E # 197 t 1.2 m 6 ce 195 msg 49
+- INFO:the message has timestamp, do nothing
+BS id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD m 6 pe 197
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.2 am 26 ag 1048579 at 1.2 pe 197
+CL id 50 tid 49 eid 50 etid 49 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 49
+
+E # 198 t 1.2 m 16 ce 196 msg 48
+BS id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD m 16 pe 198
+SH sm 16 sg 2621441
+ES id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.2 am 15 ag 1048577 at 1.2 pe 198
+CL id 50 tid 48 eid 50 etid 48 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 48
+
+E # 199 t 1.2 m 26 ce 197 msg 49
+BS id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD m 26 pe 199
+SH sm 26 sg 2621441
+ES id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.2 am 25 ag 1048577 at 1.2 pe 199
+CL id 50 tid 49 eid 50 etid 49 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 49
+
+E # 200 t 1.2 m 15 ce 198 msg 48
+- INFO:Message arrived, after Processing delay0.000185835129and Response delay0.03secs... send message back so Master
+BS id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD m 15 pe 200 sd 0.030185835129
+SH sm 15 sg 2621441
+ES id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.230185835129 am 16 ag 1048577 at 1.230185835129 pe 200
+CL id 50 tid 48 eid 50 etid 48 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 48
+
+E # 201 t 1.2 m 25 ce 199 msg 49
+- INFO:Message arrived, after Processing delay0.000223026208and Response delay0.01secs... send message back so Master
+BS id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD m 25 pe 201 sd 0.010223026208
+SH sm 25 sg 2621441
+ES id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.210223026208 am 26 ag 1048577 at 1.210223026208 pe 201
+CL id 50 tid 49 eid 50 etid 49 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 49
+
+E # 202 t 1.210223026208 m 26 ce 201 msg 49
+- INFO:the message has timestamp, do nothing
+BS id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD m 26 pe 202
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.210223026208 am 6 ag 1048579 at 1.210223026208 pe 202
+CL id 50 tid 49 eid 50 etid 49 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 49
+
+E # 203 t 1.210223026208 m 6 ce 202 msg 49
+BS id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD m 6 pe 203
+SH sm 6 sg 2621441
+ES id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.210223026208 am 5 ag 1048577 at 1.210223026208 pe 203
+CL id 50 tid 49 eid 50 etid 49 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 49
+
+E # 204 t 1.210223026208 m 5 ce 203 msg 49
+- INFO:Master received message, the delivery is over.
+
+E # 205 t 1.230185835129 m 16 ce 200 msg 48
+- INFO:the message has timestamp, do nothing
+BS id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD m 16 pe 205
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.230185835129 am 6 ag 1048578 at 1.230185835129 pe 205
+CL id 50 tid 48 eid 50 etid 48 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 48
+
+E # 206 t 1.230185835129 m 6 ce 205 msg 48
+BS id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD m 6 pe 206
+SH sm 6 sg 2621440
+ES id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.230185835129 am 5 ag 1048576 at 1.230185835129 pe 206
+CL id 50 tid 48 eid 50 etid 48 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 48
+
+E # 207 t 1.230185835129 m 5 ce 206 msg 48
+- INFO:Master received message, the delivery is over.
+
+E # 208 t 1.28 m 5 ce 195 msg 47
+CM id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n selfMsg pe -1
+BS id 50 tid 50 eid 50 etid 50 c MyMessage n selfMsg sm 5 st 1.28 am 5 at 1.36 pe 208
+ES id 50 tid 50 eid 50 etid 50 c MyMessage n selfMsg sm 5 st 1.28 am 5 at 1.36 pe 208
+- INFO:Master send a new message to 2 Slaves
+CM id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD m 5 pe 208
+SH sm 5 sg 2621440
+ES id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.28 am 6 ag 1048576 at 1.28 pe 208
+CL id 52 tid 51 eid 52 etid 51 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 51
+CM id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD m 5 pe 208
+SH sm 5 sg 2621441
+ES id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.28 am 6 ag 1048577 at 1.28 pe 208
+CL id 53 tid 52 eid 53 etid 52 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 52
+
+E # 209 t 1.28 m 6 ce 208 msg 51
+- INFO:the message has timestamp, do nothing
+BS id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD m 6 pe 209
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.28 am 16 ag 1048579 at 1.28 pe 209
+CL id 53 tid 51 eid 53 etid 51 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 51
+
+E # 210 t 1.28 m 6 ce 208 msg 52
+- INFO:the message has timestamp, do nothing
+BS id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD m 6 pe 210
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.28 am 26 ag 1048579 at 1.28 pe 210
+CL id 53 tid 52 eid 53 etid 52 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 52
+
+E # 211 t 1.28 m 16 ce 209 msg 51
+BS id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD m 16 pe 211
+SH sm 16 sg 2621441
+ES id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.28 am 15 ag 1048577 at 1.28 pe 211
+CL id 53 tid 51 eid 53 etid 51 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 51
+
+E # 212 t 1.28 m 26 ce 210 msg 52
+BS id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD m 26 pe 212
+SH sm 26 sg 2621441
+ES id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.28 am 25 ag 1048577 at 1.28 pe 212
+CL id 53 tid 52 eid 53 etid 52 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 52
+
+E # 213 t 1.28 m 15 ce 211 msg 51
+- INFO:Message arrived, after Processing delay0.000285599504and Response delay0.02secs... send message back so Master
+BS id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD m 15 pe 213 sd 0.020285599504
+SH sm 15 sg 2621441
+ES id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.300285599504 am 16 ag 1048577 at 1.300285599504 pe 213
+CL id 53 tid 51 eid 53 etid 51 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 51
+
+E # 214 t 1.28 m 25 ce 212 msg 52
+- INFO:Message arrived, after Processing delay0.000191251214and Response delay0.01secs... send message back so Master
+BS id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD m 25 pe 214 sd 0.010191251214
+SH sm 25 sg 2621441
+ES id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.290191251214 am 26 ag 1048577 at 1.290191251214 pe 214
+CL id 53 tid 52 eid 53 etid 52 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 52
+
+E # 215 t 1.290191251214 m 26 ce 214 msg 52
+- INFO:the message has timestamp, do nothing
+BS id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD m 26 pe 215
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.290191251214 am 6 ag 1048579 at 1.290191251214 pe 215
+CL id 53 tid 52 eid 53 etid 52 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 52
+
+E # 216 t 1.290191251214 m 6 ce 215 msg 52
+BS id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD m 6 pe 216
+SH sm 6 sg 2621441
+ES id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.290191251214 am 5 ag 1048577 at 1.290191251214 pe 216
+CL id 53 tid 52 eid 53 etid 52 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 52
+
+E # 217 t 1.290191251214 m 5 ce 216 msg 52
+- INFO:Master received message, the delivery is over.
+
+E # 218 t 1.300285599504 m 16 ce 213 msg 51
+- INFO:the message has timestamp, do nothing
+BS id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD m 16 pe 218
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.300285599504 am 6 ag 1048578 at 1.300285599504 pe 218
+CL id 53 tid 51 eid 53 etid 51 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 51
+
+E # 219 t 1.300285599504 m 6 ce 218 msg 51
+BS id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD m 6 pe 219
+SH sm 6 sg 2621440
+ES id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.300285599504 am 5 ag 1048576 at 1.300285599504 pe 219
+CL id 53 tid 51 eid 53 etid 51 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 51
+
+E # 220 t 1.300285599504 m 5 ce 219 msg 51
+- INFO:Master received message, the delivery is over.
+
+E # 221 t 1.36 m 5 ce 208 msg 50
+CM id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n selfMsg pe -1
+BS id 53 tid 53 eid 53 etid 53 c MyMessage n selfMsg sm 5 st 1.36 am 5 at 1.44 pe 221
+ES id 53 tid 53 eid 53 etid 53 c MyMessage n selfMsg sm 5 st 1.36 am 5 at 1.44 pe 221
+- INFO:Master send a new message to 2 Slaves
+CM id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD m 5 pe 221
+SH sm 5 sg 2621440
+ES id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.36 am 6 ag 1048576 at 1.36 pe 221
+CL id 55 tid 54 eid 55 etid 54 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 54
+CM id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD m 5 pe 221
+SH sm 5 sg 2621441
+ES id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.36 am 6 ag 1048577 at 1.36 pe 221
+CL id 56 tid 55 eid 56 etid 55 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 55
+
+E # 222 t 1.36 m 6 ce 221 msg 54
+- INFO:the message has timestamp, do nothing
+BS id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD m 6 pe 222
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.36 am 16 ag 1048579 at 1.36 pe 222
+CL id 56 tid 54 eid 56 etid 54 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 54
+
+E # 223 t 1.36 m 6 ce 221 msg 55
+- INFO:the message has timestamp, do nothing
+BS id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD m 6 pe 223
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.36 am 26 ag 1048579 at 1.36 pe 223
+CL id 56 tid 55 eid 56 etid 55 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 55
+
+E # 224 t 1.36 m 16 ce 222 msg 54
+BS id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD m 16 pe 224
+SH sm 16 sg 2621441
+ES id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.36 am 15 ag 1048577 at 1.36 pe 224
+CL id 56 tid 54 eid 56 etid 54 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 54
+
+E # 225 t 1.36 m 26 ce 223 msg 55
+BS id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD m 26 pe 225
+SH sm 26 sg 2621441
+ES id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.36 am 25 ag 1048577 at 1.36 pe 225
+CL id 56 tid 55 eid 56 etid 55 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 55
+
+E # 226 t 1.36 m 15 ce 224 msg 54
+- INFO:Message arrived, after Processing delay0.000281733476and Response delay0.02secs... send message back so Master
+BS id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD m 15 pe 226 sd 0.020281733476
+SH sm 15 sg 2621441
+ES id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.380281733476 am 16 ag 1048577 at 1.380281733476 pe 226
+CL id 56 tid 54 eid 56 etid 54 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 54
+
+E # 227 t 1.36 m 25 ce 225 msg 55
+- INFO:Message arrived, after Processing delay0.000223813435and Response delay0.01secs... send message back so Master
+BS id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD m 25 pe 227 sd 0.010223813435
+SH sm 25 sg 2621441
+ES id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.370223813435 am 26 ag 1048577 at 1.370223813435 pe 227
+CL id 56 tid 55 eid 56 etid 55 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 55
+
+E # 228 t 1.370223813435 m 26 ce 227 msg 55
+- INFO:the message has timestamp, do nothing
+BS id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD m 26 pe 228
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.370223813435 am 6 ag 1048579 at 1.370223813435 pe 228
+CL id 56 tid 55 eid 56 etid 55 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 55
+
+E # 229 t 1.370223813435 m 6 ce 228 msg 55
+BS id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD m 6 pe 229
+SH sm 6 sg 2621441
+ES id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.370223813435 am 5 ag 1048577 at 1.370223813435 pe 229
+CL id 56 tid 55 eid 56 etid 55 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 55
+
+E # 230 t 1.370223813435 m 5 ce 229 msg 55
+- INFO:Master received message, the delivery is over.
+
+E # 231 t 1.380281733476 m 16 ce 226 msg 54
+- INFO:the message has timestamp, do nothing
+BS id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD m 16 pe 231
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.380281733476 am 6 ag 1048578 at 1.380281733476 pe 231
+CL id 56 tid 54 eid 56 etid 54 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 54
+
+E # 232 t 1.380281733476 m 6 ce 231 msg 54
+BS id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD m 6 pe 232
+SH sm 6 sg 2621440
+ES id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.380281733476 am 5 ag 1048576 at 1.380281733476 pe 232
+CL id 56 tid 54 eid 56 etid 54 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 54
+
+E # 233 t 1.380281733476 m 5 ce 232 msg 54
+- INFO:Master received message, the delivery is over.
+
+E # 234 t 1.44 m 5 ce 221 msg 53
+CM id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n selfMsg pe -1
+BS id 56 tid 56 eid 56 etid 56 c MyMessage n selfMsg sm 5 st 1.44 am 5 at 1.52 pe 234
+ES id 56 tid 56 eid 56 etid 56 c MyMessage n selfMsg sm 5 st 1.44 am 5 at 1.52 pe 234
+- INFO:Master send a new message to 2 Slaves
+CM id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD m 5 pe 234
+SH sm 5 sg 2621440
+ES id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.44 am 6 ag 1048576 at 1.44 pe 234
+CL id 58 tid 57 eid 58 etid 57 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 57
+CM id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD m 5 pe 234
+SH sm 5 sg 2621441
+ES id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.44 am 6 ag 1048577 at 1.44 pe 234
+CL id 59 tid 58 eid 59 etid 58 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 58
+
+E # 235 t 1.44 m 6 ce 234 msg 57
+- INFO:the message has timestamp, do nothing
+BS id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD m 6 pe 235
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.44 am 16 ag 1048579 at 1.44 pe 235
+CL id 59 tid 57 eid 59 etid 57 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 57
+
+E # 236 t 1.44 m 6 ce 234 msg 58
+- INFO:the message has timestamp, do nothing
+BS id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD m 6 pe 236
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.44 am 26 ag 1048579 at 1.44 pe 236
+CL id 59 tid 58 eid 59 etid 58 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 58
+
+E # 237 t 1.44 m 16 ce 235 msg 57
+BS id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD m 16 pe 237
+SH sm 16 sg 2621441
+ES id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.44 am 15 ag 1048577 at 1.44 pe 237
+CL id 59 tid 57 eid 59 etid 57 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 57
+
+E # 238 t 1.44 m 26 ce 236 msg 58
+BS id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD m 26 pe 238
+SH sm 26 sg 2621441
+ES id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.44 am 25 ag 1048577 at 1.44 pe 238
+CL id 59 tid 58 eid 59 etid 58 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 58
+
+E # 239 t 1.44 m 15 ce 237 msg 57
+- INFO:Message arrived, after Processing delay0.000095233511and Response delay0.02secs... send message back so Master
+BS id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD m 15 pe 239 sd 0.020095233511
+SH sm 15 sg 2621441
+ES id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.460095233511 am 16 ag 1048577 at 1.460095233511 pe 239
+CL id 59 tid 57 eid 59 etid 57 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 57
+
+E # 240 t 1.44 m 25 ce 238 msg 58
+- INFO:Message arrived, after Processing delay0.000396370158and Response delay0.03secs... send message back so Master
+BS id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD m 25 pe 240 sd 0.030396370158
+SH sm 25 sg 2621441
+ES id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.470396370158 am 26 ag 1048577 at 1.470396370158 pe 240
+CL id 59 tid 58 eid 59 etid 58 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 58
+
+E # 241 t 1.460095233511 m 16 ce 239 msg 57
+- INFO:the message has timestamp, do nothing
+BS id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD m 16 pe 241
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.460095233511 am 6 ag 1048578 at 1.460095233511 pe 241
+CL id 59 tid 57 eid 59 etid 57 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 57
+
+E # 242 t 1.460095233511 m 6 ce 241 msg 57
+BS id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD m 6 pe 242
+SH sm 6 sg 2621440
+ES id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.460095233511 am 5 ag 1048576 at 1.460095233511 pe 242
+CL id 59 tid 57 eid 59 etid 57 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 57
+
+E # 243 t 1.460095233511 m 5 ce 242 msg 57
+- INFO:Master received message, the delivery is over.
+
+E # 244 t 1.470396370158 m 26 ce 240 msg 58
+- INFO:the message has timestamp, do nothing
+BS id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD m 26 pe 244
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.470396370158 am 6 ag 1048579 at 1.470396370158 pe 244
+CL id 59 tid 58 eid 59 etid 58 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 58
+
+E # 245 t 1.470396370158 m 6 ce 244 msg 58
+BS id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD m 6 pe 245
+SH sm 6 sg 2621441
+ES id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.470396370158 am 5 ag 1048577 at 1.470396370158 pe 245
+CL id 59 tid 58 eid 59 etid 58 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 58
+
+E # 246 t 1.470396370158 m 5 ce 245 msg 58
+- INFO:Master received message, the delivery is over.
+
+E # 247 t 1.52 m 5 ce 234 msg 56
+CM id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n selfMsg pe -1
+BS id 59 tid 59 eid 59 etid 59 c MyMessage n selfMsg sm 5 st 1.52 am 5 at 1.6 pe 247
+ES id 59 tid 59 eid 59 etid 59 c MyMessage n selfMsg sm 5 st 1.52 am 5 at 1.6 pe 247
+- INFO:Master send a new message to 2 Slaves
+CM id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD m 5 pe 247
+SH sm 5 sg 2621440
+ES id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.52 am 6 ag 1048576 at 1.52 pe 247
+CL id 61 tid 60 eid 61 etid 60 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 60
+CM id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD m 5 pe 247
+SH sm 5 sg 2621441
+ES id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.52 am 6 ag 1048577 at 1.52 pe 247
+CL id 62 tid 61 eid 62 etid 61 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 61
+
+E # 248 t 1.52 m 6 ce 247 msg 60
+- INFO:the message has timestamp, do nothing
+BS id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD m 6 pe 248
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.52 am 16 ag 1048579 at 1.52 pe 248
+CL id 62 tid 60 eid 62 etid 60 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 60
+
+E # 249 t 1.52 m 6 ce 247 msg 61
+- INFO:the message has timestamp, do nothing
+BS id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD m 6 pe 249
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.52 am 26 ag 1048579 at 1.52 pe 249
+CL id 62 tid 61 eid 62 etid 61 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 61
+
+E # 250 t 1.52 m 16 ce 248 msg 60
+BS id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD m 16 pe 250
+SH sm 16 sg 2621441
+ES id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.52 am 15 ag 1048577 at 1.52 pe 250
+CL id 62 tid 60 eid 62 etid 60 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 60
+
+E # 251 t 1.52 m 26 ce 249 msg 61
+BS id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD m 26 pe 251
+SH sm 26 sg 2621441
+ES id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.52 am 25 ag 1048577 at 1.52 pe 251
+CL id 62 tid 61 eid 62 etid 61 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 61
+
+E # 252 t 1.52 m 15 ce 250 msg 60
+- INFO:Message arrived, after Processing delay0.000056085003and Response delay0.01secs... send message back so Master
+BS id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD m 15 pe 252 sd 0.010056085003
+SH sm 15 sg 2621441
+ES id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.530056085003 am 16 ag 1048577 at 1.530056085003 pe 252
+CL id 62 tid 60 eid 62 etid 60 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 60
+
+E # 253 t 1.52 m 25 ce 251 msg 61
+- INFO:Message arrived, after Processing delay0.000128439152and Response delay0.03secs... send message back so Master
+BS id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD m 25 pe 253 sd 0.030128439152
+SH sm 25 sg 2621441
+ES id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.550128439152 am 26 ag 1048577 at 1.550128439152 pe 253
+CL id 62 tid 61 eid 62 etid 61 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 61
+
+E # 254 t 1.530056085003 m 16 ce 252 msg 60
+- INFO:the message has timestamp, do nothing
+BS id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD m 16 pe 254
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.530056085003 am 6 ag 1048578 at 1.530056085003 pe 254
+CL id 62 tid 60 eid 62 etid 60 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 60
+
+E # 255 t 1.530056085003 m 6 ce 254 msg 60
+BS id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD m 6 pe 255
+SH sm 6 sg 2621440
+ES id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.530056085003 am 5 ag 1048576 at 1.530056085003 pe 255
+CL id 62 tid 60 eid 62 etid 60 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 60
+
+E # 256 t 1.530056085003 m 5 ce 255 msg 60
+- INFO:Master received message, the delivery is over.
+
+E # 257 t 1.550128439152 m 26 ce 253 msg 61
+- INFO:the message has timestamp, do nothing
+BS id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD m 26 pe 257
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.550128439152 am 6 ag 1048579 at 1.550128439152 pe 257
+CL id 62 tid 61 eid 62 etid 61 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 61
+
+E # 258 t 1.550128439152 m 6 ce 257 msg 61
+BS id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD m 6 pe 258
+SH sm 6 sg 2621441
+ES id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.550128439152 am 5 ag 1048577 at 1.550128439152 pe 258
+CL id 62 tid 61 eid 62 etid 61 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 61
+
+E # 259 t 1.550128439152 m 5 ce 258 msg 61
+- INFO:Master received message, the delivery is over.
+
+E # 260 t 1.6 m 5 ce 247 msg 59
+CM id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n selfMsg pe -1
+BS id 62 tid 62 eid 62 etid 62 c MyMessage n selfMsg sm 5 st 1.6 am 5 at 1.68 pe 260
+ES id 62 tid 62 eid 62 etid 62 c MyMessage n selfMsg sm 5 st 1.6 am 5 at 1.68 pe 260
+- INFO:Master send a new message to 2 Slaves
+CM id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD m 5 pe 260
+SH sm 5 sg 2621440
+ES id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.6 am 6 ag 1048576 at 1.6 pe 260
+CL id 64 tid 63 eid 64 etid 63 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 63
+CM id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD m 5 pe 260
+SH sm 5 sg 2621441
+ES id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.6 am 6 ag 1048577 at 1.6 pe 260
+CL id 65 tid 64 eid 65 etid 64 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 64
+
+E # 261 t 1.6 m 6 ce 260 msg 63
+- INFO:the message has timestamp, do nothing
+BS id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD m 6 pe 261
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.6 am 16 ag 1048579 at 1.6 pe 261
+CL id 65 tid 63 eid 65 etid 63 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 63
+
+E # 262 t 1.6 m 6 ce 260 msg 64
+- INFO:the message has timestamp, do nothing
+BS id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD m 6 pe 262
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.6 am 26 ag 1048579 at 1.6 pe 262
+CL id 65 tid 64 eid 65 etid 64 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 64
+
+E # 263 t 1.6 m 16 ce 261 msg 63
+BS id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD m 16 pe 263
+SH sm 16 sg 2621441
+ES id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.6 am 15 ag 1048577 at 1.6 pe 263
+CL id 65 tid 63 eid 65 etid 63 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 63
+
+E # 264 t 1.6 m 26 ce 262 msg 64
+BS id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD m 26 pe 264
+SH sm 26 sg 2621441
+ES id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.6 am 25 ag 1048577 at 1.6 pe 264
+CL id 65 tid 64 eid 65 etid 64 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 64
+
+E # 265 t 1.6 m 15 ce 263 msg 63
+- INFO:Message arrived, after Processing delay0.000287642419and Response delay0.01secs... send message back so Master
+BS id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD m 15 pe 265 sd 0.010287642419
+SH sm 15 sg 2621441
+ES id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.610287642419 am 16 ag 1048577 at 1.610287642419 pe 265
+CL id 65 tid 63 eid 65 etid 63 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 63
+
+E # 266 t 1.6 m 25 ce 264 msg 64
+- INFO:Message arrived, after Processing delay0.000325538744and Response delay0.01secs... send message back so Master
+BS id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD m 25 pe 266 sd 0.010325538744
+SH sm 25 sg 2621441
+ES id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.610325538744 am 26 ag 1048577 at 1.610325538744 pe 266
+CL id 65 tid 64 eid 65 etid 64 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 64
+
+E # 267 t 1.610287642419 m 16 ce 265 msg 63
+- INFO:the message has timestamp, do nothing
+BS id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD m 16 pe 267
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.610287642419 am 6 ag 1048578 at 1.610287642419 pe 267
+CL id 65 tid 63 eid 65 etid 63 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 63
+
+E # 268 t 1.610287642419 m 6 ce 267 msg 63
+BS id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD m 6 pe 268
+SH sm 6 sg 2621440
+ES id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.610287642419 am 5 ag 1048576 at 1.610287642419 pe 268
+CL id 65 tid 63 eid 65 etid 63 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 63
+
+E # 269 t 1.610287642419 m 5 ce 268 msg 63
+- INFO:Master received message, the delivery is over.
+
+E # 270 t 1.610325538744 m 26 ce 266 msg 64
+- INFO:the message has timestamp, do nothing
+BS id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD m 26 pe 270
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.610325538744 am 6 ag 1048579 at 1.610325538744 pe 270
+CL id 65 tid 64 eid 65 etid 64 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 64
+
+E # 271 t 1.610325538744 m 6 ce 270 msg 64
+BS id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD m 6 pe 271
+SH sm 6 sg 2621441
+ES id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.610325538744 am 5 ag 1048577 at 1.610325538744 pe 271
+CL id 65 tid 64 eid 65 etid 64 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 64
+
+E # 272 t 1.610325538744 m 5 ce 271 msg 64
+- INFO:Master received message, the delivery is over.
+
+E # 273 t 1.68 m 5 ce 260 msg 62
+CM id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n selfMsg pe -1
+BS id 65 tid 65 eid 65 etid 65 c MyMessage n selfMsg sm 5 st 1.68 am 5 at 1.76 pe 273
+ES id 65 tid 65 eid 65 etid 65 c MyMessage n selfMsg sm 5 st 1.68 am 5 at 1.76 pe 273
+- INFO:Master send a new message to 2 Slaves
+CM id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD m 5 pe 273
+SH sm 5 sg 2621440
+ES id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.68 am 6 ag 1048576 at 1.68 pe 273
+CL id 67 tid 66 eid 67 etid 66 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 66
+CM id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD m 5 pe 273
+SH sm 5 sg 2621441
+ES id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.68 am 6 ag 1048577 at 1.68 pe 273
+CL id 68 tid 67 eid 68 etid 67 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 67
+
+E # 274 t 1.68 m 6 ce 273 msg 66
+- INFO:the message has timestamp, do nothing
+BS id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD m 6 pe 274
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.68 am 16 ag 1048579 at 1.68 pe 274
+CL id 68 tid 66 eid 68 etid 66 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 66
+
+E # 275 t 1.68 m 6 ce 273 msg 67
+- INFO:the message has timestamp, do nothing
+BS id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD m 6 pe 275
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.68 am 26 ag 1048579 at 1.68 pe 275
+CL id 68 tid 67 eid 68 etid 67 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 67
+
+E # 276 t 1.68 m 16 ce 274 msg 66
+BS id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD m 16 pe 276
+SH sm 16 sg 2621441
+ES id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.68 am 15 ag 1048577 at 1.68 pe 276
+CL id 68 tid 66 eid 68 etid 66 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 66
+
+E # 277 t 1.68 m 26 ce 275 msg 67
+BS id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD m 26 pe 277
+SH sm 26 sg 2621441
+ES id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.68 am 25 ag 1048577 at 1.68 pe 277
+CL id 68 tid 67 eid 68 etid 67 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 67
+
+E # 278 t 1.68 m 15 ce 276 msg 66
+- INFO:Message arrived, after Processing delay0.000234614101and Response delay0.02secs... send message back so Master
+BS id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD m 15 pe 278 sd 0.020234614101
+SH sm 15 sg 2621441
+ES id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.700234614101 am 16 ag 1048577 at 1.700234614101 pe 278
+CL id 68 tid 66 eid 68 etid 66 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 66
+
+E # 279 t 1.68 m 25 ce 277 msg 67
+- INFO:Message arrived, after Processing delay0.000115243562and Response delay0.03secs... send message back so Master
+BS id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD m 25 pe 279 sd 0.030115243562
+SH sm 25 sg 2621441
+ES id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.710115243562 am 26 ag 1048577 at 1.710115243562 pe 279
+CL id 68 tid 67 eid 68 etid 67 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 67
+
+E # 280 t 1.700234614101 m 16 ce 278 msg 66
+- INFO:the message has timestamp, do nothing
+BS id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD m 16 pe 280
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.700234614101 am 6 ag 1048578 at 1.700234614101 pe 280
+CL id 68 tid 66 eid 68 etid 66 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 66
+
+E # 281 t 1.700234614101 m 6 ce 280 msg 66
+BS id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD m 6 pe 281
+SH sm 6 sg 2621440
+ES id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.700234614101 am 5 ag 1048576 at 1.700234614101 pe 281
+CL id 68 tid 66 eid 68 etid 66 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 66
+
+E # 282 t 1.700234614101 m 5 ce 281 msg 66
+- INFO:Master received message, the delivery is over.
+
+E # 283 t 1.710115243562 m 26 ce 279 msg 67
+- INFO:the message has timestamp, do nothing
+BS id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD m 26 pe 283
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.710115243562 am 6 ag 1048579 at 1.710115243562 pe 283
+CL id 68 tid 67 eid 68 etid 67 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 67
+
+E # 284 t 1.710115243562 m 6 ce 283 msg 67
+BS id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD m 6 pe 284
+SH sm 6 sg 2621441
+ES id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.710115243562 am 5 ag 1048577 at 1.710115243562 pe 284
+CL id 68 tid 67 eid 68 etid 67 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 67
+
+E # 285 t 1.710115243562 m 5 ce 284 msg 67
+- INFO:Master received message, the delivery is over.
+
+E # 286 t 1.76 m 5 ce 273 msg 65
+CM id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n selfMsg pe -1
+BS id 68 tid 68 eid 68 etid 68 c MyMessage n selfMsg sm 5 st 1.76 am 5 at 1.84 pe 286
+ES id 68 tid 68 eid 68 etid 68 c MyMessage n selfMsg sm 5 st 1.76 am 5 at 1.84 pe 286
+- INFO:Master send a new message to 2 Slaves
+CM id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD m 5 pe 286
+SH sm 5 sg 2621440
+ES id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.76 am 6 ag 1048576 at 1.76 pe 286
+CL id 70 tid 69 eid 70 etid 69 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 69
+CM id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD m 5 pe 286
+SH sm 5 sg 2621441
+ES id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.76 am 6 ag 1048577 at 1.76 pe 286
+CL id 71 tid 70 eid 71 etid 70 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 70
+
+E # 287 t 1.76 m 6 ce 286 msg 69
+- INFO:the message has timestamp, do nothing
+BS id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD m 6 pe 287
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.76 am 16 ag 1048579 at 1.76 pe 287
+CL id 71 tid 69 eid 71 etid 69 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 69
+
+E # 288 t 1.76 m 6 ce 286 msg 70
+- INFO:the message has timestamp, do nothing
+BS id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD m 6 pe 288
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.76 am 26 ag 1048579 at 1.76 pe 288
+CL id 71 tid 70 eid 71 etid 70 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 70
+
+E # 289 t 1.76 m 16 ce 287 msg 69
+BS id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD m 16 pe 289
+SH sm 16 sg 2621441
+ES id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.76 am 15 ag 1048577 at 1.76 pe 289
+CL id 71 tid 69 eid 71 etid 69 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 69
+
+E # 290 t 1.76 m 26 ce 288 msg 70
+BS id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD m 26 pe 290
+SH sm 26 sg 2621441
+ES id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.76 am 25 ag 1048577 at 1.76 pe 290
+CL id 71 tid 70 eid 71 etid 70 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 70
+
+E # 291 t 1.76 m 15 ce 289 msg 69
+- INFO:Message arrived, after Processing delay0.000271051424and Response delay0.02secs... send message back so Master
+BS id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD m 15 pe 291 sd 0.020271051424
+SH sm 15 sg 2621441
+ES id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.780271051424 am 16 ag 1048577 at 1.780271051424 pe 291
+CL id 71 tid 69 eid 71 etid 69 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 69
+
+E # 292 t 1.76 m 25 ce 290 msg 70
+- INFO:Message arrived, after Processing delay0.000156806168and Response delay0.02secs... send message back so Master
+BS id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD m 25 pe 292 sd 0.020156806168
+SH sm 25 sg 2621441
+ES id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.780156806168 am 26 ag 1048577 at 1.780156806168 pe 292
+CL id 71 tid 70 eid 71 etid 70 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 70
+
+E # 293 t 1.780156806168 m 26 ce 292 msg 70
+- INFO:the message has timestamp, do nothing
+BS id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD m 26 pe 293
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.780156806168 am 6 ag 1048579 at 1.780156806168 pe 293
+CL id 71 tid 70 eid 71 etid 70 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 70
+
+E # 294 t 1.780156806168 m 6 ce 293 msg 70
+BS id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD m 6 pe 294
+SH sm 6 sg 2621441
+ES id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.780156806168 am 5 ag 1048577 at 1.780156806168 pe 294
+CL id 71 tid 70 eid 71 etid 70 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 70
+
+E # 295 t 1.780156806168 m 5 ce 294 msg 70
+- INFO:Master received message, the delivery is over.
+
+E # 296 t 1.780271051424 m 16 ce 291 msg 69
+- INFO:the message has timestamp, do nothing
+BS id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD m 16 pe 296
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.780271051424 am 6 ag 1048578 at 1.780271051424 pe 296
+CL id 71 tid 69 eid 71 etid 69 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 69
+
+E # 297 t 1.780271051424 m 6 ce 296 msg 69
+BS id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD m 6 pe 297
+SH sm 6 sg 2621440
+ES id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.780271051424 am 5 ag 1048576 at 1.780271051424 pe 297
+CL id 71 tid 69 eid 71 etid 69 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 69
+
+E # 298 t 1.780271051424 m 5 ce 297 msg 69
+- INFO:Master received message, the delivery is over.
+
+E # 299 t 1.84 m 5 ce 286 msg 68
+CM id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n selfMsg pe -1
+BS id 71 tid 71 eid 71 etid 71 c MyMessage n selfMsg sm 5 st 1.84 am 5 at 1.92 pe 299
+ES id 71 tid 71 eid 71 etid 71 c MyMessage n selfMsg sm 5 st 1.84 am 5 at 1.92 pe 299
+- INFO:Master send a new message to 2 Slaves
+CM id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD m 5 pe 299
+SH sm 5 sg 2621440
+ES id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.84 am 6 ag 1048576 at 1.84 pe 299
+CL id 73 tid 72 eid 73 etid 72 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 72
+CM id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD m 5 pe 299
+SH sm 5 sg 2621441
+ES id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.84 am 6 ag 1048577 at 1.84 pe 299
+CL id 74 tid 73 eid 74 etid 73 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 73
+
+E # 300 t 1.84 m 6 ce 299 msg 72
+- INFO:the message has timestamp, do nothing
+BS id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD m 6 pe 300
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.84 am 16 ag 1048579 at 1.84 pe 300
+CL id 74 tid 72 eid 74 etid 72 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 72
+
+E # 301 t 1.84 m 6 ce 299 msg 73
+- INFO:the message has timestamp, do nothing
+BS id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD m 6 pe 301
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.84 am 26 ag 1048579 at 1.84 pe 301
+CL id 74 tid 73 eid 74 etid 73 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 73
+
+E # 302 t 1.84 m 16 ce 300 msg 72
+BS id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD m 16 pe 302
+SH sm 16 sg 2621441
+ES id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.84 am 15 ag 1048577 at 1.84 pe 302
+CL id 74 tid 72 eid 74 etid 72 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 72
+
+E # 303 t 1.84 m 26 ce 301 msg 73
+BS id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD m 26 pe 303
+SH sm 26 sg 2621441
+ES id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.84 am 25 ag 1048577 at 1.84 pe 303
+CL id 74 tid 73 eid 74 etid 73 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 73
+
+E # 304 t 1.84 m 15 ce 302 msg 72
+- INFO:Message arrived, after Processing delay0.000200226511and Response delay0.02secs... send message back so Master
+BS id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD m 15 pe 304 sd 0.020200226511
+SH sm 15 sg 2621441
+ES id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.860200226511 am 16 ag 1048577 at 1.860200226511 pe 304
+CL id 74 tid 72 eid 74 etid 72 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 72
+
+E # 305 t 1.84 m 25 ce 303 msg 73
+- INFO:Message arrived, after Processing delay0.000132169883and Response delay0.01secs... send message back so Master
+BS id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD m 25 pe 305 sd 0.010132169883
+SH sm 25 sg 2621441
+ES id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.850132169883 am 26 ag 1048577 at 1.850132169883 pe 305
+CL id 74 tid 73 eid 74 etid 73 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 73
+
+E # 306 t 1.850132169883 m 26 ce 305 msg 73
+- INFO:the message has timestamp, do nothing
+BS id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD m 26 pe 306
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.850132169883 am 6 ag 1048579 at 1.850132169883 pe 306
+CL id 74 tid 73 eid 74 etid 73 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 73
+
+E # 307 t 1.850132169883 m 6 ce 306 msg 73
+BS id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD m 6 pe 307
+SH sm 6 sg 2621441
+ES id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.850132169883 am 5 ag 1048577 at 1.850132169883 pe 307
+CL id 74 tid 73 eid 74 etid 73 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 73
+
+E # 308 t 1.850132169883 m 5 ce 307 msg 73
+- INFO:Master received message, the delivery is over.
+
+E # 309 t 1.860200226511 m 16 ce 304 msg 72
+- INFO:the message has timestamp, do nothing
+BS id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD m 16 pe 309
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.860200226511 am 6 ag 1048578 at 1.860200226511 pe 309
+CL id 74 tid 72 eid 74 etid 72 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 72
+
+E # 310 t 1.860200226511 m 6 ce 309 msg 72
+BS id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD m 6 pe 310
+SH sm 6 sg 2621440
+ES id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.860200226511 am 5 ag 1048576 at 1.860200226511 pe 310
+CL id 74 tid 72 eid 74 etid 72 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 72
+
+E # 311 t 1.860200226511 m 5 ce 310 msg 72
+- INFO:Master received message, the delivery is over.
+
+E # 312 t 1.92 m 5 ce 299 msg 71
+CM id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n selfMsg pe -1
+BS id 74 tid 74 eid 74 etid 74 c MyMessage n selfMsg sm 5 st 1.92 am 5 at 2 pe 312
+ES id 74 tid 74 eid 74 etid 74 c MyMessage n selfMsg sm 5 st 1.92 am 5 at 2 pe 312
+- INFO:Master send a new message to 2 Slaves
+CM id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD m 5 pe 312
+SH sm 5 sg 2621440
+ES id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 1.92 am 6 ag 1048576 at 1.92 pe 312
+CL id 76 tid 75 eid 76 etid 75 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 75
+CM id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD m 5 pe 312
+SH sm 5 sg 2621441
+ES id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 1.92 am 6 ag 1048577 at 1.92 pe 312
+CL id 77 tid 76 eid 77 etid 76 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 76
+
+E # 313 t 1.92 m 6 ce 312 msg 75
+- INFO:the message has timestamp, do nothing
+BS id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD m 6 pe 313
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 1.92 am 16 ag 1048579 at 1.92 pe 313
+CL id 77 tid 75 eid 77 etid 75 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 75
+
+E # 314 t 1.92 m 6 ce 312 msg 76
+- INFO:the message has timestamp, do nothing
+BS id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD m 6 pe 314
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 1.92 am 26 ag 1048579 at 1.92 pe 314
+CL id 77 tid 76 eid 77 etid 76 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 76
+
+E # 315 t 1.92 m 16 ce 313 msg 75
+BS id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD m 16 pe 315
+SH sm 16 sg 2621441
+ES id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 1.92 am 15 ag 1048577 at 1.92 pe 315
+CL id 77 tid 75 eid 77 etid 75 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 75
+
+E # 316 t 1.92 m 26 ce 314 msg 76
+BS id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD m 26 pe 316
+SH sm 26 sg 2621441
+ES id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 1.92 am 25 ag 1048577 at 1.92 pe 316
+CL id 77 tid 76 eid 77 etid 76 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 76
+
+E # 317 t 1.92 m 15 ce 315 msg 75
+- INFO:Message arrived, after Processing delay0.000156805064and Response delay0.03secs... send message back so Master
+BS id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD m 15 pe 317 sd 0.030156805064
+SH sm 15 sg 2621441
+ES id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 1.950156805064 am 16 ag 1048577 at 1.950156805064 pe 317
+CL id 77 tid 75 eid 77 etid 75 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 75
+
+E # 318 t 1.92 m 25 ce 316 msg 76
+- INFO:Message arrived, after Processing delay0.000326186746and Response delay0.02secs... send message back so Master
+BS id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD m 25 pe 318 sd 0.020326186746
+SH sm 25 sg 2621441
+ES id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 1.940326186746 am 26 ag 1048577 at 1.940326186746 pe 318
+CL id 77 tid 76 eid 77 etid 76 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 76
+
+E # 319 t 1.940326186746 m 26 ce 318 msg 76
+- INFO:the message has timestamp, do nothing
+BS id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD m 26 pe 319
+SH sm 26 sg 2621443
+SH sm 4 sg 2621441
+SH sm 2 sg 1048577
+ES id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD sm 26 sg 2621443 st 1.940326186746 am 6 ag 1048579 at 1.940326186746 pe 319
+CL id 77 tid 76 eid 77 etid 76 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 76
+
+E # 320 t 1.940326186746 m 6 ce 319 msg 76
+BS id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD m 6 pe 320
+SH sm 6 sg 2621441
+ES id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD sm 6 sg 2621441 st 1.940326186746 am 5 ag 1048577 at 1.940326186746 pe 320
+CL id 77 tid 76 eid 77 etid 76 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 76
+
+E # 321 t 1.940326186746 m 5 ce 320 msg 76
+- INFO:Master received message, the delivery is over.
+
+E # 322 t 1.950156805064 m 16 ce 317 msg 75
+- INFO:the message has timestamp, do nothing
+BS id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD m 16 pe 322
+SH sm 16 sg 2621443
+SH sm 3 sg 2621441
+SH sm 2 sg 1048576
+ES id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD sm 16 sg 2621443 st 1.950156805064 am 6 ag 1048578 at 1.950156805064 pe 322
+CL id 77 tid 75 eid 77 etid 75 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 75
+
+E # 323 t 1.950156805064 m 6 ce 322 msg 75
+BS id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD m 6 pe 323
+SH sm 6 sg 2621440
+ES id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD sm 6 sg 2621440 st 1.950156805064 am 5 ag 1048576 at 1.950156805064 pe 323
+CL id 77 tid 75 eid 77 etid 75 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 75
+
+E # 324 t 1.950156805064 m 5 ce 323 msg 75
+- INFO:Master received message, the delivery is over.
+
+E # 325 t 2 m 5 ce 312 msg 74
+CM id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n selfMsg pe -1
+BS id 77 tid 77 eid 77 etid 77 c MyMessage n selfMsg sm 5 st 2 am 5 at 2.08 pe 325
+ES id 77 tid 77 eid 77 etid 77 c MyMessage n selfMsg sm 5 st 2 am 5 at 2.08 pe 325
+- INFO:Master send a new message to 2 Slaves
+CM id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD m 5 pe 325
+SH sm 5 sg 2621440
+ES id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD sm 5 sg 2621440 st 2 am 6 ag 1048576 at 2 pe 325
+CL id 79 tid 78 eid 79 etid 78 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 78
+CM id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD m 5 pe 325
+SH sm 5 sg 2621441
+ES id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD sm 5 sg 2621441 st 2 am 6 ag 1048577 at 2 pe 325
+CL id 80 tid 79 eid 80 etid 79 c omnetpp::cMessage n theMsgisGruppeD m 5 pe -1 cid 79
+
+E # 326 t 2 m 6 ce 325 msg 78
+- INFO:the message has timestamp, do nothing
+BS id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD m 6 pe 326
+SH sm 6 sg 2621442
+SH sm 2 sg 2621440
+SH sm 3 sg 1048577
+ES id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD sm 6 sg 2621442 st 2 am 16 ag 1048579 at 2 pe 326
+CL id 80 tid 78 eid 80 etid 78 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 78
+
+E # 327 t 2 m 6 ce 325 msg 79
+- INFO:the message has timestamp, do nothing
+BS id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD m 6 pe 327
+SH sm 6 sg 2621443
+SH sm 2 sg 2621441
+SH sm 4 sg 1048577
+ES id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD sm 6 sg 2621443 st 2 am 26 ag 1048579 at 2 pe 327
+CL id 80 tid 79 eid 80 etid 79 c omnetpp::cMessage n theMsgisGruppeD m 6 pe -1 cid 79
+
+E # 328 t 2 m 16 ce 326 msg 78
+BS id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD m 16 pe 328
+SH sm 16 sg 2621441
+ES id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD sm 16 sg 2621441 st 2 am 15 ag 1048577 at 2 pe 328
+CL id 80 tid 78 eid 80 etid 78 c omnetpp::cMessage n theMsgisGruppeD m 16 pe -1 cid 78
+
+E # 329 t 2 m 26 ce 327 msg 79
+BS id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD m 26 pe 329
+SH sm 26 sg 2621441
+ES id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD sm 26 sg 2621441 st 2 am 25 ag 1048577 at 2 pe 329
+CL id 80 tid 79 eid 80 etid 79 c omnetpp::cMessage n theMsgisGruppeD m 26 pe -1 cid 79
+
+E # 330 t 2 m 15 ce 328 msg 78
+- INFO:Message arrived, after Processing delay0.000128572103and Response delay0.02secs... send message back so Master
+BS id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD m 15 pe 330 sd 0.020128572103
+SH sm 15 sg 2621441
+ES id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD sm 15 sg 2621441 st 2.020128572103 am 16 ag 1048577 at 2.020128572103 pe 330
+CL id 80 tid 78 eid 80 etid 78 c omnetpp::cMessage n theMsgisGruppeD m 15 pe -1 cid 78
+
+E # 331 t 2 m 25 ce 329 msg 79
+- INFO:Message arrived, after Processing delay0.000488605745and Response delay0.01secs... send message back so Master
+BS id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD m 25 pe 331 sd 0.010488605745
+SH sm 25 sg 2621441
+ES id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD sm 25 sg 2621441 st 2.010488605745 am 26 ag 1048577 at 2.010488605745 pe 331
+CL id 80 tid 79 eid 80 etid 79 c omnetpp::cMessage n theMsgisGruppeD m 25 pe -1 cid 79
+
+
+SE e 0 c 38 m "Simulation time limit reached -- at t=2s, event #332"

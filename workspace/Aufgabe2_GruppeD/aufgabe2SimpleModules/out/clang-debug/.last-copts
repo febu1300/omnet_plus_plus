@@ -1,0 +1,1 @@
+-O0 -Wall -glldb -fstandalone-debug   -MMD -MP -MF .d    -isystem /Users/linxin/Documents/OMNet++5.7/omnetpp-6.0.1/tools/macos.x86_64/include -Wno-deprecated-register -Wno-unused-function -fno-omit-frame-pointer  -DWITH_QTENV -DWITH_NETBUILDER -DWITH_OSG -DOMNETPPLIBS_IMPORT  -I. -I/Users/linxin/Documents/OMNet++5.7/omnetpp-6.0.1/include

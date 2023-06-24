@@ -1,0 +1,1014 @@
+SB ov 1536 ev 2 rid General-0-20230527-13:27:23-71225
+
+E # 0 t 0 m 1 ce -1 msg -1
+MC id 1 c omnetpp::cModule t Network n Network cm 1
+MDC id 1 d bgb=375,300
+MC id 2 c Node t Node pid 1 n node[0]
+MDC id 2 d i=block/routing
+MC id 3 c Node t Node pid 1 n node[1]
+MDC id 3 d i=block/routing
+MC id 4 c Node t Node pid 1 n node[2]
+MDC id 4 d i=block/routing
+GC m 2 g 2621440 n out i 0 o 1
+GC m 3 g 1048576 n in i 0 o 0
+CC sm 2 sg 2621440 dm 3 dg 1048576
+GC m 3 g 2621440 n out i 0 o 1
+GC m 2 g 1048576 n in i 0 o 0
+CC sm 3 sg 2621440 dm 2 dg 1048576
+GC m 2 g 2621441 n out i 1 o 1
+GC m 4 g 1048576 n in i 0 o 0
+CC sm 2 sg 2621441 dm 4 dg 1048576
+GC m 4 g 2621440 n out i 0 o 1
+GC m 2 g 1048577 n in i 1 o 0
+CC sm 4 sg 2621440 dm 2 dg 1048577
+CMB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n selfMsg pe -1
+- INFO:Master send a message to Slaves
+BS id 0 tid 0 eid 0 etid 0 c MyMessage n selfMsg sm 2 st 0 am 2 at 0.08 pe 0
+ES id 0 tid 0 eid 0 etid 0 c MyMessage n selfMsg sm 2 st 0 am 2 at 0.08 pe 0
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD m 2 pe 0
+SH sm 2 sg 2621440
+ES id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0 am 3 ag 1048576 at 0 pe 0
+CL id 2 tid 1 eid 2 etid 1 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 1
+CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD m 2 pe 0
+SH sm 2 sg 2621441
+ES id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0 am 4 ag 1048576 at 0 pe 0
+CL id 3 tid 2 eid 3 etid 2 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 2
+CME
+CMB sm 1 tm 3 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n selfMsg pe -1
+CME
+CMB sm 1 tm 4 m initialize(0)
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n selfMsg pe -1
+CME
+
+E # 1 t 0 m 3 ce 0 msg 1
+- INFO:Message arrived, after Processing delay0.000094700983and Response delay0.03secs... send message back so Master
+BS id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD m 3 pe 1 sd 0.030094700983
+SH sm 3 sg 2621440
+ES id 1 tid 1 eid 1 etid 1 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.030094700983 am 2 ag 1048576 at 0.030094700983 pe 1
+CL id 5 tid 1 eid 5 etid 1 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 1
+
+E # 2 t 0 m 4 ce 0 msg 2
+- INFO:Message arrived, after Processing delay0.000288478078and Response delay0.01secs... send message back so Master
+BS id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD m 4 pe 2 sd 0.010288478078
+SH sm 4 sg 2621440
+ES id 2 tid 2 eid 2 etid 2 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.010288478078 am 2 ag 1048577 at 0.010288478078 pe 2
+CL id 5 tid 2 eid 5 etid 2 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 2
+
+E # 3 t 0.010288478078 m 2 ce 2 msg 2
+- INFO:Master received message, the delivery is over.
+
+E # 4 t 0.030094700983 m 2 ce 1 msg 1
+- INFO:Master received message, the delivery is over.
+
+E # 5 t 0.08 m 2 ce 0 msg 0
+CM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n selfMsg pe -1
+BS id 5 tid 5 eid 5 etid 5 c MyMessage n selfMsg sm 2 st 0.08 am 2 at 0.16 pe 5
+ES id 5 tid 5 eid 5 etid 5 c MyMessage n selfMsg sm 2 st 0.08 am 2 at 0.16 pe 5
+CM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD m 2 pe 5
+SH sm 2 sg 2621440
+ES id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.08 am 3 ag 1048576 at 0.08 pe 5
+CL id 7 tid 6 eid 7 etid 6 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 6
+CM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD m 2 pe 5
+SH sm 2 sg 2621441
+ES id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.08 am 4 ag 1048576 at 0.08 pe 5
+CL id 8 tid 7 eid 8 etid 7 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 7
+- INFO:Master send a new message to Slaves
+
+E # 6 t 0.08 m 3 ce 5 msg 6
+- INFO:Message arrived, after Processing delay0.000285257068and Response delay0.03secs... send message back so Master
+BS id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD m 3 pe 6 sd 0.030285257068
+SH sm 3 sg 2621440
+ES id 6 tid 6 eid 6 etid 6 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.110285257068 am 2 ag 1048576 at 0.110285257068 pe 6
+CL id 8 tid 6 eid 8 etid 6 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 6
+
+E # 7 t 0.08 m 4 ce 5 msg 7
+- INFO:Message arrived, after Processing delay0.000271988671and Response delay0.01secs... send message back so Master
+BS id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD m 4 pe 7 sd 0.010271988671
+SH sm 4 sg 2621440
+ES id 7 tid 7 eid 7 etid 7 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.090271988671 am 2 ag 1048577 at 0.090271988671 pe 7
+CL id 8 tid 7 eid 8 etid 7 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 7
+
+E # 8 t 0.090271988671 m 2 ce 7 msg 7
+- INFO:Master received message, the delivery is over.
+
+E # 9 t 0.110285257068 m 2 ce 6 msg 6
+- INFO:Master received message, the delivery is over.
+
+E # 10 t 0.16 m 2 ce 5 msg 5
+CM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n selfMsg pe -1
+BS id 8 tid 8 eid 8 etid 8 c MyMessage n selfMsg sm 2 st 0.16 am 2 at 0.24 pe 10
+ES id 8 tid 8 eid 8 etid 8 c MyMessage n selfMsg sm 2 st 0.16 am 2 at 0.24 pe 10
+CM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD m 2 pe 10
+SH sm 2 sg 2621440
+ES id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.16 am 3 ag 1048576 at 0.16 pe 10
+CL id 10 tid 9 eid 10 etid 9 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 9
+CM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD m 2 pe 10
+SH sm 2 sg 2621441
+ES id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.16 am 4 ag 1048576 at 0.16 pe 10
+CL id 11 tid 10 eid 11 etid 10 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 10
+- INFO:Master send a new message to Slaves
+
+E # 11 t 0.16 m 3 ce 10 msg 9
+- INFO:Message arrived, after Processing delay0.000125100475and Response delay0.02secs... send message back so Master
+BS id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD m 3 pe 11 sd 0.020125100475
+SH sm 3 sg 2621440
+ES id 9 tid 9 eid 9 etid 9 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.180125100475 am 2 ag 1048576 at 0.180125100475 pe 11
+CL id 11 tid 9 eid 11 etid 9 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 9
+
+E # 12 t 0.16 m 4 ce 10 msg 10
+- INFO:Message arrived, after Processing delay0.000092284228and Response delay0.02secs... send message back so Master
+BS id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD m 4 pe 12 sd 0.020092284228
+SH sm 4 sg 2621440
+ES id 10 tid 10 eid 10 etid 10 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.180092284228 am 2 ag 1048577 at 0.180092284228 pe 12
+CL id 11 tid 10 eid 11 etid 10 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 10
+
+E # 13 t 0.180092284228 m 2 ce 12 msg 10
+- INFO:Master received message, the delivery is over.
+
+E # 14 t 0.180125100475 m 2 ce 11 msg 9
+- INFO:Master received message, the delivery is over.
+
+E # 15 t 0.24 m 2 ce 10 msg 8
+CM id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n selfMsg pe -1
+BS id 11 tid 11 eid 11 etid 11 c MyMessage n selfMsg sm 2 st 0.24 am 2 at 0.32 pe 15
+ES id 11 tid 11 eid 11 etid 11 c MyMessage n selfMsg sm 2 st 0.24 am 2 at 0.32 pe 15
+CM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD m 2 pe 15
+SH sm 2 sg 2621440
+ES id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.24 am 3 ag 1048576 at 0.24 pe 15
+CL id 13 tid 12 eid 13 etid 12 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 12
+CM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD m 2 pe 15
+SH sm 2 sg 2621441
+ES id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.24 am 4 ag 1048576 at 0.24 pe 15
+CL id 14 tid 13 eid 14 etid 13 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 13
+- INFO:Master send a new message to Slaves
+
+E # 16 t 0.24 m 3 ce 15 msg 12
+- INFO:Message arrived, after Processing delay0.00016843116and Response delay0.01secs... send message back so Master
+BS id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD m 3 pe 16 sd 0.01016843116
+SH sm 3 sg 2621440
+ES id 12 tid 12 eid 12 etid 12 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.25016843116 am 2 ag 1048576 at 0.25016843116 pe 16
+CL id 14 tid 12 eid 14 etid 12 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 12
+
+E # 17 t 0.24 m 4 ce 15 msg 13
+- INFO:Message arrived, after Processing delay0.000397632883and Response delay0.01secs... send message back so Master
+BS id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD m 4 pe 17 sd 0.010397632883
+SH sm 4 sg 2621440
+ES id 13 tid 13 eid 13 etid 13 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.250397632883 am 2 ag 1048577 at 0.250397632883 pe 17
+CL id 14 tid 13 eid 14 etid 13 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 13
+
+E # 18 t 0.25016843116 m 2 ce 16 msg 12
+- INFO:Master received message, the delivery is over.
+
+E # 19 t 0.250397632883 m 2 ce 17 msg 13
+- INFO:Master received message, the delivery is over.
+
+E # 20 t 0.32 m 2 ce 15 msg 11
+CM id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n selfMsg pe -1
+BS id 14 tid 14 eid 14 etid 14 c MyMessage n selfMsg sm 2 st 0.32 am 2 at 0.4 pe 20
+ES id 14 tid 14 eid 14 etid 14 c MyMessage n selfMsg sm 2 st 0.32 am 2 at 0.4 pe 20
+CM id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD m 2 pe 20
+SH sm 2 sg 2621440
+ES id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.32 am 3 ag 1048576 at 0.32 pe 20
+CL id 16 tid 15 eid 16 etid 15 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 15
+CM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD m 2 pe 20
+SH sm 2 sg 2621441
+ES id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.32 am 4 ag 1048576 at 0.32 pe 20
+CL id 17 tid 16 eid 17 etid 16 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 16
+- INFO:Master send a new message to Slaves
+
+E # 21 t 0.32 m 3 ce 20 msg 15
+- INFO:Message arrived, after Processing delay0.000163469806and Response delay0.02secs... send message back so Master
+BS id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD m 3 pe 21 sd 0.020163469806
+SH sm 3 sg 2621440
+ES id 15 tid 15 eid 15 etid 15 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.340163469806 am 2 ag 1048576 at 0.340163469806 pe 21
+CL id 17 tid 15 eid 17 etid 15 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 15
+
+E # 22 t 0.32 m 4 ce 20 msg 16
+- INFO:Message arrived, after Processing delay0.000102620275and Response delay0.01secs... send message back so Master
+BS id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD m 4 pe 22 sd 0.010102620275
+SH sm 4 sg 2621440
+ES id 16 tid 16 eid 16 etid 16 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.330102620275 am 2 ag 1048577 at 0.330102620275 pe 22
+CL id 17 tid 16 eid 17 etid 16 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 16
+
+E # 23 t 0.330102620275 m 2 ce 22 msg 16
+- INFO:Master received message, the delivery is over.
+
+E # 24 t 0.340163469806 m 2 ce 21 msg 15
+- INFO:Master received message, the delivery is over.
+
+E # 25 t 0.4 m 2 ce 20 msg 14
+CM id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n selfMsg pe -1
+BS id 17 tid 17 eid 17 etid 17 c MyMessage n selfMsg sm 2 st 0.4 am 2 at 0.48 pe 25
+ES id 17 tid 17 eid 17 etid 17 c MyMessage n selfMsg sm 2 st 0.4 am 2 at 0.48 pe 25
+CM id 18 tid 18 eid 18 etid 18 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD m 2 pe 25
+SH sm 2 sg 2621440
+ES id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.4 am 3 ag 1048576 at 0.4 pe 25
+CL id 19 tid 18 eid 19 etid 18 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 18
+CM id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD m 2 pe 25
+SH sm 2 sg 2621441
+ES id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.4 am 4 ag 1048576 at 0.4 pe 25
+CL id 20 tid 19 eid 20 etid 19 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 19
+- INFO:Master send a new message to Slaves
+
+E # 26 t 0.4 m 3 ce 25 msg 18
+- INFO:Message arrived, after Processing delay0.000267447048and Response delay0.01secs... send message back so Master
+BS id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD m 3 pe 26 sd 0.010267447048
+SH sm 3 sg 2621440
+ES id 18 tid 18 eid 18 etid 18 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.410267447048 am 2 ag 1048576 at 0.410267447048 pe 26
+CL id 20 tid 18 eid 20 etid 18 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 18
+
+E # 27 t 0.4 m 4 ce 25 msg 19
+- INFO:Message arrived, after Processing delay0.000078277042and Response delay0.03secs... send message back so Master
+BS id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD m 4 pe 27 sd 0.030078277042
+SH sm 4 sg 2621440
+ES id 19 tid 19 eid 19 etid 19 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.430078277042 am 2 ag 1048577 at 0.430078277042 pe 27
+CL id 20 tid 19 eid 20 etid 19 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 19
+
+E # 28 t 0.410267447048 m 2 ce 26 msg 18
+- INFO:Master received message, the delivery is over.
+
+E # 29 t 0.430078277042 m 2 ce 27 msg 19
+- INFO:Master received message, the delivery is over.
+
+E # 30 t 0.48 m 2 ce 25 msg 17
+CM id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n selfMsg pe -1
+BS id 20 tid 20 eid 20 etid 20 c MyMessage n selfMsg sm 2 st 0.48 am 2 at 0.56 pe 30
+ES id 20 tid 20 eid 20 etid 20 c MyMessage n selfMsg sm 2 st 0.48 am 2 at 0.56 pe 30
+CM id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD m 2 pe 30
+SH sm 2 sg 2621440
+ES id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.48 am 3 ag 1048576 at 0.48 pe 30
+CL id 22 tid 21 eid 22 etid 21 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 21
+CM id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD m 2 pe 30
+SH sm 2 sg 2621441
+ES id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.48 am 4 ag 1048576 at 0.48 pe 30
+CL id 23 tid 22 eid 23 etid 22 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 22
+- INFO:Master send a new message to Slaves
+
+E # 31 t 0.48 m 3 ce 30 msg 21
+- INFO:Message arrived, after Processing delay0.000098734009and Response delay0.02secs... send message back so Master
+BS id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD m 3 pe 31 sd 0.020098734009
+SH sm 3 sg 2621440
+ES id 21 tid 21 eid 21 etid 21 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.500098734009 am 2 ag 1048576 at 0.500098734009 pe 31
+CL id 23 tid 21 eid 23 etid 21 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 21
+
+E # 32 t 0.48 m 4 ce 30 msg 22
+- INFO:Message arrived, after Processing delay0.000317367602and Response delay0.03secs... send message back so Master
+BS id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD m 4 pe 32 sd 0.030317367602
+SH sm 4 sg 2621440
+ES id 22 tid 22 eid 22 etid 22 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.510317367602 am 2 ag 1048577 at 0.510317367602 pe 32
+CL id 23 tid 22 eid 23 etid 22 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 22
+
+E # 33 t 0.500098734009 m 2 ce 31 msg 21
+- INFO:Master received message, the delivery is over.
+
+E # 34 t 0.510317367602 m 2 ce 32 msg 22
+- INFO:Master received message, the delivery is over.
+
+E # 35 t 0.56 m 2 ce 30 msg 20
+CM id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n selfMsg pe -1
+BS id 23 tid 23 eid 23 etid 23 c MyMessage n selfMsg sm 2 st 0.56 am 2 at 0.64 pe 35
+ES id 23 tid 23 eid 23 etid 23 c MyMessage n selfMsg sm 2 st 0.56 am 2 at 0.64 pe 35
+CM id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD m 2 pe 35
+SH sm 2 sg 2621440
+ES id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.56 am 3 ag 1048576 at 0.56 pe 35
+CL id 25 tid 24 eid 25 etid 24 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 24
+CM id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD m 2 pe 35
+SH sm 2 sg 2621441
+ES id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.56 am 4 ag 1048576 at 0.56 pe 35
+CL id 26 tid 25 eid 26 etid 25 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 25
+- INFO:Master send a new message to Slaves
+
+E # 36 t 0.56 m 3 ce 35 msg 24
+- INFO:Message arrived, after Processing delay0.000179963218and Response delay0.03secs... send message back so Master
+BS id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD m 3 pe 36 sd 0.030179963218
+SH sm 3 sg 2621440
+ES id 24 tid 24 eid 24 etid 24 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.590179963218 am 2 ag 1048576 at 0.590179963218 pe 36
+CL id 26 tid 24 eid 26 etid 24 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 24
+
+E # 37 t 0.56 m 4 ce 35 msg 25
+- INFO:Message arrived, after Processing delay0.000174506921and Response delay0.03secs... send message back so Master
+BS id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD m 4 pe 37 sd 0.030174506921
+SH sm 4 sg 2621440
+ES id 25 tid 25 eid 25 etid 25 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.590174506921 am 2 ag 1048577 at 0.590174506921 pe 37
+CL id 26 tid 25 eid 26 etid 25 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 25
+
+E # 38 t 0.590174506921 m 2 ce 37 msg 25
+- INFO:Master received message, the delivery is over.
+
+E # 39 t 0.590179963218 m 2 ce 36 msg 24
+- INFO:Master received message, the delivery is over.
+
+E # 40 t 0.64 m 2 ce 35 msg 23
+CM id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n selfMsg pe -1
+BS id 26 tid 26 eid 26 etid 26 c MyMessage n selfMsg sm 2 st 0.64 am 2 at 0.72 pe 40
+ES id 26 tid 26 eid 26 etid 26 c MyMessage n selfMsg sm 2 st 0.64 am 2 at 0.72 pe 40
+CM id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD m 2 pe 40
+SH sm 2 sg 2621440
+ES id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.64 am 3 ag 1048576 at 0.64 pe 40
+CL id 28 tid 27 eid 28 etid 27 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 27
+CM id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD m 2 pe 40
+SH sm 2 sg 2621441
+ES id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.64 am 4 ag 1048576 at 0.64 pe 40
+CL id 29 tid 28 eid 29 etid 28 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 28
+- INFO:Master send a new message to Slaves
+
+E # 41 t 0.64 m 3 ce 40 msg 27
+- INFO:Message arrived, after Processing delay0.000186327787and Response delay0.01secs... send message back so Master
+BS id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD m 3 pe 41 sd 0.010186327787
+SH sm 3 sg 2621440
+ES id 27 tid 27 eid 27 etid 27 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.650186327787 am 2 ag 1048576 at 0.650186327787 pe 41
+CL id 29 tid 27 eid 29 etid 27 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 27
+
+E # 42 t 0.64 m 4 ce 40 msg 28
+- INFO:Message arrived, after Processing delay0.000382266178and Response delay0.03secs... send message back so Master
+BS id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD m 4 pe 42 sd 0.030382266178
+SH sm 4 sg 2621440
+ES id 28 tid 28 eid 28 etid 28 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.670382266178 am 2 ag 1048577 at 0.670382266178 pe 42
+CL id 29 tid 28 eid 29 etid 28 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 28
+
+E # 43 t 0.650186327787 m 2 ce 41 msg 27
+- INFO:Master received message, the delivery is over.
+
+E # 44 t 0.670382266178 m 2 ce 42 msg 28
+- INFO:Master received message, the delivery is over.
+
+E # 45 t 0.72 m 2 ce 40 msg 26
+CM id 29 tid 29 eid 29 etid 29 c omnetpp::cMessage n selfMsg pe -1
+BS id 29 tid 29 eid 29 etid 29 c MyMessage n selfMsg sm 2 st 0.72 am 2 at 0.8 pe 45
+ES id 29 tid 29 eid 29 etid 29 c MyMessage n selfMsg sm 2 st 0.72 am 2 at 0.8 pe 45
+CM id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD m 2 pe 45
+SH sm 2 sg 2621440
+ES id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.72 am 3 ag 1048576 at 0.72 pe 45
+CL id 31 tid 30 eid 31 etid 30 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 30
+CM id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD m 2 pe 45
+SH sm 2 sg 2621441
+ES id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.72 am 4 ag 1048576 at 0.72 pe 45
+CL id 32 tid 31 eid 32 etid 31 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 31
+- INFO:Master send a new message to Slaves
+
+E # 46 t 0.72 m 3 ce 45 msg 30
+- INFO:Message arrived, after Processing delay0.000310322766and Response delay0.03secs... send message back so Master
+BS id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD m 3 pe 46 sd 0.030310322766
+SH sm 3 sg 2621440
+ES id 30 tid 30 eid 30 etid 30 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.750310322766 am 2 ag 1048576 at 0.750310322766 pe 46
+CL id 32 tid 30 eid 32 etid 30 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 30
+
+E # 47 t 0.72 m 4 ce 45 msg 31
+- INFO:Message arrived, after Processing delay0.000338363094and Response delay0.01secs... send message back so Master
+BS id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD m 4 pe 47 sd 0.010338363094
+SH sm 4 sg 2621440
+ES id 31 tid 31 eid 31 etid 31 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.730338363094 am 2 ag 1048577 at 0.730338363094 pe 47
+CL id 32 tid 31 eid 32 etid 31 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 31
+
+E # 48 t 0.730338363094 m 2 ce 47 msg 31
+- INFO:Master received message, the delivery is over.
+
+E # 49 t 0.750310322766 m 2 ce 46 msg 30
+- INFO:Master received message, the delivery is over.
+
+E # 50 t 0.8 m 2 ce 45 msg 29
+CM id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n selfMsg pe -1
+BS id 32 tid 32 eid 32 etid 32 c MyMessage n selfMsg sm 2 st 0.8 am 2 at 0.88 pe 50
+ES id 32 tid 32 eid 32 etid 32 c MyMessage n selfMsg sm 2 st 0.8 am 2 at 0.88 pe 50
+CM id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD m 2 pe 50
+SH sm 2 sg 2621440
+ES id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.8 am 3 ag 1048576 at 0.8 pe 50
+CL id 34 tid 33 eid 34 etid 33 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 33
+CM id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD m 2 pe 50
+SH sm 2 sg 2621441
+ES id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.8 am 4 ag 1048576 at 0.8 pe 50
+CL id 35 tid 34 eid 35 etid 34 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 34
+- INFO:Master send a new message to Slaves
+
+E # 51 t 0.8 m 3 ce 50 msg 33
+- INFO:Message arrived, after Processing delay0.000256343316and Response delay0.01secs... send message back so Master
+BS id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD m 3 pe 51 sd 0.010256343316
+SH sm 3 sg 2621440
+ES id 33 tid 33 eid 33 etid 33 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.810256343316 am 2 ag 1048576 at 0.810256343316 pe 51
+CL id 35 tid 33 eid 35 etid 33 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 33
+
+E # 52 t 0.8 m 4 ce 50 msg 34
+- INFO:Message arrived, after Processing delay0.000089660534and Response delay0.01secs... send message back so Master
+BS id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD m 4 pe 52 sd 0.010089660534
+SH sm 4 sg 2621440
+ES id 34 tid 34 eid 34 etid 34 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.810089660534 am 2 ag 1048577 at 0.810089660534 pe 52
+CL id 35 tid 34 eid 35 etid 34 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 34
+
+E # 53 t 0.810089660534 m 2 ce 52 msg 34
+- INFO:Master received message, the delivery is over.
+
+E # 54 t 0.810256343316 m 2 ce 51 msg 33
+- INFO:Master received message, the delivery is over.
+
+E # 55 t 0.88 m 2 ce 50 msg 32
+CM id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n selfMsg pe -1
+BS id 35 tid 35 eid 35 etid 35 c MyMessage n selfMsg sm 2 st 0.88 am 2 at 0.96 pe 55
+ES id 35 tid 35 eid 35 etid 35 c MyMessage n selfMsg sm 2 st 0.88 am 2 at 0.96 pe 55
+CM id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD m 2 pe 55
+SH sm 2 sg 2621440
+ES id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.88 am 3 ag 1048576 at 0.88 pe 55
+CL id 37 tid 36 eid 37 etid 36 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 36
+CM id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD m 2 pe 55
+SH sm 2 sg 2621441
+ES id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.88 am 4 ag 1048576 at 0.88 pe 55
+CL id 38 tid 37 eid 38 etid 37 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 37
+- INFO:Master send a new message to Slaves
+
+E # 56 t 0.88 m 3 ce 55 msg 36
+- INFO:Message arrived, after Processing delay0.000124739937and Response delay0.02secs... send message back so Master
+BS id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD m 3 pe 56 sd 0.020124739937
+SH sm 3 sg 2621440
+ES id 36 tid 36 eid 36 etid 36 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.900124739937 am 2 ag 1048576 at 0.900124739937 pe 56
+CL id 38 tid 36 eid 38 etid 36 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 36
+
+E # 57 t 0.88 m 4 ce 55 msg 37
+- INFO:Message arrived, after Processing delay0.00019079421and Response delay0.03secs... send message back so Master
+BS id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD m 4 pe 57 sd 0.03019079421
+SH sm 4 sg 2621440
+ES id 37 tid 37 eid 37 etid 37 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.91019079421 am 2 ag 1048577 at 0.91019079421 pe 57
+CL id 38 tid 37 eid 38 etid 37 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 37
+
+E # 58 t 0.900124739937 m 2 ce 56 msg 36
+- INFO:Master received message, the delivery is over.
+
+E # 59 t 0.91019079421 m 2 ce 57 msg 37
+- INFO:Master received message, the delivery is over.
+
+E # 60 t 0.96 m 2 ce 55 msg 35
+CM id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n selfMsg pe -1
+BS id 38 tid 38 eid 38 etid 38 c MyMessage n selfMsg sm 2 st 0.96 am 2 at 1.04 pe 60
+ES id 38 tid 38 eid 38 etid 38 c MyMessage n selfMsg sm 2 st 0.96 am 2 at 1.04 pe 60
+CM id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD m 2 pe 60
+SH sm 2 sg 2621440
+ES id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 0.96 am 3 ag 1048576 at 0.96 pe 60
+CL id 40 tid 39 eid 40 etid 39 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 39
+CM id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD m 2 pe 60
+SH sm 2 sg 2621441
+ES id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 0.96 am 4 ag 1048576 at 0.96 pe 60
+CL id 41 tid 40 eid 41 etid 40 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 40
+- INFO:Master send a new message to Slaves
+
+E # 61 t 0.96 m 3 ce 60 msg 39
+- INFO:Message arrived, after Processing delay0.000075634452and Response delay0.01secs... send message back so Master
+BS id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD m 3 pe 61 sd 0.010075634452
+SH sm 3 sg 2621440
+ES id 39 tid 39 eid 39 etid 39 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 0.970075634452 am 2 ag 1048576 at 0.970075634452 pe 61
+CL id 41 tid 39 eid 41 etid 39 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 39
+
+E # 62 t 0.96 m 4 ce 60 msg 40
+- INFO:Message arrived, after Processing delay0.000145897637and Response delay0.02secs... send message back so Master
+BS id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD m 4 pe 62 sd 0.020145897637
+SH sm 4 sg 2621440
+ES id 40 tid 40 eid 40 etid 40 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 0.980145897637 am 2 ag 1048577 at 0.980145897637 pe 62
+CL id 41 tid 40 eid 41 etid 40 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 40
+
+E # 63 t 0.970075634452 m 2 ce 61 msg 39
+- INFO:Master received message, the delivery is over.
+
+E # 64 t 0.980145897637 m 2 ce 62 msg 40
+- INFO:Master received message, the delivery is over.
+
+E # 65 t 1.04 m 2 ce 60 msg 38
+CM id 41 tid 41 eid 41 etid 41 c omnetpp::cMessage n selfMsg pe -1
+BS id 41 tid 41 eid 41 etid 41 c MyMessage n selfMsg sm 2 st 1.04 am 2 at 1.12 pe 65
+ES id 41 tid 41 eid 41 etid 41 c MyMessage n selfMsg sm 2 st 1.04 am 2 at 1.12 pe 65
+CM id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD m 2 pe 65
+SH sm 2 sg 2621440
+ES id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.04 am 3 ag 1048576 at 1.04 pe 65
+CL id 43 tid 42 eid 43 etid 42 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 42
+CM id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD m 2 pe 65
+SH sm 2 sg 2621441
+ES id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.04 am 4 ag 1048576 at 1.04 pe 65
+CL id 44 tid 43 eid 44 etid 43 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 43
+- INFO:Master send a new message to Slaves
+
+E # 66 t 1.04 m 3 ce 65 msg 42
+- INFO:Message arrived, after Processing delay0.000213018175and Response delay0.02secs... send message back so Master
+BS id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD m 3 pe 66 sd 0.020213018175
+SH sm 3 sg 2621440
+ES id 42 tid 42 eid 42 etid 42 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.060213018175 am 2 ag 1048576 at 1.060213018175 pe 66
+CL id 44 tid 42 eid 44 etid 42 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 42
+
+E # 67 t 1.04 m 4 ce 65 msg 43
+- INFO:Message arrived, after Processing delay0.000295559141and Response delay0.01secs... send message back so Master
+BS id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD m 4 pe 67 sd 0.010295559141
+SH sm 4 sg 2621440
+ES id 43 tid 43 eid 43 etid 43 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.050295559141 am 2 ag 1048577 at 1.050295559141 pe 67
+CL id 44 tid 43 eid 44 etid 43 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 43
+
+E # 68 t 1.050295559141 m 2 ce 67 msg 43
+- INFO:Master received message, the delivery is over.
+
+E # 69 t 1.060213018175 m 2 ce 66 msg 42
+- INFO:Master received message, the delivery is over.
+
+E # 70 t 1.12 m 2 ce 65 msg 41
+CM id 44 tid 44 eid 44 etid 44 c omnetpp::cMessage n selfMsg pe -1
+BS id 44 tid 44 eid 44 etid 44 c MyMessage n selfMsg sm 2 st 1.12 am 2 at 1.2 pe 70
+ES id 44 tid 44 eid 44 etid 44 c MyMessage n selfMsg sm 2 st 1.12 am 2 at 1.2 pe 70
+CM id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD m 2 pe 70
+SH sm 2 sg 2621440
+ES id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.12 am 3 ag 1048576 at 1.12 pe 70
+CL id 46 tid 45 eid 46 etid 45 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 45
+CM id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD m 2 pe 70
+SH sm 2 sg 2621441
+ES id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.12 am 4 ag 1048576 at 1.12 pe 70
+CL id 47 tid 46 eid 47 etid 46 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 46
+- INFO:Master send a new message to Slaves
+
+E # 71 t 1.12 m 3 ce 70 msg 45
+- INFO:Message arrived, after Processing delay0.000097925046and Response delay0.03secs... send message back so Master
+BS id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD m 3 pe 71 sd 0.030097925046
+SH sm 3 sg 2621440
+ES id 45 tid 45 eid 45 etid 45 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.150097925046 am 2 ag 1048576 at 1.150097925046 pe 71
+CL id 47 tid 45 eid 47 etid 45 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 45
+
+E # 72 t 1.12 m 4 ce 70 msg 46
+- INFO:Message arrived, after Processing delay0.000230530607and Response delay0.01secs... send message back so Master
+BS id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD m 4 pe 72 sd 0.010230530607
+SH sm 4 sg 2621440
+ES id 46 tid 46 eid 46 etid 46 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.130230530607 am 2 ag 1048577 at 1.130230530607 pe 72
+CL id 47 tid 46 eid 47 etid 46 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 46
+
+E # 73 t 1.130230530607 m 2 ce 72 msg 46
+- INFO:Master received message, the delivery is over.
+
+E # 74 t 1.150097925046 m 2 ce 71 msg 45
+- INFO:Master received message, the delivery is over.
+
+E # 75 t 1.2 m 2 ce 70 msg 44
+CM id 47 tid 47 eid 47 etid 47 c omnetpp::cMessage n selfMsg pe -1
+BS id 47 tid 47 eid 47 etid 47 c MyMessage n selfMsg sm 2 st 1.2 am 2 at 1.28 pe 75
+ES id 47 tid 47 eid 47 etid 47 c MyMessage n selfMsg sm 2 st 1.2 am 2 at 1.28 pe 75
+CM id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD m 2 pe 75
+SH sm 2 sg 2621440
+ES id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.2 am 3 ag 1048576 at 1.2 pe 75
+CL id 49 tid 48 eid 49 etid 48 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 48
+CM id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD m 2 pe 75
+SH sm 2 sg 2621441
+ES id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.2 am 4 ag 1048576 at 1.2 pe 75
+CL id 50 tid 49 eid 50 etid 49 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 49
+- INFO:Master send a new message to Slaves
+
+E # 76 t 1.2 m 3 ce 75 msg 48
+- INFO:Message arrived, after Processing delay0.000185835129and Response delay0.01secs... send message back so Master
+BS id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD m 3 pe 76 sd 0.010185835129
+SH sm 3 sg 2621440
+ES id 48 tid 48 eid 48 etid 48 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.210185835129 am 2 ag 1048576 at 1.210185835129 pe 76
+CL id 50 tid 48 eid 50 etid 48 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 48
+
+E # 77 t 1.2 m 4 ce 75 msg 49
+- INFO:Message arrived, after Processing delay0.000223026208and Response delay0.02secs... send message back so Master
+BS id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD m 4 pe 77 sd 0.020223026208
+SH sm 4 sg 2621440
+ES id 49 tid 49 eid 49 etid 49 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.220223026208 am 2 ag 1048577 at 1.220223026208 pe 77
+CL id 50 tid 49 eid 50 etid 49 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 49
+
+E # 78 t 1.210185835129 m 2 ce 76 msg 48
+- INFO:Master received message, the delivery is over.
+
+E # 79 t 1.220223026208 m 2 ce 77 msg 49
+- INFO:Master received message, the delivery is over.
+
+E # 80 t 1.28 m 2 ce 75 msg 47
+CM id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n selfMsg pe -1
+BS id 50 tid 50 eid 50 etid 50 c MyMessage n selfMsg sm 2 st 1.28 am 2 at 1.36 pe 80
+ES id 50 tid 50 eid 50 etid 50 c MyMessage n selfMsg sm 2 st 1.28 am 2 at 1.36 pe 80
+CM id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD m 2 pe 80
+SH sm 2 sg 2621440
+ES id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.28 am 3 ag 1048576 at 1.28 pe 80
+CL id 52 tid 51 eid 52 etid 51 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 51
+CM id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD m 2 pe 80
+SH sm 2 sg 2621441
+ES id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.28 am 4 ag 1048576 at 1.28 pe 80
+CL id 53 tid 52 eid 53 etid 52 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 52
+- INFO:Master send a new message to Slaves
+
+E # 81 t 1.28 m 3 ce 80 msg 51
+- INFO:Message arrived, after Processing delay0.000285599504and Response delay0.02secs... send message back so Master
+BS id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD m 3 pe 81 sd 0.020285599504
+SH sm 3 sg 2621440
+ES id 51 tid 51 eid 51 etid 51 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.300285599504 am 2 ag 1048576 at 1.300285599504 pe 81
+CL id 53 tid 51 eid 53 etid 51 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 51
+
+E # 82 t 1.28 m 4 ce 80 msg 52
+- INFO:Message arrived, after Processing delay0.000191251214and Response delay0.03secs... send message back so Master
+BS id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD m 4 pe 82 sd 0.030191251214
+SH sm 4 sg 2621440
+ES id 52 tid 52 eid 52 etid 52 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.310191251214 am 2 ag 1048577 at 1.310191251214 pe 82
+CL id 53 tid 52 eid 53 etid 52 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 52
+
+E # 83 t 1.300285599504 m 2 ce 81 msg 51
+- INFO:Master received message, the delivery is over.
+
+E # 84 t 1.310191251214 m 2 ce 82 msg 52
+- INFO:Master received message, the delivery is over.
+
+E # 85 t 1.36 m 2 ce 80 msg 50
+CM id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n selfMsg pe -1
+BS id 53 tid 53 eid 53 etid 53 c MyMessage n selfMsg sm 2 st 1.36 am 2 at 1.44 pe 85
+ES id 53 tid 53 eid 53 etid 53 c MyMessage n selfMsg sm 2 st 1.36 am 2 at 1.44 pe 85
+CM id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD m 2 pe 85
+SH sm 2 sg 2621440
+ES id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.36 am 3 ag 1048576 at 1.36 pe 85
+CL id 55 tid 54 eid 55 etid 54 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 54
+CM id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD m 2 pe 85
+SH sm 2 sg 2621441
+ES id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.36 am 4 ag 1048576 at 1.36 pe 85
+CL id 56 tid 55 eid 56 etid 55 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 55
+- INFO:Master send a new message to Slaves
+
+E # 86 t 1.36 m 3 ce 85 msg 54
+- INFO:Message arrived, after Processing delay0.000281733476and Response delay0.02secs... send message back so Master
+BS id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD m 3 pe 86 sd 0.020281733476
+SH sm 3 sg 2621440
+ES id 54 tid 54 eid 54 etid 54 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.380281733476 am 2 ag 1048576 at 1.380281733476 pe 86
+CL id 56 tid 54 eid 56 etid 54 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 54
+
+E # 87 t 1.36 m 4 ce 85 msg 55
+- INFO:Message arrived, after Processing delay0.000223813435and Response delay0.01secs... send message back so Master
+BS id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD m 4 pe 87 sd 0.010223813435
+SH sm 4 sg 2621440
+ES id 55 tid 55 eid 55 etid 55 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.370223813435 am 2 ag 1048577 at 1.370223813435 pe 87
+CL id 56 tid 55 eid 56 etid 55 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 55
+
+E # 88 t 1.370223813435 m 2 ce 87 msg 55
+- INFO:Master received message, the delivery is over.
+
+E # 89 t 1.380281733476 m 2 ce 86 msg 54
+- INFO:Master received message, the delivery is over.
+
+E # 90 t 1.44 m 2 ce 85 msg 53
+CM id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n selfMsg pe -1
+BS id 56 tid 56 eid 56 etid 56 c MyMessage n selfMsg sm 2 st 1.44 am 2 at 1.52 pe 90
+ES id 56 tid 56 eid 56 etid 56 c MyMessage n selfMsg sm 2 st 1.44 am 2 at 1.52 pe 90
+CM id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD m 2 pe 90
+SH sm 2 sg 2621440
+ES id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.44 am 3 ag 1048576 at 1.44 pe 90
+CL id 58 tid 57 eid 58 etid 57 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 57
+CM id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD m 2 pe 90
+SH sm 2 sg 2621441
+ES id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.44 am 4 ag 1048576 at 1.44 pe 90
+CL id 59 tid 58 eid 59 etid 58 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 58
+- INFO:Master send a new message to Slaves
+
+E # 91 t 1.44 m 3 ce 90 msg 57
+- INFO:Message arrived, after Processing delay0.000095233511and Response delay0.03secs... send message back so Master
+BS id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD m 3 pe 91 sd 0.030095233511
+SH sm 3 sg 2621440
+ES id 57 tid 57 eid 57 etid 57 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.470095233511 am 2 ag 1048576 at 1.470095233511 pe 91
+CL id 59 tid 57 eid 59 etid 57 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 57
+
+E # 92 t 1.44 m 4 ce 90 msg 58
+- INFO:Message arrived, after Processing delay0.000396370158and Response delay0.02secs... send message back so Master
+BS id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD m 4 pe 92 sd 0.020396370158
+SH sm 4 sg 2621440
+ES id 58 tid 58 eid 58 etid 58 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.460396370158 am 2 ag 1048577 at 1.460396370158 pe 92
+CL id 59 tid 58 eid 59 etid 58 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 58
+
+E # 93 t 1.460396370158 m 2 ce 92 msg 58
+- INFO:Master received message, the delivery is over.
+
+E # 94 t 1.470095233511 m 2 ce 91 msg 57
+- INFO:Master received message, the delivery is over.
+
+E # 95 t 1.52 m 2 ce 90 msg 56
+CM id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n selfMsg pe -1
+BS id 59 tid 59 eid 59 etid 59 c MyMessage n selfMsg sm 2 st 1.52 am 2 at 1.6 pe 95
+ES id 59 tid 59 eid 59 etid 59 c MyMessage n selfMsg sm 2 st 1.52 am 2 at 1.6 pe 95
+CM id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD m 2 pe 95
+SH sm 2 sg 2621440
+ES id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.52 am 3 ag 1048576 at 1.52 pe 95
+CL id 61 tid 60 eid 61 etid 60 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 60
+CM id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD m 2 pe 95
+SH sm 2 sg 2621441
+ES id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.52 am 4 ag 1048576 at 1.52 pe 95
+CL id 62 tid 61 eid 62 etid 61 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 61
+- INFO:Master send a new message to Slaves
+
+E # 96 t 1.52 m 3 ce 95 msg 60
+- INFO:Message arrived, after Processing delay0.000056085003and Response delay0.01secs... send message back so Master
+BS id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD m 3 pe 96 sd 0.010056085003
+SH sm 3 sg 2621440
+ES id 60 tid 60 eid 60 etid 60 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.530056085003 am 2 ag 1048576 at 1.530056085003 pe 96
+CL id 62 tid 60 eid 62 etid 60 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 60
+
+E # 97 t 1.52 m 4 ce 95 msg 61
+- INFO:Message arrived, after Processing delay0.000128439152and Response delay0.02secs... send message back so Master
+BS id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD m 4 pe 97 sd 0.020128439152
+SH sm 4 sg 2621440
+ES id 61 tid 61 eid 61 etid 61 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.540128439152 am 2 ag 1048577 at 1.540128439152 pe 97
+CL id 62 tid 61 eid 62 etid 61 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 61
+
+E # 98 t 1.530056085003 m 2 ce 96 msg 60
+- INFO:Master received message, the delivery is over.
+
+E # 99 t 1.540128439152 m 2 ce 97 msg 61
+- INFO:Master received message, the delivery is over.
+
+E # 100 t 1.6 m 2 ce 95 msg 59
+CM id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n selfMsg pe -1
+BS id 62 tid 62 eid 62 etid 62 c MyMessage n selfMsg sm 2 st 1.6 am 2 at 1.68 pe 100
+ES id 62 tid 62 eid 62 etid 62 c MyMessage n selfMsg sm 2 st 1.6 am 2 at 1.68 pe 100
+CM id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD m 2 pe 100
+SH sm 2 sg 2621440
+ES id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.6 am 3 ag 1048576 at 1.6 pe 100
+CL id 64 tid 63 eid 64 etid 63 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 63
+CM id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD m 2 pe 100
+SH sm 2 sg 2621441
+ES id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.6 am 4 ag 1048576 at 1.6 pe 100
+CL id 65 tid 64 eid 65 etid 64 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 64
+- INFO:Master send a new message to Slaves
+
+E # 101 t 1.6 m 3 ce 100 msg 63
+- INFO:Message arrived, after Processing delay0.000287642419and Response delay0.02secs... send message back so Master
+BS id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD m 3 pe 101 sd 0.020287642419
+SH sm 3 sg 2621440
+ES id 63 tid 63 eid 63 etid 63 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.620287642419 am 2 ag 1048576 at 1.620287642419 pe 101
+CL id 65 tid 63 eid 65 etid 63 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 63
+
+E # 102 t 1.6 m 4 ce 100 msg 64
+- INFO:Message arrived, after Processing delay0.000325538744and Response delay0.02secs... send message back so Master
+BS id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD m 4 pe 102 sd 0.020325538744
+SH sm 4 sg 2621440
+ES id 64 tid 64 eid 64 etid 64 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.620325538744 am 2 ag 1048577 at 1.620325538744 pe 102
+CL id 65 tid 64 eid 65 etid 64 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 64
+
+E # 103 t 1.620287642419 m 2 ce 101 msg 63
+- INFO:Master received message, the delivery is over.
+
+E # 104 t 1.620325538744 m 2 ce 102 msg 64
+- INFO:Master received message, the delivery is over.
+
+E # 105 t 1.68 m 2 ce 100 msg 62
+CM id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n selfMsg pe -1
+BS id 65 tid 65 eid 65 etid 65 c MyMessage n selfMsg sm 2 st 1.68 am 2 at 1.76 pe 105
+ES id 65 tid 65 eid 65 etid 65 c MyMessage n selfMsg sm 2 st 1.68 am 2 at 1.76 pe 105
+CM id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD m 2 pe 105
+SH sm 2 sg 2621440
+ES id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.68 am 3 ag 1048576 at 1.68 pe 105
+CL id 67 tid 66 eid 67 etid 66 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 66
+CM id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:1
+BS id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD m 2 pe 105
+SH sm 2 sg 2621441
+ES id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.68 am 4 ag 1048576 at 1.68 pe 105
+CL id 68 tid 67 eid 68 etid 67 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 67
+- INFO:Master send a new message to Slaves
+
+E # 106 t 1.68 m 3 ce 105 msg 66
+- INFO:Message arrived, after Processing delay0.000234614101and Response delay0.03secs... send message back so Master
+BS id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD m 3 pe 106 sd 0.030234614101
+SH sm 3 sg 2621440
+ES id 66 tid 66 eid 66 etid 66 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.710234614101 am 2 ag 1048576 at 1.710234614101 pe 106
+CL id 68 tid 66 eid 68 etid 66 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 66
+
+E # 107 t 1.68 m 4 ce 105 msg 67
+- INFO:Message arrived, after Processing delay0.000115243562and Response delay0.01secs... send message back so Master
+BS id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD m 4 pe 107 sd 0.010115243562
+SH sm 4 sg 2621440
+ES id 67 tid 67 eid 67 etid 67 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.690115243562 am 2 ag 1048577 at 1.690115243562 pe 107
+CL id 68 tid 67 eid 68 etid 67 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 67
+
+E # 108 t 1.690115243562 m 2 ce 107 msg 67
+- INFO:Master received message, the delivery is over.
+
+E # 109 t 1.710234614101 m 2 ce 106 msg 66
+- INFO:Master received message, the delivery is over.
+
+E # 110 t 1.76 m 2 ce 105 msg 65
+CM id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n selfMsg pe -1
+BS id 68 tid 68 eid 68 etid 68 c MyMessage n selfMsg sm 2 st 1.76 am 2 at 1.84 pe 110
+ES id 68 tid 68 eid 68 etid 68 c MyMessage n selfMsg sm 2 st 1.76 am 2 at 1.84 pe 110
+CM id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD m 2 pe 110
+SH sm 2 sg 2621440
+ES id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.76 am 3 ag 1048576 at 1.76 pe 110
+CL id 70 tid 69 eid 70 etid 69 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 69
+CM id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD m 2 pe 110
+SH sm 2 sg 2621441
+ES id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.76 am 4 ag 1048576 at 1.76 pe 110
+CL id 71 tid 70 eid 71 etid 70 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 70
+- INFO:Master send a new message to Slaves
+
+E # 111 t 1.76 m 3 ce 110 msg 69
+- INFO:Message arrived, after Processing delay0.000271051424and Response delay0.03secs... send message back so Master
+BS id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD m 3 pe 111 sd 0.030271051424
+SH sm 3 sg 2621440
+ES id 69 tid 69 eid 69 etid 69 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.790271051424 am 2 ag 1048576 at 1.790271051424 pe 111
+CL id 71 tid 69 eid 71 etid 69 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 69
+
+E # 112 t 1.76 m 4 ce 110 msg 70
+- INFO:Message arrived, after Processing delay0.000156806168and Response delay0.02secs... send message back so Master
+BS id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD m 4 pe 112 sd 0.020156806168
+SH sm 4 sg 2621440
+ES id 70 tid 70 eid 70 etid 70 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.780156806168 am 2 ag 1048577 at 1.780156806168 pe 112
+CL id 71 tid 70 eid 71 etid 70 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 70
+
+E # 113 t 1.780156806168 m 2 ce 112 msg 70
+- INFO:Master received message, the delivery is over.
+
+E # 114 t 1.790271051424 m 2 ce 111 msg 69
+- INFO:Master received message, the delivery is over.
+
+E # 115 t 1.84 m 2 ce 110 msg 68
+CM id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n selfMsg pe -1
+BS id 71 tid 71 eid 71 etid 71 c MyMessage n selfMsg sm 2 st 1.84 am 2 at 1.92 pe 115
+ES id 71 tid 71 eid 71 etid 71 c MyMessage n selfMsg sm 2 st 1.84 am 2 at 1.92 pe 115
+CM id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD m 2 pe 115
+SH sm 2 sg 2621440
+ES id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.84 am 3 ag 1048576 at 1.84 pe 115
+CL id 73 tid 72 eid 73 etid 72 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 72
+CM id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD m 2 pe 115
+SH sm 2 sg 2621441
+ES id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.84 am 4 ag 1048576 at 1.84 pe 115
+CL id 74 tid 73 eid 74 etid 73 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 73
+- INFO:Master send a new message to Slaves
+
+E # 116 t 1.84 m 3 ce 115 msg 72
+- INFO:Message arrived, after Processing delay0.000200226511and Response delay0.02secs... send message back so Master
+BS id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD m 3 pe 116 sd 0.020200226511
+SH sm 3 sg 2621440
+ES id 72 tid 72 eid 72 etid 72 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.860200226511 am 2 ag 1048576 at 1.860200226511 pe 116
+CL id 74 tid 72 eid 74 etid 72 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 72
+
+E # 117 t 1.84 m 4 ce 115 msg 73
+- INFO:Message arrived, after Processing delay0.000132169883and Response delay0.03secs... send message back so Master
+BS id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD m 4 pe 117 sd 0.030132169883
+SH sm 4 sg 2621440
+ES id 73 tid 73 eid 73 etid 73 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.870132169883 am 2 ag 1048577 at 1.870132169883 pe 117
+CL id 74 tid 73 eid 74 etid 73 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 73
+
+E # 118 t 1.860200226511 m 2 ce 116 msg 72
+- INFO:Master received message, the delivery is over.
+
+E # 119 t 1.870132169883 m 2 ce 117 msg 73
+- INFO:Master received message, the delivery is over.
+
+E # 120 t 1.92 m 2 ce 115 msg 71
+CM id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n selfMsg pe -1
+BS id 74 tid 74 eid 74 etid 74 c MyMessage n selfMsg sm 2 st 1.92 am 2 at 2 pe 120
+ES id 74 tid 74 eid 74 etid 74 c MyMessage n selfMsg sm 2 st 1.92 am 2 at 2 pe 120
+CM id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD m 2 pe 120
+SH sm 2 sg 2621440
+ES id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 1.92 am 3 ag 1048576 at 1.92 pe 120
+CL id 76 tid 75 eid 76 etid 75 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 75
+CM id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:2
+BS id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD m 2 pe 120
+SH sm 2 sg 2621441
+ES id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 1.92 am 4 ag 1048576 at 1.92 pe 120
+CL id 77 tid 76 eid 77 etid 76 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 76
+- INFO:Master send a new message to Slaves
+
+E # 121 t 1.92 m 3 ce 120 msg 75
+- INFO:Message arrived, after Processing delay0.000156805064and Response delay0.02secs... send message back so Master
+BS id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD m 3 pe 121 sd 0.020156805064
+SH sm 3 sg 2621440
+ES id 75 tid 75 eid 75 etid 75 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 1.940156805064 am 2 ag 1048576 at 1.940156805064 pe 121
+CL id 77 tid 75 eid 77 etid 75 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 75
+
+E # 122 t 1.92 m 4 ce 120 msg 76
+- INFO:Message arrived, after Processing delay0.000326186746and Response delay0.02secs... send message back so Master
+BS id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD m 4 pe 122 sd 0.020326186746
+SH sm 4 sg 2621440
+ES id 76 tid 76 eid 76 etid 76 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 1.940326186746 am 2 ag 1048577 at 1.940326186746 pe 122
+CL id 77 tid 76 eid 77 etid 76 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 76
+
+E # 123 t 1.940156805064 m 2 ce 121 msg 75
+- INFO:Master received message, the delivery is over.
+
+E # 124 t 1.940326186746 m 2 ce 122 msg 76
+- INFO:Master received message, the delivery is over.
+
+E # 125 t 2 m 2 ce 120 msg 74
+CM id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n selfMsg pe -1
+BS id 77 tid 77 eid 77 etid 77 c MyMessage n selfMsg sm 2 st 2 am 2 at 2.08 pe 125
+ES id 77 tid 77 eid 77 etid 77 c MyMessage n selfMsg sm 2 st 2 am 2 at 2.08 pe 125
+CM id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD m 2 pe 125
+SH sm 2 sg 2621440
+ES id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD sm 2 sg 2621440 st 2 am 3 ag 1048576 at 2 pe 125
+CL id 79 tid 78 eid 79 etid 78 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 78
+CM id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n theMsgisGruppeD pe -1
+- INFO:The priority of this message is:3
+BS id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD m 2 pe 125
+SH sm 2 sg 2621441
+ES id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD sm 2 sg 2621441 st 2 am 4 ag 1048576 at 2 pe 125
+CL id 80 tid 79 eid 80 etid 79 c omnetpp::cMessage n theMsgisGruppeD m 2 pe -1 cid 79
+- INFO:Master send a new message to Slaves
+
+E # 126 t 2 m 3 ce 125 msg 78
+- INFO:Message arrived, after Processing delay0.000128572103and Response delay0.03secs... send message back so Master
+BS id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD m 3 pe 126 sd 0.030128572103
+SH sm 3 sg 2621440
+ES id 78 tid 78 eid 78 etid 78 c MyMessage n theMsgisGruppeD sm 3 sg 2621440 st 2.030128572103 am 2 ag 1048576 at 2.030128572103 pe 126
+CL id 80 tid 78 eid 80 etid 78 c omnetpp::cMessage n theMsgisGruppeD m 3 pe -1 cid 78
+
+E # 127 t 2 m 4 ce 125 msg 79
+- INFO:Message arrived, after Processing delay0.000488605745and Response delay0.03secs... send message back so Master
+BS id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD m 4 pe 127 sd 0.030488605745
+SH sm 4 sg 2621440
+ES id 79 tid 79 eid 79 etid 79 c MyMessage n theMsgisGruppeD sm 4 sg 2621440 st 2.030488605745 am 2 ag 1048577 at 2.030488605745 pe 127
+CL id 80 tid 79 eid 80 etid 79 c omnetpp::cMessage n theMsgisGruppeD m 4 pe -1 cid 79
+
+
+SE e 0 c 38 m "Simulation time limit reached -- at t=2s, event #128"

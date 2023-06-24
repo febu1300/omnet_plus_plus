@@ -32,9 +32,9 @@ void TimestampLayer::handleMessage(cMessage *msg)
         else{
             EV << "the message has timestamp, do nothing\n";
         }
-        send(receivedMsg, "timeLOut", gateIndex+2);
+        send(receivedMsg, "tstampOut", gateIndex+2);
     }
     else{
-        send(receivedMsg, "timeLOut", gateIndex-2);
+        send(receivedMsg, "tstampOut", gateIndex-2);
     }
 }

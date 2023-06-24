@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgtool 6.0 from CompoundedModule/myMessage.msg.
+// Generated file, do not edit! Created by opp_msgtool 6.0 from myMessage.msg.
 //
 
 #ifndef __MYMESSAGE_M_H
@@ -18,7 +18,7 @@
 
 class MyMessage;
 /**
- * Class generated from <tt>CompoundedModule/myMessage.msg:19</tt> by opp_msgtool.
+ * Class generated from <tt>myMessage.msg:19</tt> by opp_msgtool.
  * <pre>
  * //
  * // TODO generated message class

@@ -1484,3 +1484,9 @@ java.io.FileNotFoundException: /home/adm_bur7746m/omnetpp/omnet_plus_plus/worksp
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-06-24 17:11:38.281
+!MESSAGE Indexed 'Aufgabe2GruppeI' (3 sources, 477 headers) in 9.53 sec: 48,954 declarations; 84,684 references; 0 unresolved inclusions; 50 syntax errors; 25 unresolved names (0.019%)
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-06-24 17:32:18.134
+!MESSAGE The workspace will exit with unsaved changes in this session.

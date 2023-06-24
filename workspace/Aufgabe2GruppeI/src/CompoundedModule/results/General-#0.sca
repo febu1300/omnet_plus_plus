@@ -1,0 +1,217 @@
+version 3
+run General-0-20230624-17:31:28-158612
+attr configname General
+attr datetime 20230624-17:31:28
+attr datetimef 20230624-173128
+attr experiment General
+attr inifile compoundedmoudle.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Network
+attr processid 158612
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Network
+config sim-time-limit 10s
+config Network.CompoundedModule[0].ApplicationLayer.isMaster true
+config Network.CompoundedModule[1].ApplicationLayer.isMaster false
+
+par Network.cmodule[0].app_l.appOut[0].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[0].app_l.appOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[0].app_l.appOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].tstamp_l.tstampOut[0].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[0].tstamp_l.tstampOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[0].tstamp_l.tstampOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].app_l.appOut[1].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[0].app_l.appOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[0].app_l.appOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].tstamp_l.tstampOut[1].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[0].tstamp_l.tstampOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[0].tstamp_l.tstampOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].tstamp_l.tstampOut[2].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[0].tstamp_l.tstampOut[2].channel disabled false
+attr mutable ""
+par Network.cmodule[0].tstamp_l.tstampOut[2].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].in[0].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[0].in[0].channel disabled false
+attr mutable ""
+par Network.cmodule[0].in[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].tstamp_l.tstampOut[3].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[0].tstamp_l.tstampOut[3].channel disabled false
+attr mutable ""
+par Network.cmodule[0].tstamp_l.tstampOut[3].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].in[1].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[0].in[1].channel disabled false
+attr mutable ""
+par Network.cmodule[0].in[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].app_l typename "\"aufgabe2gruppei.CompoundedModule.ApplicationLayer\""
+par Network.cmodule[0].app_l isMaster false
+statistic Network.cmodule[0].app_l Priority
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+bin	-inf	0
+bin	0	0
+bin	1	0
+par Network.cmodule[0].tstamp_l typename "\"aufgabe2gruppei.CompoundedModule.TimestampLayer\""
+par Network.cmodule[0] typename "\"aufgabe2gruppei.CompoundedModule.CompoundedModule\""
+par Network.cmodule[0] isMaster false
+par Network.cmodule[1].app_l.appOut[0].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[1].app_l.appOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[1].app_l.appOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].tstamp_l.tstampOut[0].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[1].tstamp_l.tstampOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[1].tstamp_l.tstampOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].app_l.appOut[1].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[1].app_l.appOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[1].app_l.appOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].tstamp_l.tstampOut[1].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[1].tstamp_l.tstampOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[1].tstamp_l.tstampOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].tstamp_l.tstampOut[2].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[1].tstamp_l.tstampOut[2].channel disabled false
+attr mutable ""
+par Network.cmodule[1].tstamp_l.tstampOut[2].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].in[0].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[1].in[0].channel disabled false
+attr mutable ""
+par Network.cmodule[1].in[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].tstamp_l.tstampOut[3].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[1].tstamp_l.tstampOut[3].channel disabled false
+attr mutable ""
+par Network.cmodule[1].tstamp_l.tstampOut[3].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].in[1].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[1].in[1].channel disabled false
+attr mutable ""
+par Network.cmodule[1].in[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].app_l typename "\"aufgabe2gruppei.CompoundedModule.ApplicationLayer\""
+par Network.cmodule[1].app_l isMaster false
+statistic Network.cmodule[1].app_l Priority
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+bin	-inf	0
+bin	0	0
+bin	1	0
+par Network.cmodule[1].tstamp_l typename "\"aufgabe2gruppei.CompoundedModule.TimestampLayer\""
+par Network.cmodule[1] typename "\"aufgabe2gruppei.CompoundedModule.CompoundedModule\""
+par Network.cmodule[1] isMaster false
+par Network.cmodule[2].app_l.appOut[0].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[2].app_l.appOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[2].app_l.appOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].tstamp_l.tstampOut[0].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[2].tstamp_l.tstampOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[2].tstamp_l.tstampOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].app_l.appOut[1].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[2].app_l.appOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[2].app_l.appOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].tstamp_l.tstampOut[1].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[2].tstamp_l.tstampOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[2].tstamp_l.tstampOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].tstamp_l.tstampOut[2].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[2].tstamp_l.tstampOut[2].channel disabled false
+attr mutable ""
+par Network.cmodule[2].tstamp_l.tstampOut[2].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].in[0].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel1\""
+par Network.cmodule[2].in[0].channel disabled false
+attr mutable ""
+par Network.cmodule[2].in[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].tstamp_l.tstampOut[3].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[2].tstamp_l.tstampOut[3].channel disabled false
+attr mutable ""
+par Network.cmodule[2].tstamp_l.tstampOut[3].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].in[1].channel typename "\"aufgabe2gruppei.CompoundedModule.Channel2\""
+par Network.cmodule[2].in[1].channel disabled false
+attr mutable ""
+par Network.cmodule[2].in[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].app_l typename "\"aufgabe2gruppei.CompoundedModule.ApplicationLayer\""
+par Network.cmodule[2].app_l isMaster false
+statistic Network.cmodule[2].app_l Priority
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+bin	-inf	0
+bin	0	0
+bin	1	0
+par Network.cmodule[2].tstamp_l typename "\"aufgabe2gruppei.CompoundedModule.TimestampLayer\""
+par Network.cmodule[2] typename "\"aufgabe2gruppei.CompoundedModule.CompoundedModule\""
+par Network.cmodule[2] isMaster false
+par Network typename "\"aufgabe2gruppei.CompoundedModule.Network\""
+

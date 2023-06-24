@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgtool 6.0 from CompoundedModule/myMessage.msg.
+// Generated file, do not edit! Created by opp_msgtool 6.0 from myMessage.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:
@@ -152,7 +152,9 @@ void doParsimUnpacking(omnetpp::cCommBuffer *, T& t)
 
 Register_Class(MyMessage)
 
-
+MyMessage::MyMessage(const char *name, short kind) : ::omnetpp::cMessage(name, kind)
+{
+}
 
 MyMessage::MyMessage(const MyMessage& other) : ::omnetpp::cMessage(other)
 {

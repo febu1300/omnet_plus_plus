@@ -60,14 +60,14 @@ void ApplicationLayer::initialize()
 {
     srand(getpid());
     selfMsg = generateSelfMsg();
-    if(par("applIsMaster").boolValue() == true){
+    if(par("isMaster").boolValue() == true){
         EV << "Master send a message to 2 Slaves\n";
         // send a selfMessage
         scheduleAt(simTime()+0.08, selfMsg);
-        int k=gateSize("appLOut");
+        int k=gateSize("appOut");
         for(int i=0;i<k;i++){
             MyMessage *myMsg = generateMessage();
-            send(myMsg, "appLOut", i);
+            send(myMsg, "appOut", i);
         }
     }
 }
@@ -75,28 +75,28 @@ void ApplicationLayer::initialize()
 void ApplicationLayer::handleMessage(cMessage *msg)
 {
     MyMessage *receivedMsg = check_and_cast<MyMessage *>(msg);
-    if(receivedMsg == selfMsg && par("applIsMaster").boolValue()){
+    if(receivedMsg == selfMsg && par("isMaster").boolValue()){
         selfMsg = generateSelfMsg();
         // send a selfMessage,so evety 80ms the master can send a new message
         scheduleAt(simTime()+0.08, selfMsg);
         EV << "Master send a new message to 2 Slaves"<<endl;
-        int k = gateSize("appLOut");
-        // send a new message from gates appLOut[0] and appLout[1]
+        int k = gateSize("appOut");
+        // send a new message from gates appOut[0] and appOut[1]
         for(int i=0;i<k;i++){
             MyMessage *myMsg = generateMessage();
-            send(myMsg, "appLOut", i);
+            send(myMsg, "appOut", i);
         }
     }
-    else if(receivedMsg != selfMsg && !par("applIsMaster").boolValue()){
+    else if(receivedMsg != selfMsg && !par("isMaster").boolValue()){
         cGate *arrivalGate = receivedMsg->getArrivalGate();
         int gateIndex = arrivalGate->getIndex();
         // the 2 delays, the processingDelay can also use a selfMessage, but here we use sendDelayed, it not influence the results and the structure is simpler.
         simtime_t processingDelay = truncnormal(200,100)/1000000;
         simtime_t responseDelay = receivedMsg->getPriority()*0.01;
         EV << "Message arrived, after Processing delay"<<processingDelay<<"and Response delay"<<responseDelay<<"secs... send message back so Master\n";
-        sendDelayed(receivedMsg, processingDelay+responseDelay, "appLOut", gateIndex);
+        sendDelayed(receivedMsg, processingDelay+responseDelay, "appOut", gateIndex);
     }
-    else if(receivedMsg != selfMsg && par("applIsMaster").boolValue()){
+    else if(receivedMsg != selfMsg && par("isMaster").boolValue()){
         EV << "Master received message, the delivery is over."<<endl;
         simtime_t latency = simTime()-receivedMsg->getTimestamp();
         latencyVector.record(latency);

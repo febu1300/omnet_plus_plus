@@ -21,7 +21,7 @@ package aufgabe2gruppei.CompoundedModule;
 simple ApplicationLayer
 {
     parameters:
-
+        bool isMaster = default(false);
     gates:
         input appIn[];
         output appOut[];
@@ -61,7 +61,7 @@ module CompoundedModule
             @display("p=139,195");
         }
         tstamp_l: TimestampLayer {
-            @display("p=476,193");
+            @display("p=492,195");
         }
     connections:
         app_l.appOut++ --> Channel1 --> tstamp_l.tstampIn++;

@@ -3,6 +3,7 @@
     <inputs>
         <input pattern="/tictoc7/results/General-*.vec"/>
         <input pattern="/tictoc7/results/General-*.sca"/>
+        <input pattern="app_l"/>
     </inputs>
     <charts/>
 </analysis>

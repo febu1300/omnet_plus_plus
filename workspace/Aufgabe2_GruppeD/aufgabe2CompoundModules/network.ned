@@ -58,7 +58,7 @@ module ComMoudle
         appL.appLOut++ --> Channel2 --> timeL.timeLIn++;     //appLOut[1]--timeLOut[1]
         appL.appLIn++ <-- Channel2 <-- timeL.timeLOut++;
 		
-		timeL.timeLOut++ --> Channel1 -->out++;      //timLOut[2]--out[0]
+	timeL.timeLOut++ --> Channel1 -->out++;      //timLOut[2]--out[0]
         timeL.timeLIn++ <-- Channel1 <-- in++ ;   
         
         timeL.timeLOut++ --> Channel2 -->out++;      //timLOut[3]--out[1]
@@ -79,7 +79,7 @@ network Network
         comMoudle[0].out++ --> comMoudle[1].in++;  //0-1
         comMoudle[0].in++ <-- comMoudle[1].out++; 
 
-		comMoudle[0].out++ --> comMoudle[2].in++;  //1-1
+	comMoudle[0].out++ --> comMoudle[2].in++;  //1-1
         comMoudle[0].in++ <-- comMoudle[2].out++; 
 }
 

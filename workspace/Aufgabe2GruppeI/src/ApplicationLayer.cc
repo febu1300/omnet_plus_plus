@@ -12,7 +12,8 @@
 #include <omnetpp.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include"myMessage_m.h"
+
+#include "myMessage_m.h"
 
 using namespace omnetpp;
 
@@ -60,6 +61,7 @@ void ApplicationLayer::initialize()
 {
     srand(getpid());
     selfMsg = generateSelfMsg();
+
     if(par("isMaster").boolValue() == true){
         EV << "Master send a message to 2 Slaves\n";
         // send a selfMessage

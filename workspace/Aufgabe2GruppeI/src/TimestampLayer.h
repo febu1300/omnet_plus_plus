@@ -13,8 +13,8 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef COMPOUNDEDMODULE_TIMESTAMPLAYER_H_
-#define COMPOUNDEDMODULE_TIMESTAMPLAYER_H_
+#ifndef TIMESTAMPLAYER_H_
+#define TIMESTAMPLAYER_H_
 
 class TimestampLayer {
 public:
@@ -22,4 +22,4 @@ public:
     virtual ~TimestampLayer();
 };
 
-#endif /* COMPOUNDEDMODULE_TIMESTAMPLAYER_H_ */
+#endif /* TIMESTAMPLAYER_H_ */

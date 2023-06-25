@@ -13,15 +13,17 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package aufgabe2gruppei.CompoundedModule;
+
 
 //
 // TODO auto-generated type
 //
+package aufgabe2gruppei;
+
 simple ApplicationLayer
 {
     parameters:
-        bool isMaster = default(false);
+       bool isMaster = default(true);
     gates:
         input appIn[];
         output appOut[];
@@ -44,6 +46,7 @@ channel Channel2 extends ned.DelayChannel
 {
     delay = 0ms;
 }
+
 
 
 module CompoundedModule
@@ -78,6 +81,7 @@ module CompoundedModule
 }
 network Network
 {
+    
     @display("bgb=499,229");
     submodules:
         cmodule[3]: CompoundedModule {

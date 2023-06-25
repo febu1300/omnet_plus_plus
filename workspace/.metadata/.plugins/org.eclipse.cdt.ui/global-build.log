@@ -401,3 +401,278 @@ cd src && make
 make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
 make[1]: Nothing to be done for 'all'.
 make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+10:55:03 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+11:07:46 **** Build of configuration release for project aufgabe2CompoundModules ****
+make MODE=release all 
+appL.cc
+timeL.cc
+myMessage_m.cc
+Creating executable: out/gcc-release//aufgabe2CompoundModules
+11:25:00 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+11:33:29 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+11:34:26 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+11:35:16 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+11:36:35 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+11:37:04 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+11:47:26 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+11:50:22 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+11:59:40 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:00:27 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:01:27 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:03:10 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:05:06 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:07:34 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:40:01 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+ApplicationLayer.cc
+ApplicationLayer.cc:16:10: fatal error: ../myMessage_m.h: No such file or directory
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+   16 | #include "../myMessage_m.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [Makefile:108: ../out/gcc-release/src/ApplicationLayer.o] Error 1
+make: *** [Makefile:2: all] Error 2
+"make MODE=release all" terminated with exit code 2. Build might be incomplete.
+12:40:56 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+ApplicationLayer.cc
+TimestampLayer.cc
+TimestampLayer.cc:5:10: fatal error: ../myMessage_m.h: No such file or directory
+    5 | #include "../myMessage_m.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [Makefile:108: ../out/gcc-release/src/TimestampLayer.o] Error 1
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make: *** [Makefile:2: all] Error 2
+"make MODE=release all" terminated with exit code 2. Build might be incomplete.
+12:41:09 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+TimestampLayer.cc
+myMessage_m.cc
+myMessage_m.cc:31:10: fatal error: ../myMessage_m.h: No such file or directory
+   31 | #include "../myMessage_m.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [Makefile:108: ../out/gcc-release/src/myMessage_m.o] Error 1
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make: *** [Makefile:2: all] Error 2
+"make MODE=release all" terminated with exit code 2. Build might be incomplete.
+12:41:27 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+myMessage_m.cc
+Creating executable: ../out/gcc-release/src/Aufgabe2GruppeI
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:41:49 **** Incremental Build of configuration debug for project Aufgabe2GruppeI ****
+make MODE=debug all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+ApplicationLayer.cc
+TimestampLayer.cc
+myMessage_m.cc
+Creating executable: ../out/gcc-debug/src/Aufgabe2GruppeI_dbg
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:43:17 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:45:54 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:48:14 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+ApplicationLayer.cc
+Creating executable: ../out/gcc-release/src/Aufgabe2GruppeI
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:49:14 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+ApplicationLayer.cc
+Creating executable: ../out/gcc-release/src/Aufgabe2GruppeI
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:49:38 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:50:00 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+ApplicationLayer.cc
+Creating executable: ../out/gcc-release/src/Aufgabe2GruppeI
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+12:50:27 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+ApplicationLayer.cc
+Creating executable: ../out/gcc-release/src/Aufgabe2GruppeI
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+13:36:41 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+13:40:47 **** Build of configuration release for project aufgabe2CompoundModules ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+13:42:04 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+13:42:50 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+13:44:41 **** Incremental Build of configuration release for project aufgabe2CompoundModules ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+13:45:09 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+13:48:26 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+13:49:21 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+13:50:00 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+14:07:05 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+14:10:40 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+15:00:19 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+15:00:56 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+15:29:14 **** Incremental Build of configuration release for project Aufgabe2GruppeI ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/adm_bur7746m/omnetpp/omnet_plus_plus/workspace/Aufgabe2GruppeI/src'

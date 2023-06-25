@@ -1,9 +1,10 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:tictoc,org.eclipse.launchbar.core.descriptorType.default\:tictoc (1),org.eclipse.launchbar.core.descriptorType.default\:CompoundedModule - compoundedmoudle
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:tictoc,org.eclipse.launchbar.core.descriptorType.default\:tictoc (1),org.eclipse.launchbar.core.descriptorType.default\:CompoundedModule - compoundedmoudle (1),org.eclipse.launchbar.core.descriptorType.default\:CompoundedModule - compoundedmoudle,org.eclipse.launchbar.core.descriptorType.default\:aufgabe2CompoundModules,org.eclipse.launchbar.core.descriptorType.default\:src,org.eclipse.launchbar.core.descriptorType.default\:src (1)
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:CompoundedModule\ -\ compoundedmoudle/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:src/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:tictoc\ (1)/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:tictoc/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:tictoc/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

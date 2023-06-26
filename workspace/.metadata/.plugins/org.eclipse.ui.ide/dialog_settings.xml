@@ -12,6 +12,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/af/omnetpp-6.0.1/omnet_plus_plus/workspace/Aufgabe2_Gruppe_I"/>
 			<item value="/home/af/omnetpp-6.0.1/omnet_plus_plus/workspace"/>
 		</list>
 	</section>

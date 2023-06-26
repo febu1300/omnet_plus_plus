@@ -28,9 +28,15 @@ network Lin
 
         @display("bgb=730,367");
     submodules:
-        //todo: place the slaves and master node. define the number of gates for the master
-       
+          // place the slaves and master node. define the number of gates for the master
+           LSlave[numSlaves]: LinSlave;
+           LMaster: LinMaster;
+       	
     connections:
         //todo: connect each slave with the master
+           for i = 0..numSlaves-1 {
+            LSlave[i].LinSlaveOut++ --> LMaster.MasterIn++;
+            LMaster.MasterOut++ --> LSlave[i].LinSlaveIn++;
+        }
         
 }

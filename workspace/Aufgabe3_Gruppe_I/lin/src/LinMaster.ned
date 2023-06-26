@@ -22,5 +22,7 @@ simple LinMaster extends LinNode
         @class(LinMaster);
         
     gates:
-      	//todo: define the gate going to/coming from the bus
+      	//define the gate going to/coming from the bus
+      	input  MasterIn[];
+      	output  MasterOut[];
 }

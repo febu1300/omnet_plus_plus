@@ -23,10 +23,9 @@ class LinMaster: public LinNode {
 public:
     LinMaster();
     virtual ~LinMaster();
+    cMessage* sendNewMsg;
+    cMessage* selfEvent;
 
-    /*
-     * todo: declare needed member variables
-     */
 
 protected:
 

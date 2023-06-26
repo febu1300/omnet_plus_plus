@@ -34,6 +34,11 @@ void LinMaster::initialize() {
     /*
      * todo: initialize all variables needed and schedule the first LIN-frame for the time step 10ms
      */
+    sendNewMsg = new cMessage("New Message");
+    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
+
+    sendNewMsg = new cMessage("self Event");
+    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
 
 }
 
@@ -47,14 +52,25 @@ void LinMaster::finish() {
 }
 
 void LinMaster::handleSelfMessage(cMessage *msg) {
+    int messageId = getRandomMessageId(FRAME_TYPE::UNCONDITIONAL_FRAME);
 
     if (msg == changeSporadic) {
         needSporadic = true;
-        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2, 4), SimTimeUnit::SIMTIME_S), changeSporadic);
+        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2, 4), SimTimeUnit::SIMTIME_MS), changeSporadic);
+    } else if (msg->isName("sendNewMsg")) {
+
+        sendLinRequest(messageId);
+
+        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
+
+    } else if (msg->isName("selfEvent")){
+        sendLinRequest(messageId);
+
+        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
     }
 
     /*
-     * todo: handle self messages in order to send next packet or check timeouts
+     * handle self messages in order to send next packet or check timeouts
      */
 
 }
@@ -64,6 +80,18 @@ void LinMaster::receiveFrame(cMessage *msg) {
     /*
      * todo: handle received Frames, check for collisions
      */
+    LinRequestFrame *receivedFrame = dynamic_cast<LinRequestFrame*>(msg);
+      if (receivedFrame) {
+          int receivedMessageId = receivedFrame->getMessageId();
+      }
+/*Sind zwei Frames zur gleichen Zeit an der Reihe, soll nur das
+      versendet werden, das ein längeres Interval hat. Es darf nur und muss ein einziges Frame
+      pro Zeitslot versendet werden!
+ */
+      // Perform collision checking logic
+      // if dectected
+      // Handle collision
+      // if not process the received frame
 
     delete msg;
 }

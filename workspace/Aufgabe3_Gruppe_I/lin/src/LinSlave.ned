@@ -12,7 +12,8 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
-
+//LinMaster.h,LinSlave.ned, LinMaster.ned, 
+//Lin.ned,LinMaster.cc,LinSlave.cc,
 package lin;
 
 //class defining a LIN slave
@@ -21,5 +22,8 @@ simple LinSlave extends LinNode
     parameters:
         @class(LinSlave);
     gates:          
-        //todo: define the gate going to/coming from the bus
+
+        // define the gate going to/coming from the bus
+        input LinSlaveIn[];
+        output LinSlaveOut[];
 }

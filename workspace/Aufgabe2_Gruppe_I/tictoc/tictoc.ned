@@ -18,45 +18,48 @@
 //
 simple Knoten
 {
-	parameters:
-	     bool isMaster = default(false); 
-	   
-        
+    parameters:
+        bool isMaster = default(false);
+
+
     gates:
         input in[];
         output out[];
 }
 
+simple TimeStampLayer
+{
+    parameters:
+        bool isMaster = default(false);
+    gates:
+        input port_in;
+        output port_out;
+}
 
 network Net1
 {
     @display("bgb=715,408");
     submodules:
         k1: Knoten {
-            @display("p=497,221");
+            @display("p=277,111;b=60,56,oval");
         }
 
 
         k2: Knoten {
-            @display("p=334,95");
+            @display("p=374,236");
         }
 
 
         k3: Knoten {
-            @display("p=204,221");
+            @display("p=206,236");
         }
-
-
     connections:
         k1.out++ --> k2.in++;
         k2.out++ --> k1.in++;
-        
+
         k1.out++ --> k3.in++;
         k3.out++ --> k1.in++;
-        
+
         k2.out++ --> k3.in++;
         k3.out++ --> k2.in++;
-
-
-
 }

@@ -1,14 +1,14 @@
-SB ov 1536 ev 2 rid General-0-20230625-22:20:27-6671
-
 E # 0 t 0 m 1 ce -1 msg -1
+SB v 1287 rid General-0-20230619-13:59:06-11231 b 1000
+KF p -1 c "" s ""
 MC id 1 c omnetpp::cModule t Net1 n Net1 cm 1
-MDC id 1 d bgb=715,408
+MS id 1 d bgb=715,408
 MC id 2 c Knoten t Knoten pid 1 n k1
-MDC id 2 d p=497,221
+MS id 2 d p=277,111;b=60,56,oval
 MC id 3 c Knoten t Knoten pid 1 n k2
-MDC id 3 d p=334,95
+MS id 3 d p=374,236
 MC id 4 c Knoten t Knoten pid 1 n k3
-MDC id 4 d p=204,221
+MS id 4 d p=206,236
 GC m 2 g 2621440 n out i 0 o 1
 GC m 3 g 1048576 n in i 0 o 0
 CC sm 2 sg 2621440 dm 3 dg 1048576
@@ -27,83 +27,39 @@ CC sm 3 sg 2621441 dm 4 dg 1048577
 GC m 4 g 2621441 n out i 1 o 1
 GC m 3 g 1048577 n in i 1 o 0
 CC sm 4 sg 2621441 dm 3 dg 1048577
-CMB sm 1 tm 2 m initialize(0)
-CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n "" pe -1
+MB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe -1
 CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi pe -1
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi m 2 pe 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe 0
+ES t 0.08
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage MB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n message pe -1
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi pe -1
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi pe 0
 SH sm 2 sg 2621440
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi sm 2 sg 2621440 st 0 am 3 ag 1048576 at 0 pe 0
-CL id 2 tid 1 eid 2 etid 1 c omnetpp::cMessage n hi m 2 pe -1 cid 1
-CME
-CMB sm 1 tm 3 m initialize(0)
-CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n "" pe -1
-CME
-CMB sm 1 tm 4 m initialize(0)
-CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n "" pe -1
-CME
+ES t 0
+CL id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi pe 0 cid 2
+ME
+MB sm 1 tm 3 m initialize(0)
+CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n message pe -1
+ME
+MB sm 1 tm 4 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n message pe -1
+ME
+MB sm 1 tm 5 m initialize(0)
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n message pe -1
+CM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n hi pe -1
+ME
+DM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi pe 0
+ge n event pe 0
+ES t 0.002
 
-SE e 0 c -1 m ""
-0 msg 1
-- INFO: Forwarding message hi0 on gate[1]
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi m 3 pe 1
-SH sm 3 sg 2621440
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi sm 3 sg 2621440 st 0 am 2 ag 1048576 at 0 pe 1
-CL id 4 tid 1 eid 4 etid 1 c omnetpp::cMessage n hi m 3 pe -1 cid 1
+E # 4 t 0.002 m 4 ce 3 msg 3
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi pe 3
+SH sm 4 sg 2621440
+ES t 0.002
+CL id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi pe 4 cid 4
+DM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n event pe 4
 
-E # 2 t 0 m 2 ce 1 msg 1
-- INFO: Forwarding message hi0 on gate[2]
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi m 2 pe 2
-SH sm 2 sg 2621441
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi sm 2 sg 2621441 st 0 am 4 ag 1048576 at 0 pe 2
-CL id 4 tid 1 eid 4 etid 1 c omnetpp::cMessage n hi m 2 pe -1 cid 1
-
-E # 3 t 0 m 4 ce 2 msg 1
-- INFO: Forwarding message hi0 on gate[2]
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi m 4 pe 3
-SH sm 4 sg 2621441
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi sm 4 sg 2621441 st 0 am 3 ag 1048577 at 0 pe 3
-CL id 4 tid 1 eid 4 etid 1 c omnetpp::cMessage n hi m 4 pe -1 cid 1
-
-E # 4 t 0 m 3 ce 3 msg 1
-- INFO: Forwarding message hi0 on gate[1]
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi m 3 pe 4
-SH sm 3 sg 2621440
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi sm 3 sg 2621440 st 0 am 2 ag 1048576 at 0 pe 4
-CL id 4 tid 1 eid 4 etid 1 c omnetpp::cMessage n hi m 3 pe -1 cid 1
-
-E # 5 t 0 m 2 ce 4 msg 1
-- INFO: Forwarding message hi0 on gate[2]
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi m 2 pe 5
-SH sm 2 sg 2621441
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi sm 2 sg 2621441 st 0 am 4 ag 1048576 at 0 pe 5
-CL id 4 tid 1 eid 4 etid 1 c omnetpp::cMessage n hi m 2 pe -1 cid 1
-
-E # 6 t 0 m 4 ce 5 msg 1
-- INFO: Forwarding message hi0 on gate[2]
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi m 4 pe 6
-SH sm 4 sg 2621441
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi sm 4 sg 2621441 st 0 am 3 ag 1048577 at 0 pe 6
-CL id 4 tid 1 eid 4 etid 1 c omnetpp::cMessage n hi m 4 pe -1 cid 1
-
-E # 7 t 0 m 3 ce 6 msg 1
-- INFO: Forwarding message hi0 on gate[2]
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi m 3 pe 7
-SH sm 3 sg 2621441
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi sm 3 sg 2621441 st 0 am 4 ag 1048577 at 0 pe 7
-CL id 4 tid 1 eid 4 etid 1 c omnetpp::cMessage n hi m 3 pe -1 cid 1
-
-E # 8 t 0 m 4 ce 7 msg 1
-- INFO: Forwarding message hi0 on gate[2]
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi m 4 pe 8
-SH sm 4 sg 2621441
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi sm 4 sg 2621441 st 0 am 3 ag 1048577 at 0 pe 8
-CL id 4 tid 1 eid 4 etid 1 c omnetpp::cMessage n hi m 4 pe -1 cid 1
-
-E # 9 t 0 m 3 ce 8 msg 1
-- INFO: Forwarding message hi0 on gate[2]
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi m 3 pe 9
-SH sm 3 sg 2621441
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n hi sm 3 sg 2621441 st 0 am 4 ag 1048577 at 0 pe 9
-CL id 4 tid 1 eid 4 etid 1 c omnetpp::cMessage n hi m 3 pe -1 cid 1
-
-SE e 0 c 10 m "The user has finished the simulation -- at t=0s, event #9"
+E # 5 t 0.002 m 2 ce 4 msg 1
+SE e 1 c 9 m "scheduleAt(): Message (omnetpp::cMessage)event is currently scheduled, use cancelEvent() before rescheduling"

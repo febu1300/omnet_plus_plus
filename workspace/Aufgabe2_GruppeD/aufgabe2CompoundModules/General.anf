@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<analysis version="2">
-    <inputs>
-        <input pattern="/tictoc7/results/General-*.vec"/>
-        <input pattern="/tictoc7/results/General-*.sca"/>
-        <input pattern="app_l"/>
-    </inputs>
-    <charts/>
-</analysis>

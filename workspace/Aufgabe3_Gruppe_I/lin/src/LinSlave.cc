@@ -24,12 +24,11 @@ LinSlave::~LinSlave()
 {}
 
 void LinSlave::receiveFrame(cMessage *msg) {
-    /*
-     * todo: handle received Frames, send responses
-     */
+
     LinResponseFrame *responseFrame = dynamic_cast<LinResponseFrame*>(msg);
         if (responseFrame) {
-            int receivedMessageId = receivedFrame->getMessageId();
+            int responseMessageId = responseFrame->getMessageId();
+          EV <<  responseMessageId << "\n";
         }
     delete msg;
 }

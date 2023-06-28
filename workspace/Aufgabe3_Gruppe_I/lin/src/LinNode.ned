@@ -18,8 +18,7 @@ package lin;
 //class defining a generic LIN node
 simple LinNode
 {
-    
     parameters:
-		@class(LinNode);
+        @class(LinNode);
         @display("i=block/ifcard");
 }

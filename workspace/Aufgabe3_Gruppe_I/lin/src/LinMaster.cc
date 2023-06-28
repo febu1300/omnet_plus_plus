@@ -34,11 +34,11 @@ void LinMaster::initialize() {
     /*
      * todo: initialize all variables needed and schedule the first LIN-frame for the time step 10ms
      */
-    sendNewMsg = new cMessage("New Message");
-    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
+   // sendNewMsg = new cMessage("New Message");
+   // scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
 
-    sendNewMsg = new cMessage("self Event");
-    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
+   // sendNewMsg = new cMessage("self Event");
+   // scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
 
 }
 
@@ -52,21 +52,29 @@ void LinMaster::finish() {
 }
 
 void LinMaster::handleSelfMessage(cMessage *msg) {
-    int messageId = getRandomMessageId(FRAME_TYPE::UNCONDITIONAL_FRAME);
+    int messageId;
 
     if (msg == changeSporadic) {
         needSporadic = true;
-        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2, 4), SimTimeUnit::SIMTIME_MS), changeSporadic);
-    } else if (msg->isName("sendNewMsg")) {
+        EV <<"hello"<<"\n";
+        messageId = getRandomMessageId(msg);
 
-        sendLinRequest(messageId);
 
-        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
+        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2.0, 4.0), SimTimeUnit::SIMTIME_MS), changeSporadic);
+        LinNode::sendFrame(msg);
+    } else if (msg==sendNewMsg) {
+        needSporadic = false;
+        messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
+        //sendLinRequest(messageId);
 
-    } else if (msg->isName("selfEvent")){
-        sendLinRequest(messageId);
+        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9.0, 11.0), SimTimeUnit::SIMTIME_MS), sendNewMsg);
 
-        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
+    } else if (msg == selfEvent){
+        needSporadic = false;
+        messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
+      //  sendLinRequest(messageId);
+
+        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6.0, 8.0), SimTimeUnit::SIMTIME_MS), selfEvent);
     }
 
     /*
@@ -80,9 +88,11 @@ void LinMaster::receiveFrame(cMessage *msg) {
     /*
      * todo: handle received Frames, check for collisions
      */
+
     LinRequestFrame *receivedFrame = dynamic_cast<LinRequestFrame*>(msg);
       if (receivedFrame) {
           int receivedMessageId = receivedFrame->getMessageId();
+          EV << receivedMessageId <<"\n";
       }
 /*Sind zwei Frames zur gleichen Zeit an der Reihe, soll nur das
       versendet werden, das ein längeres Interval hat. Es darf nur und muss ein einziges Frame

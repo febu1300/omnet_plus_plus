@@ -53,7 +53,7 @@ void LinMaster::finish() {
 }
 
 void LinMaster::handleSelfMessage(cMessage *msg) {
-    int messageId;
+
 
     if (msg == changeSporadic) {
         needSporadic = true;
@@ -63,7 +63,9 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
         //  messageId = getRandomMessageId(msg);
         scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2, 4), SimTimeUnit::SIMTIME_MS), changeSporadic);
         EV <<"sproadic"<< gateSize("MasterOut") << "\n";
-
+        //int messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
+        //int messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
+        //sendLinRequest(50);
        // LinNode::sendFrame(msg);
     } else if (msg==sendNewMsg) {
         needSporadic = false;
@@ -76,7 +78,7 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
 
     } else if (msg == selfEvent){
         needSporadic = false;
-     //   messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
+        int messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
       //  sendLinRequest(messageId);
        // selfEvent = new cMessage("New Message");
         EV <<"event triggered"<< gateSize("MasterOut") << "\n";

@@ -24,6 +24,7 @@ simple LinSlave extends LinNode
     gates:          
 
         // define the gate going to/coming from the bus
-        input LinSlaveIn[];
-        output LinSlaveOut[];
+       // input LinSlaveIn[];
+      //  output LinSlaveOut[];
+      inout gate[];
 }

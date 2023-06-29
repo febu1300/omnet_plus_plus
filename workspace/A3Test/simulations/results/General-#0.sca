@@ -1,0 +1,680 @@
+version 3
+run General-0-20230608-23:16:55-27012
+attr configname General
+attr datetime 20230608-23:16:55
+attr datetimef 20230608-231655
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Lin
+attr processid 27012
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Lin
+config num-rngs 4
+config seed-0-mt 0
+config seed-1-mt 1
+config seed-2-mt 2
+config seed-3-mt 3
+config sim-time-limit 60s
+
+par Lin.master.gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[0].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[0].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[0].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[0].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[1].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[1].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[1].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[1].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[1].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[1].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[2].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[2].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[2].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[2].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[2].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[2].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[3].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[3].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[3].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[3].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[3].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[3].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[4].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[4].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[4].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[4].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[4].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[4].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[5].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[5].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[5].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[5].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[5].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[5].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[6].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[6].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[6].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[6].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[6].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[6].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[7].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[7].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[7].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[7].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[7].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[7].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[8].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[8].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[8].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[8].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[8].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[8].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[9].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[9].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[9].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[9].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[9].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[9].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[10].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[10].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[10].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[10].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[10].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[10].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[11].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[11].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[11].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[11].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[11].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[11].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[12].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[12].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[12].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[12].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[12].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[12].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[13].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[13].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[13].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[13].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[13].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[13].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[14].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[14].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[14].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[14].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[14].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[14].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[15].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[15].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[15].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[15].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[15].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[15].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[16].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[16].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[16].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[16].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[16].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[16].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[17].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[17].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[17].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[17].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[17].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[17].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[18].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[18].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[18].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[18].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[18].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[18].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[19].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[19].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[19].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[19].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[19].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[19].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[20].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[20].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[20].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[20].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[20].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[20].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[21].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[21].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[21].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[21].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[21].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[21].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[22].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[22].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[22].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[22].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[22].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[22].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[23].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[23].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[23].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[23].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[23].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[23].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[24].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[24].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[24].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[24].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[24].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[24].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[25].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[25].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[25].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[25].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[25].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[25].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[26].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[26].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[26].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[26].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[26].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[26].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[27].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[27].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[27].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[27].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[27].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[27].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[28].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[28].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[28].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[28].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[28].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[28].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[29].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[29].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[29].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[29].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[29].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[29].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[30].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[30].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[30].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[30].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[30].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[30].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[31].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[31].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[31].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[31].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[31].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[31].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[32].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[32].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[32].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[32].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[32].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[32].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[33].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[33].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[33].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[33].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[33].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[33].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[34].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[34].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[34].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[34].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[34].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[34].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[35].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[35].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[35].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[35].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[35].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[35].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[36].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[36].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[36].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[36].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[36].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[36].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[37].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[37].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[37].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[37].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[37].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[37].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[38].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[38].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[38].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[38].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[38].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[38].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[39].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[39].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[39].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[39].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[39].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[39].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[40].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[40].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[40].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[40].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[40].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[40].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[41].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[41].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[41].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[41].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[41].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[41].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[42].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[42].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[42].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[42].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[42].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[42].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[43].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[43].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[43].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[43].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[43].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[43].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[44].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[44].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[44].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[44].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[44].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[44].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[45].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[45].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[45].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[45].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[45].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[45].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[46].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[46].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[46].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[46].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[46].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[46].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[47].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[47].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[47].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[47].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[47].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[47].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[48].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[48].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[48].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[48].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[48].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[48].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master.gate$o[49].channel typename "\"ned.DelayChannel\""
+par Lin.master.gate$o[49].channel disabled false
+attr mutable ""
+par Lin.master.gate$o[49].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.slave[49].gate$o[0].channel typename "\"ned.DelayChannel\""
+par Lin.slave[49].gate$o[0].channel disabled false
+attr mutable ""
+par Lin.slave[49].gate$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par Lin.master typename "\"lin.LinMaster\""
+par Lin.slave[0] typename "\"lin.LinSlave\""
+par Lin.slave[1] typename "\"lin.LinSlave\""
+par Lin.slave[2] typename "\"lin.LinSlave\""
+par Lin.slave[3] typename "\"lin.LinSlave\""
+par Lin.slave[4] typename "\"lin.LinSlave\""
+par Lin.slave[5] typename "\"lin.LinSlave\""
+par Lin.slave[6] typename "\"lin.LinSlave\""
+par Lin.slave[7] typename "\"lin.LinSlave\""
+par Lin.slave[8] typename "\"lin.LinSlave\""
+par Lin.slave[9] typename "\"lin.LinSlave\""
+par Lin.slave[10] typename "\"lin.LinSlave\""
+par Lin.slave[11] typename "\"lin.LinSlave\""
+par Lin.slave[12] typename "\"lin.LinSlave\""
+par Lin.slave[13] typename "\"lin.LinSlave\""
+par Lin.slave[14] typename "\"lin.LinSlave\""
+par Lin.slave[15] typename "\"lin.LinSlave\""
+par Lin.slave[16] typename "\"lin.LinSlave\""
+par Lin.slave[17] typename "\"lin.LinSlave\""
+par Lin.slave[18] typename "\"lin.LinSlave\""
+par Lin.slave[19] typename "\"lin.LinSlave\""
+par Lin.slave[20] typename "\"lin.LinSlave\""
+par Lin.slave[21] typename "\"lin.LinSlave\""
+par Lin.slave[22] typename "\"lin.LinSlave\""
+par Lin.slave[23] typename "\"lin.LinSlave\""
+par Lin.slave[24] typename "\"lin.LinSlave\""
+par Lin.slave[25] typename "\"lin.LinSlave\""
+par Lin.slave[26] typename "\"lin.LinSlave\""
+par Lin.slave[27] typename "\"lin.LinSlave\""
+par Lin.slave[28] typename "\"lin.LinSlave\""
+par Lin.slave[29] typename "\"lin.LinSlave\""
+par Lin.slave[30] typename "\"lin.LinSlave\""
+par Lin.slave[31] typename "\"lin.LinSlave\""
+par Lin.slave[32] typename "\"lin.LinSlave\""
+par Lin.slave[33] typename "\"lin.LinSlave\""
+par Lin.slave[34] typename "\"lin.LinSlave\""
+par Lin.slave[35] typename "\"lin.LinSlave\""
+par Lin.slave[36] typename "\"lin.LinSlave\""
+par Lin.slave[37] typename "\"lin.LinSlave\""
+par Lin.slave[38] typename "\"lin.LinSlave\""
+par Lin.slave[39] typename "\"lin.LinSlave\""
+par Lin.slave[40] typename "\"lin.LinSlave\""
+par Lin.slave[41] typename "\"lin.LinSlave\""
+par Lin.slave[42] typename "\"lin.LinSlave\""
+par Lin.slave[43] typename "\"lin.LinSlave\""
+par Lin.slave[44] typename "\"lin.LinSlave\""
+par Lin.slave[45] typename "\"lin.LinSlave\""
+par Lin.slave[46] typename "\"lin.LinSlave\""
+par Lin.slave[47] typename "\"lin.LinSlave\""
+par Lin.slave[48] typename "\"lin.LinSlave\""
+par Lin.slave[49] typename "\"lin.LinSlave\""
+par Lin typename "\"lin.simulations.Lin\""
+par Lin numSlaves 50
+

@@ -1,0 +1,30 @@
+file 109580 1686259023                                          
+version 3
+run General-0-20230608-23:16:55-27012
+attr configname General
+attr datetime 20230608-23:16:55
+attr datetimef 20230608-231655
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Lin
+attr processid 27012
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Lin
+config num-rngs 4
+config seed-0-mt 0
+config seed-1-mt 1
+config seed-2-mt 2
+config seed-3-mt 3
+config sim-time-limit 60s
+
+vector 0 Lin.master "" ETV
+0	597 108981 1 313658 0.01 60 6000 0 59 150045 5330603
+

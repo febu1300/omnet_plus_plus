@@ -24,19 +24,18 @@ network Lin
 {
     parameters:
         //number of slaves in the LIN network
-        int numSlaves = 50;
+        int numSlaves = 5;
 
         @display("bgb=730,367");
     submodules:
-          // place the slaves and master node. define the number of gates for the master
-           LSlave[numSlaves]: LinSlave;
-           LMaster: LinMaster;
-       	
+        // place the slaves and master node. define the number of gates for the master
+        LSlave[numSlaves]: LinSlave;
+        LMaster: LinMaster;
     connections:
         //todo: connect each slave with the master
-           for i = 0..numSlaves-1 {
-            LSlave[i].LinSlaveOut++ --> LMaster.MasterIn++;
-            LMaster.MasterOut++ --> LSlave[i].LinSlaveIn++;
-        }
+        for i=0..numSlaves-1 {
         
+            LMaster.gate++ <--> LSlave[i].gate++;
+        }
+
 }

@@ -1,0 +1,19 @@
+version 2
+run General-0-20230629-10:22:39-153675
+attr configname General
+attr datetime 20230629-10:22:39
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Lin
+attr processid 153675
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 0 Lin.master "" ETV
+0	1	0.01	37

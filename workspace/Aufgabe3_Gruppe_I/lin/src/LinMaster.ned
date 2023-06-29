@@ -23,6 +23,7 @@ simple LinMaster extends LinNode
         
     gates:
       	//define the gate going to/coming from the bus
-      	input  MasterIn[];
-      	output  MasterOut[];
+      	//input  MasterIn[];
+      	//output  MasterOut[];
+      	inout gate[];
 }

@@ -31,15 +31,14 @@ void LinMaster::initialize() {
     changeSporadic = new cMessage("changeSporadic");
     scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2, 4), SimTimeUnit::SIMTIME_MS), changeSporadic);
 
-
     /*
      * todo: initialize all variables needed and schedule the first LIN-frame for the time step 10ms
      */
     sendNewMsg = new cMessage("New Message");
-    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
+          scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
 
-    selfEvent = new cMessage("self Event");
-    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
+          selfEvent = new cMessage("self Event");
+          scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
 
 }
 
@@ -53,42 +52,55 @@ void LinMaster::finish() {
 }
 
 void LinMaster::handleSelfMessage(cMessage *msg) {
+    int messageId;
 
+    auto currentTime = simTime().raw();
 
-    if (msg == changeSporadic) {
+    EV << "AAA"<<currentTime % 70 <<" "<<currentTime % 30<<"  "<< currentTime % 10 <<"\n";
+      if (currentTime%70 == 0 && msg == changeSporadic) {
         needSporadic = true;
-       // EV <<"hello "<< gateSize("MasterOut") <<"\n";
-        gateSize("MasterOut");
 
-        //  messageId = getRandomMessageId(msg);
-        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2, 4), SimTimeUnit::SIMTIME_MS), changeSporadic);
-        EV <<"sproadic"<< gateSize("MasterOut") << "\n";
-        //int messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
-        //int messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
-        //sendLinRequest(50);
-       // LinNode::sendFrame(msg);
-    } else if (msg==sendNewMsg) {
+       // scheduleAt(simTime() + .03, changeSporadic);
+
+         messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
+         EV <<"Sproadic Message sent " << getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME) << "\n";
+
+         sendLinRequest(messageId);
+
+
+
+
+    } else if (currentTime % 30  && msg==sendNewMsg) {
         needSporadic = false;
        // messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
         //sendLinRequest(messageId);
+      //  scheduleAt(simTime() + .01, sendNewMsg);
+        messageId = getRandomMessageId(FRAME_TYPE::UNCONDITIONAL_FRAME);
+        EV <<"Unconditional Message sent"<< getRandomMessageId(FRAME_TYPE::UNCONDITIONAL_FRAME) << "\n";
+        sendLinRequest(messageId);
 
-        EV <<"Unconditional"<< gateSize("MasterOut") << "\n";
-
-        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
-
-    } else if (msg == selfEvent){
+    } else if (currentTime % 10  && msg == selfEvent){
         needSporadic = false;
-        int messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
+       // int messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
       //  sendLinRequest(messageId);
        // selfEvent = new cMessage("New Message");
-        EV <<"event triggered"<< gateSize("MasterOut") << "\n";
-        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
 
+
+       // scheduleAt(simTime() + 0.07, selfEvent);
+        messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
+        EV <<"Event triggered Message sent"<< getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME) << "\n";
+        sendLinRequest(messageId);
+
+
+    } else
+    {
+        EV << "Collision"<<currentTime % 70 <<" "<<currentTime % 30<<"  "<< currentTime % 10 <<"\n";
     }
 
     /*
      * handle self messages in order to send next packet or check timeouts
      */
+
 
 }
 
@@ -99,9 +111,11 @@ void LinMaster::receiveFrame(cMessage *msg) {
      */
 
     LinRequestFrame *receivedFrame = dynamic_cast<LinRequestFrame*>(msg);
+    EV <<"recieve frame"<<"\n";
+
       if (receivedFrame) {
           int receivedMessageId = receivedFrame->getMessageId();
-          EV << receivedMessageId <<"\n";
+          EV <<"recieve frame"<< receivedMessageId <<"\n";
       }
 /*Sind zwei Frames zur gleichen Zeit an der Reihe, soll nur das
       versendet werden, das ein längeres Interval hat. Es darf nur und muss ein einziges Frame
@@ -119,13 +133,13 @@ void LinMaster::receiveFrame(cMessage *msg) {
 int LinMaster::getRandomMessageId(FRAME_TYPE frameType) const {
     switch (frameType){
     case (FRAME_TYPE::UNCONDITIONAL_FRAME):{
-        return omnetpp::intuniform(getRNG(1), FIRST_UNCONDITIONAL, LAST_UNCONDITIONAL);
+        return omnetpp::intuniform(getRNG(0), FIRST_UNCONDITIONAL, LAST_UNCONDITIONAL);
     }
     case (FRAME_TYPE::SPORADIC_FRAME):{
-        return omnetpp::intuniform(getRNG(1), FIRST_SPORADIC, LAST_SPORADIC);
+        return omnetpp::intuniform(getRNG(0), FIRST_SPORADIC, LAST_SPORADIC);
         }
     case (FRAME_TYPE::EVENT_TRIGGERED_FRAME):{
-        return omnetpp::intuniform(getRNG(1), FIRST_EVENT_TRIGGERED, LAST_EVENT_TRIGGERED);
+        return omnetpp::intuniform(getRNG(0), FIRST_EVENT_TRIGGERED, LAST_EVENT_TRIGGERED);
         }
     default:{
         ASSERT2(false, "No message id can be generated for the type UNKNOWN!");

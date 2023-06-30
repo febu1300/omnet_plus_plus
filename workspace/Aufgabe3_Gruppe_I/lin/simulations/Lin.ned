@@ -25,7 +25,8 @@ network Lin
     parameters:
         //number of slaves in the LIN network
         int numSlaves = 5;
-
+		
+	@signal[recordVector](type="vector");
         @display("bgb=730,367");
     submodules:
         // place the slaves and master node. define the number of gates for the master

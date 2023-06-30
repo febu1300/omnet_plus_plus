@@ -43,24 +43,29 @@ void LinSlave::receiveFrame(cMessage *msg) {
                 }
 
                 if(isMyMsg && isSproadConditional==0){
+
               if(responseMessageId  >= 50){
                       EV <<"Recieved Message ID"<< responseMessageId <<"\n";
                       response = getResponse();
+
                       sendLinResponse(responseMessageId , response);
               }
               else  if(responseMessageId  >= 40 && responseMessageId <= 49){
                       EV <<"Recieved Message ID  "<< responseMessageId  <<"\n";
                       response = getResponse();
+                      scheduleAt(simTime(), msg);
+
                       sendLinResponse(responseMessageId , response);
                   }
               if(responseMessageId  >= 0 && responseMessageId  <= 39){
-
+                  scheduleAt(simTime(), msg);
                       EV <<"Recieved Message ID  "<< responseMessageId  <<"\n";
                       response = getResponse();
                       sendLinResponse(responseMessageId , response);
               }
 
                 }
+
     delete msg;
 }
 
@@ -71,6 +76,7 @@ void LinSlave::sendLinResponse(int messageId, int response) {
     frame->setResponse(response);
 
     sendFrame(frame);
+
 }
 
 int LinSlave::getResponse() const {

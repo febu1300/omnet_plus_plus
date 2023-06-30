@@ -31,6 +31,7 @@ void LinMaster::initialize() {
     changeSporadic = new cMessage("changeSporadic");
     scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2, 4), SimTimeUnit::SIMTIME_MS), changeSporadic);
 
+
     /*
      * todo: initialize all variables needed and schedule the first LIN-frame for the time step 10ms
      */
@@ -78,7 +79,6 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
 
     } else if (msg == selfEvent){
         needSporadic = false;
-       // int messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
         //sendLinRequest(messageId);
        // selfEvent = new cMessage("New Message");
 
@@ -113,7 +113,7 @@ void LinMaster::receiveFrame(cMessage *msg) {
 
     LinRequestFrame *receivedFrame = dynamic_cast<LinRequestFrame*>(msg);
 
-          EV <<"recieve frame"<<"\n";
+            EV <<"recieve frame"<<"\n";
 
           int receivedMessageId = receivedFrame->getMessageId();
 
@@ -144,13 +144,13 @@ void LinMaster::receiveFrame(cMessage *msg) {
 int LinMaster::getRandomMessageId(FRAME_TYPE frameType) const {
     switch (frameType){
     case (FRAME_TYPE::UNCONDITIONAL_FRAME):{
-        return omnetpp::intuniform(getRNG(0), FIRST_UNCONDITIONAL, LAST_UNCONDITIONAL);
+        return omnetpp::intuniform(getRNG(1), FIRST_UNCONDITIONAL, LAST_UNCONDITIONAL);
     }
     case (FRAME_TYPE::SPORADIC_FRAME):{
-        return omnetpp::intuniform(getRNG(0), FIRST_SPORADIC, LAST_SPORADIC);
+        return omnetpp::intuniform(getRNG(1), FIRST_SPORADIC, LAST_SPORADIC);
         }
     case (FRAME_TYPE::EVENT_TRIGGERED_FRAME):{
-        return omnetpp::intuniform(getRNG(0), FIRST_EVENT_TRIGGERED, LAST_EVENT_TRIGGERED);
+        return omnetpp::intuniform(getRNG(1), FIRST_EVENT_TRIGGERED, LAST_EVENT_TRIGGERED);
         }
     default:{
         ASSERT2(false, "No message id can be generated for the type UNKNOWN!");

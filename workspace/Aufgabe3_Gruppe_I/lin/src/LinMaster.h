@@ -25,7 +25,7 @@ public:
     virtual ~LinMaster();
     cMessage* sendNewMsg;
     cMessage* selfEvent;
-
+    int collision ;
 
 protected:
 

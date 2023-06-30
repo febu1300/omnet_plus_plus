@@ -25,11 +25,42 @@ LinSlave::~LinSlave()
 
 void LinSlave::receiveFrame(cMessage *msg) {
 
-    LinResponseFrame *responseFrame = dynamic_cast<LinResponseFrame*>(msg);
-        if (responseFrame) {
-            int responseMessageId = responseFrame->getMessageId();
-          EV <<  responseMessageId << "\n";
-        }
+        LinRequestFrame *receivedFrame = dynamic_cast<LinRequestFrame*>(msg);
+
+              int responseMessageId = receivedFrame->getMessageId();
+              bool isSproadConditional = (getIndex() == responseMessageId);
+
+              EV <<"Sporadic "<< isSproadConditional <<"\n";
+             int response;
+             bool isMyMsg = (getIndex() == responseMessageId);
+
+                if(responseMessageId >= 50){
+                    std::list<int> collisionId = getEventTriggeredIds(responseMessageId);
+                    for(int id : collisionId){
+                        if(id == getIndex())
+                            isMyMsg = true;
+                    }
+                }
+
+                if(isMyMsg && isSproadConditional==0){
+              if(responseMessageId  >= 50){
+                      EV <<"Recieved Message ID"<< responseMessageId <<"\n";
+                      response = getResponse();
+                      sendLinResponse(responseMessageId , response);
+              }
+              else  if(responseMessageId  >= 40 && responseMessageId <= 49){
+                      EV <<"Recieved Message ID  "<< responseMessageId  <<"\n";
+                      response = getResponse();
+                      sendLinResponse(responseMessageId , response);
+                  }
+              if(responseMessageId  >= 0 && responseMessageId  <= 39){
+
+                      EV <<"Recieved Message ID  "<< responseMessageId  <<"\n";
+                      response = getResponse();
+                      sendLinResponse(responseMessageId , response);
+              }
+
+                }
     delete msg;
 }
 

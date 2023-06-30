@@ -35,10 +35,10 @@ void LinMaster::initialize() {
      * todo: initialize all variables needed and schedule the first LIN-frame for the time step 10ms
      */
     sendNewMsg = new cMessage("New Message");
-          scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
+    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
 
-          selfEvent = new cMessage("self Event");
-          scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
+    selfEvent = new cMessage("self Event");
+    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
 
 }
 
@@ -56,19 +56,18 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
 
     auto currentTime = simTime().raw();
 
-    EV << "AAA"<<currentTime % 70 <<" "<<currentTime % 30<<"  "<< currentTime % 10 <<"\n";
+   // EV << "AAA"<<currentTime % 70 <<" "<<currentTime % 30<<"  "<< currentTime % 10 <<"\n";
 
       if (msg == changeSporadic) {
         needSporadic = true;
-
-       scheduleAt(simTime() + .03, changeSporadic);
+        scheduleAt(simTime() + .03, changeSporadic);
 
          messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
          EV <<"Sproadic Message sent " << messageId << "\n";
 
          //sendLinRequest(messageId);
 
-    } else if ( msg==sendNewMsg) {
+    } else if ( msg== sendNewMsg) {
         needSporadic = false;
        // messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
         //sendLinRequest(messageId);
@@ -95,6 +94,7 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
       // Sporadic messages have the second priority
 
       EV <<"message"<< LinNode::getFrameType(messageId) << "\n";
+
       if(currentTime%10==0){
       sendLinRequest(messageId);
       }
@@ -112,12 +112,22 @@ void LinMaster::receiveFrame(cMessage *msg) {
      */
 
     LinRequestFrame *receivedFrame = dynamic_cast<LinRequestFrame*>(msg);
-    EV <<"recieve frame"<<"\n";
 
-      if (receivedFrame) {
+          EV <<"recieve frame"<<"\n";
+
           int receivedMessageId = receivedFrame->getMessageId();
-          EV <<"recieve frame"<< receivedMessageId <<"\n";
-      }
+
+          if(receivedMessageId >= 50){
+              EV <<"recieve frame 50"<< receivedMessageId <<"\n";
+          }
+          else
+              if(receivedMessageId >= 40 && receivedMessageId <= 49){
+                  EV <<"recieve frame 45"<< receivedMessageId <<"\n";
+              }
+          if(receivedMessageId >= 0 && receivedMessageId <= 39){
+
+          EV <<"recieve frame 30"<< receivedMessageId <<"\n";
+          }
 /*Sind zwei Frames zur gleichen Zeit an der Reihe, soll nur das
       versendet werden, das ein längeres Interval hat. Es darf nur und muss ein einziges Frame
       pro Zeitslot versendet werden!

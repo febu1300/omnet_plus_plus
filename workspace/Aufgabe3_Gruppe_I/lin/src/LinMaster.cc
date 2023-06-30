@@ -57,46 +57,47 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
     auto currentTime = simTime().raw();
 
     EV << "AAA"<<currentTime % 70 <<" "<<currentTime % 30<<"  "<< currentTime % 10 <<"\n";
-      if (currentTime%70 == 0 && msg == changeSporadic) {
+
+      if (msg == changeSporadic) {
         needSporadic = true;
 
-       // scheduleAt(simTime() + .03, changeSporadic);
+       scheduleAt(simTime() + .03, changeSporadic);
 
          messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
-         EV <<"Sproadic Message sent " << getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME) << "\n";
+         EV <<"Sproadic Message sent " << messageId << "\n";
 
-         sendLinRequest(messageId);
+         //sendLinRequest(messageId);
 
-
-
-
-    } else if (currentTime % 30  && msg==sendNewMsg) {
+    } else if ( msg==sendNewMsg) {
         needSporadic = false;
        // messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
         //sendLinRequest(messageId);
-      //  scheduleAt(simTime() + .01, sendNewMsg);
+        scheduleAt(simTime() + .01, sendNewMsg);
         messageId = getRandomMessageId(FRAME_TYPE::UNCONDITIONAL_FRAME);
-        EV <<"Unconditional Message sent"<< getRandomMessageId(FRAME_TYPE::UNCONDITIONAL_FRAME) << "\n";
-        sendLinRequest(messageId);
+        EV <<"Unconditional Message sent"<< messageId << "\n";
+       // sendLinRequest(messageId);
 
-    } else if (currentTime % 10  && msg == selfEvent){
+    } else if (msg == selfEvent){
         needSporadic = false;
        // int messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
-      //  sendLinRequest(messageId);
+        //sendLinRequest(messageId);
        // selfEvent = new cMessage("New Message");
 
 
-       // scheduleAt(simTime() + 0.07, selfEvent);
+        scheduleAt(simTime() + 0.07, selfEvent);
         messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
-        EV <<"Event triggered Message sent"<< getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME) << "\n";
-        sendLinRequest(messageId);
+        EV <<"Event triggered Message sent"<< messageId<< "\n";
+       // sendLinRequest(messageId);
 
 
-    } else
-    {
-        EV << "Collision"<<currentTime % 70 <<" "<<currentTime % 30<<"  "<< currentTime % 10 <<"\n";
     }
+// selfEvent have the highest priorty since they have lhe longest interval,
+      // Sporadic messages have the second priority
 
+      EV <<"message"<< LinNode::getFrameType(messageId) << "\n";
+      if(currentTime%10==0){
+      sendLinRequest(messageId);
+      }
     /*
      * handle self messages in order to send next packet or check timeouts
      */

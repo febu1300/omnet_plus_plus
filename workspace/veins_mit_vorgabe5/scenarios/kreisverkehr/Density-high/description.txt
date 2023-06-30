@@ -1,0 +1,2 @@
+Average number of vehicles on the road after 500s: 101.2424
+Average number of vehicles per km of road: tbd

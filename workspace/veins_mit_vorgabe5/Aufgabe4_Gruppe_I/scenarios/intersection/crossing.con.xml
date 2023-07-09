@@ -1,0 +1,30 @@
+<connections>
+        <connection from="w" to="-e" fromLane="0" toLane="0" />
+        <connection from="w" to="-e" fromLane="1" toLane="1" />
+        <connection from="w" to="-e" fromLane="2" toLane="2" />
+        <connection from="w" to="-s" fromLane="0" toLane="0" />
+        <connection from="w" to="-n" fromLane="2" toLane="2" />
+        <connection from="w" to="-w" fromLane="2" toLane="0" />
+
+        <connection from="e" to="-w" fromLane="0" toLane="0" />
+        <connection from="e" to="-w" fromLane="1" toLane="1" />
+        <connection from="e" to="-w" fromLane="2" toLane="2" />
+        <connection from="e" to="-n" fromLane="0" toLane="0" />
+        <connection from="e" to="-s" fromLane="2" toLane="2" />
+        <connection from="e" to="-e" fromLane="2" toLane="0" />
+
+
+        <connection from="s" to="-n" fromLane="0" toLane="0" />
+        <connection from="s" to="-n" fromLane="1" toLane="1" />
+        <connection from="s" to="-n" fromLane="2" toLane="2" />
+        <connection from="s" to="-e" fromLane="0" toLane="0" />
+        <connection from="s" to="-w" fromLane="2" toLane="2" />
+        <connection from="s" to="-s" fromLane="2" toLane="0" />
+
+        <connection from="n" to="-s" fromLane="0" toLane="0" />
+        <connection from="n" to="-s" fromLane="1" toLane="1" />
+        <connection from="n" to="-s" fromLane="2" toLane="2" />
+        <connection from="n" to="-w" fromLane="0" toLane="0" />
+        <connection from="n" to="-e" fromLane="2" toLane="2" />
+        <connection from="n" to="-n" fromLane="2" toLane="0" />
+</connections>

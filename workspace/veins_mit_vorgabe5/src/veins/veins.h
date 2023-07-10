@@ -60,7 +60,7 @@ using namespace omnetpp;
  * %Veins - The open source vehicular network simulation framework.
  */
 namespace Veins {
-#ifdef __cpp_lib_make_unique
+#ifdef false //__cpp_lib_make_unique
 using make_unique = std::make_unique;
 #else
 /**

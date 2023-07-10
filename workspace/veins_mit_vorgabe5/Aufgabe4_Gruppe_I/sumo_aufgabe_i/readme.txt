@@ -7,3 +7,6 @@ To generate a route file directly we can use -r  option and specify the rou.xml 
   sumo-gui -c net.sumo.cfg 
 
 poly.xml and sumo.cfg file can be imported from Sumo website
+
+Types of trafic participants 
+Beim kreuzungen overlap the vehichle output 

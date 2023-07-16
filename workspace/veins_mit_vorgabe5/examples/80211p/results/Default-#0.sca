@@ -1,0 +1,147 @@
+version 2
+run Default-0-20230716-14:30:59-189258
+attr configname Default
+attr datetime 20230716-14:30:59
+attr experiment Default
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network SimpleScenario
+attr processid 189258
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.node[*].appl.sendBeacons true
+param *.playgroundSizeX 200m
+param *.playgroundSizeY 200m
+param *.playgroundSizeZ 50m
+param *.world.useTorus false
+param *.world.use2D false
+param *.annotations.draw true
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 50m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.**.nic.mac1609_4.txPower 5mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.node[*].applType "\"SimpleWaveApp\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons false
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 0.1s
+param *.node[*].appl.beaconPriority 2
+param *.node[*].mobility.z 1.895
+param *.node[*].mobility.y 100
+param *.node[0].mobility.x 80
+param *.node[1].mobility.x 90
+param *.node[2].mobility.x 100
+param *.node[3].mobility.x 110
+param *.node[4].mobility.x 120
+param *.node[*].mobility.angle "uniform(0deg, 359deg)"
+param *.node[*].mobility.acceleration 0mpss
+param *.node[*].mobility.updateInterval 100ms
+param *.node[*].mobility.speed 22mps
+
+scalar SimpleScenario.node[0].appl generatedWSMs 0
+scalar SimpleScenario.node[0].appl receivedWSMs 0
+scalar SimpleScenario.node[0].appl generatedBSMs 0
+scalar SimpleScenario.node[0].appl receivedBSMs 2
+scalar SimpleScenario.node[0].nic.phy80211p busyTime 0.010980811682058
+scalar SimpleScenario.node[0].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SimpleScenario.node[0].nic.mac1609_4 ReceivedBroadcasts 2
+scalar SimpleScenario.node[0].nic.mac1609_4 SentPackets 0
+scalar SimpleScenario.node[0].nic.mac1609_4 SentAcknowledgements 0
+scalar SimpleScenario.node[0].nic.mac1609_4 SNIRLostPackets 0
+scalar SimpleScenario.node[0].nic.mac1609_4 RXTXLostPackets 0
+scalar SimpleScenario.node[0].nic.mac1609_4 TotalLostPackets 0
+scalar SimpleScenario.node[0].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SimpleScenario.node[0].nic.mac1609_4 TooLittleTime 0
+scalar SimpleScenario.node[0].nic.mac1609_4 TimesIntoBackoff 0
+scalar SimpleScenario.node[0].nic.mac1609_4 SlotsBackoff 0
+scalar SimpleScenario.node[0].nic.mac1609_4 NumInternalContention 0
+scalar SimpleScenario.node[0].nic.mac1609_4 totalBusyTime 0.000208
+scalar SimpleScenario.node[1].appl generatedWSMs 0
+scalar SimpleScenario.node[1].appl receivedWSMs 0
+scalar SimpleScenario.node[1].appl generatedBSMs 1
+scalar SimpleScenario.node[1].appl receivedBSMs 1
+scalar SimpleScenario.node[1].nic.phy80211p busyTime 0.0073205411213719
+scalar SimpleScenario.node[1].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SimpleScenario.node[1].nic.mac1609_4 ReceivedBroadcasts 1
+scalar SimpleScenario.node[1].nic.mac1609_4 SentPackets 1
+scalar SimpleScenario.node[1].nic.mac1609_4 SentAcknowledgements 0
+scalar SimpleScenario.node[1].nic.mac1609_4 SNIRLostPackets 0
+scalar SimpleScenario.node[1].nic.mac1609_4 RXTXLostPackets 0
+scalar SimpleScenario.node[1].nic.mac1609_4 TotalLostPackets 0
+scalar SimpleScenario.node[1].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SimpleScenario.node[1].nic.mac1609_4 TooLittleTime 0
+scalar SimpleScenario.node[1].nic.mac1609_4 TimesIntoBackoff 1
+scalar SimpleScenario.node[1].nic.mac1609_4 SlotsBackoff 0
+scalar SimpleScenario.node[1].nic.mac1609_4 NumInternalContention 0
+scalar SimpleScenario.node[1].nic.mac1609_4 totalBusyTime 0.000209
+scalar SimpleScenario.node[2].appl generatedWSMs 0
+scalar SimpleScenario.node[2].appl receivedWSMs 0
+scalar SimpleScenario.node[2].appl generatedBSMs 1
+scalar SimpleScenario.node[2].appl receivedBSMs 2
+scalar SimpleScenario.node[2].nic.phy80211p busyTime 0.0073205411213719
+scalar SimpleScenario.node[2].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SimpleScenario.node[2].nic.mac1609_4 ReceivedBroadcasts 2
+scalar SimpleScenario.node[2].nic.mac1609_4 SentPackets 1
+scalar SimpleScenario.node[2].nic.mac1609_4 SentAcknowledgements 0
+scalar SimpleScenario.node[2].nic.mac1609_4 SNIRLostPackets 0
+scalar SimpleScenario.node[2].nic.mac1609_4 RXTXLostPackets 0
+scalar SimpleScenario.node[2].nic.mac1609_4 TotalLostPackets 0
+scalar SimpleScenario.node[2].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SimpleScenario.node[2].nic.mac1609_4 TooLittleTime 0
+scalar SimpleScenario.node[2].nic.mac1609_4 TimesIntoBackoff 0
+scalar SimpleScenario.node[2].nic.mac1609_4 SlotsBackoff 0
+scalar SimpleScenario.node[2].nic.mac1609_4 NumInternalContention 0
+scalar SimpleScenario.node[2].nic.mac1609_4 totalBusyTime 0.000208
+scalar SimpleScenario.node[3].appl generatedWSMs 0
+scalar SimpleScenario.node[3].appl receivedWSMs 0
+scalar SimpleScenario.node[3].appl generatedBSMs 0
+scalar SimpleScenario.node[3].appl receivedBSMs 2
+scalar SimpleScenario.node[3].nic.phy80211p busyTime 0.010980811682058
+scalar SimpleScenario.node[3].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SimpleScenario.node[3].nic.mac1609_4 ReceivedBroadcasts 2
+scalar SimpleScenario.node[3].nic.mac1609_4 SentPackets 0
+scalar SimpleScenario.node[3].nic.mac1609_4 SentAcknowledgements 0
+scalar SimpleScenario.node[3].nic.mac1609_4 SNIRLostPackets 0
+scalar SimpleScenario.node[3].nic.mac1609_4 RXTXLostPackets 0
+scalar SimpleScenario.node[3].nic.mac1609_4 TotalLostPackets 0
+scalar SimpleScenario.node[3].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SimpleScenario.node[3].nic.mac1609_4 TooLittleTime 0
+scalar SimpleScenario.node[3].nic.mac1609_4 TimesIntoBackoff 0
+scalar SimpleScenario.node[3].nic.mac1609_4 SlotsBackoff 0
+scalar SimpleScenario.node[3].nic.mac1609_4 NumInternalContention 0
+scalar SimpleScenario.node[3].nic.mac1609_4 totalBusyTime 0.000208
+scalar SimpleScenario.node[4].appl generatedWSMs 0
+scalar SimpleScenario.node[4].appl receivedWSMs 0
+scalar SimpleScenario.node[4].appl generatedBSMs 1
+scalar SimpleScenario.node[4].appl receivedBSMs 1
+scalar SimpleScenario.node[4].nic.phy80211p busyTime 0.0073205411213719
+scalar SimpleScenario.node[4].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SimpleScenario.node[4].nic.mac1609_4 ReceivedBroadcasts 1
+scalar SimpleScenario.node[4].nic.mac1609_4 SentPackets 1
+scalar SimpleScenario.node[4].nic.mac1609_4 SentAcknowledgements 0
+scalar SimpleScenario.node[4].nic.mac1609_4 SNIRLostPackets 0
+scalar SimpleScenario.node[4].nic.mac1609_4 RXTXLostPackets 0
+scalar SimpleScenario.node[4].nic.mac1609_4 TotalLostPackets 0
+scalar SimpleScenario.node[4].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SimpleScenario.node[4].nic.mac1609_4 TooLittleTime 0
+scalar SimpleScenario.node[4].nic.mac1609_4 TimesIntoBackoff 1
+scalar SimpleScenario.node[4].nic.mac1609_4 SlotsBackoff 9
+scalar SimpleScenario.node[4].nic.mac1609_4 NumInternalContention 0
+scalar SimpleScenario.node[4].nic.mac1609_4 totalBusyTime 0.000209
+

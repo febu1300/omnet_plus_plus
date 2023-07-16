@@ -1,0 +1,14 @@
+<routes>
+<route id="route1" edges="w -e"/>
+<route id="route2" edges="w -s"/>
+<route id="route3" edges="w -n"/>
+<route id="route4" edges="n -e"/>
+<route id="route5" edges="n -w"/>
+<route id="route6" edges="n -s"/>
+<route id="route7" edges="e -n"/>
+<route id="route8" edges="e -w"/>
+<route id="route9" edges="e -s"/>
+<route id="route10" edges="s -w"/>
+<route id="route11" edges="s -n"/>
+<route id="route12" edges="s -e"/>
+</routes>

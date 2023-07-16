@@ -10,27 +10,27 @@ network SimpleScenario
         double playgroundSizeX @unit(m); // x size of the area the nodes are in (in meters)
         double playgroundSizeY @unit(m); // y size of the area the nodes are in (in meters)
         double playgroundSizeZ @unit(m); // z size of the area the nodes are in (in meters)
-        @display("bgb=$playgroundSizeX,$playgroundSizeY");
+        @display("bgb=991,671");
     submodules:
         obstacles: ObstacleControl {
-            @display("p=240,50");
+            @display("p=603,487");
         }
-       connectionManager: ConnectionManager {
+        connectionManager: ConnectionManager {
             parameters:
-                @display("p=150,0;i=abstract/multicast");
+                @display("p=737,65;i=abstract/multicast");
         }
         world: BaseWorldUtility {
             parameters:
                 playgroundSizeX = playgroundSizeX;
                 playgroundSizeY = playgroundSizeY;
                 playgroundSizeZ = playgroundSizeZ;
-                @display("p=30,0;i=misc/globe");
+                @display("p=383,97;i=misc/globe");
         }
         node[5]: Wifi {
-            @display("p=150,140;b=10,10,oval");
-        }        
+            @display("p=336,272;b=10,10,oval");
+        }
         annotations: AnnotationManager {
-            @display("p=260,50");
+            @display("p=882,327");
         }
     connections allowunconnected:
 }

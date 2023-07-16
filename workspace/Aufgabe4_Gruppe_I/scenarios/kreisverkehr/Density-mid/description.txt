@@ -1,0 +1,2 @@
+Average number of vehicles on the road after 200s: 89.66822
+Average number of vehicles per km of road: tbd

@@ -25,8 +25,10 @@ public:
     virtual ~LinMaster();
     cMessage* sendNewMsg;
     cMessage* selfEvent;
+    cMessage *checkAntwort;
+    std::list<int> collisionId;
     int collision ;
-
+    cOutVector recordMsgId;
 protected:
 
     /* This is a message to simulate some kind of system dynamics.

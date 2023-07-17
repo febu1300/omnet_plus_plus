@@ -24,47 +24,16 @@ LinSlave::~LinSlave()
 {}
 
 void LinSlave::receiveFrame(cMessage *msg) {
+    LinRequestFrame *receivedFrame = dynamic_cast<LinRequestFrame*>(msg);
 
-        LinRequestFrame *receivedFrame = dynamic_cast<LinRequestFrame*>(msg);
+    int responseMessageId = receivedFrame->getMessageId();
 
-              int responseMessageId = receivedFrame->getMessageId();
-              bool isSproadConditional = (getIndex() == responseMessageId);
+    if (getIndex() == responseMessageId || (hasUpdatedData() && isResponsibleForEventTriggered(responseMessageId))) {
 
-              EV <<"Sporadic "<< isSproadConditional <<"\n";
-             int response;
-             bool isMyMsg = (getIndex() == responseMessageId);
+        EV << "Recieved Message ID  " << responseMessageId << "\n";
+        sendLinResponse(responseMessageId, getResponse());
 
-                if(responseMessageId >= 50){
-                    std::list<int> collisionId = getEventTriggeredIds(responseMessageId);
-                    for(int id : collisionId){
-                        if(id == getIndex())
-                            isMyMsg = true;
-                    }
-                }
-
-                if(isMyMsg && isSproadConditional==0){
-
-              if(responseMessageId  >= 50){
-                      EV <<"Recieved Message ID"<< responseMessageId <<"\n";
-                      response = getResponse();
-
-                      sendLinResponse(responseMessageId , response);
-              }
-              else  if(responseMessageId  >= 40 && responseMessageId <= 49){
-                      EV <<"Recieved Message ID  "<< responseMessageId  <<"\n";
-                      response = getResponse();
-                      scheduleAt(simTime(), msg);
-
-                      sendLinResponse(responseMessageId , response);
-                  }
-              if(responseMessageId  >= 0 && responseMessageId  <= 39){
-                  scheduleAt(simTime(), msg);
-                      EV <<"Recieved Message ID  "<< responseMessageId  <<"\n";
-                      response = getResponse();
-                      sendLinResponse(responseMessageId , response);
-              }
-
-                }
+    }
 
     delete msg;
 }
@@ -76,7 +45,6 @@ void LinSlave::sendLinResponse(int messageId, int response) {
     frame->setResponse(response);
 
     sendFrame(frame);
-
 }
 
 int LinSlave::getResponse() const {

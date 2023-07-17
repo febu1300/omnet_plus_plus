@@ -27,19 +27,20 @@ LinMaster::~LinMaster() {
 }
 
 void LinMaster::initialize() {
-    needSporadic = false;
+    needSporadic = true;
     changeSporadic = new cMessage("changeSporadic");
     scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2, 4), SimTimeUnit::SIMTIME_MS), changeSporadic);
-
 
     /*
      * todo: initialize all variables needed and schedule the first LIN-frame for the time step 10ms
      */
-    sendNewMsg = new cMessage("New Message");
-    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
+    //sendNewMsg = new cMessage("New Message");
+    //scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), sendNewMsg);
+    checkAntwort = new cMessage("checkAntwort");
+    collision = 0;
 
     selfEvent = new cMessage("self Event");
-    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 6, 8), SimTimeUnit::SIMTIME_MS), selfEvent);
+    scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 9, 11), SimTimeUnit::SIMTIME_MS), selfEvent);
 
 }
 
@@ -56,48 +57,76 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
     int messageId;
 
     auto currentTime = simTime().raw();
-
-   // EV << "AAA"<<currentTime % 70 <<" "<<currentTime % 30<<"  "<< currentTime % 10 <<"\n";
-
-      if (msg == changeSporadic) {
+    int64_t millisecondTime = static_cast<int64_t>(currentTime / 1000000000);
+    if (msg == changeSporadic) {
         needSporadic = true;
-        scheduleAt(simTime() + .03, changeSporadic);
+        EV << "Master send a new selfmessage changeSporadic"<<endl;
+        scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2, 4), SimTimeUnit::SIMTIME_S), changeSporadic);
+    }
+   // EV << "AAA"<<currentTime % 70 <<" "<<currentTime % 30<<"  "<< currentTime % 10 <<"\n";
+    if(msg == checkAntwort){
+          if(collision > 1)
+              collision = UNCONDITIONALS_PER_EVENT_TRIGGERED;
+          else{
+              collision = 0;
+              collisionId.clear();
+          }
+      }
 
-         messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
-         EV <<"Sproadic Message sent " << messageId << "\n";
+    if(msg == selfEvent){
+        scheduleAt(simTime() + 0.01, selfEvent);
+      if (millisecondTime%70 == 0) {
+
+         messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
+         recordMsgId.record(messageId);
+         sendLinRequest(messageId);
+         EV <<"Random Message " << messageId << "\n";
+
+         scheduleAt(simTime() + 0.001, checkAntwort);
 
          //sendLinRequest(messageId);
 
-    } else if ( msg== sendNewMsg) {
-        needSporadic = false;
-       // messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
-        //sendLinRequest(messageId);
-        scheduleAt(simTime() + .01, sendNewMsg);
-        messageId = getRandomMessageId(FRAME_TYPE::UNCONDITIONAL_FRAME);
-        EV <<"Unconditional Message sent"<< messageId << "\n";
-       // sendLinRequest(messageId);
+    } else if (millisecondTime%30 ==0 && needSporadic) {
 
-    } else if (msg == selfEvent){
-        needSporadic = false;
+        int messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
+        EV << "Master send a new sporadic message to salves : " << messageId << endl;
+        recordMsgId.record(messageId);
+        sendLinRequest(messageId);
+
+    } else {
+
         //sendLinRequest(messageId);
        // selfEvent = new cMessage("New Message");
+        if(collision > 0){
+            EV << "There are now "<< collision << " slaves waiting to be checked" << endl;
+            //sendLinRequest(collisionId[UNCONDITIONALS_PER_EVENT_TRIGGERED-collision]);
+            std::list<int>::iterator iter = collisionId.begin();
+            std::advance(iter, UNCONDITIONALS_PER_EVENT_TRIGGERED - collision);
+            EV << "Master send a new unconditional message and see what is going wrong: " << *iter << endl;
+            recordMsgId.record(*iter);
+            sendLinRequest(*iter);
+            collision--;
+            if(collision == 0) collisionId.clear();
+            return;
+        }
+        int messageId = getRandomMessageId(FRAME_TYPE::UNCONDITIONAL_FRAME);
+        EV << "Master send a new unconditional message to salves : " << messageId << endl;
+        recordMsgId.record(messageId);
+        sendLinRequest(messageId);
 
 
-        scheduleAt(simTime() + 0.07, selfEvent);
-        messageId = getRandomMessageId(FRAME_TYPE::EVENT_TRIGGERED_FRAME);
-        EV <<"Event triggered Message sent"<< messageId<< "\n";
+
        // sendLinRequest(messageId);
 
 
     }
+    }
 // selfEvent have the highest priorty since they have lhe longest interval,
       // Sporadic messages have the second priority
 
-      EV <<"message"<< LinNode::getFrameType(messageId) << "\n";
 
-      if(currentTime%10==0){
-      sendLinRequest(messageId);
-      }
+
+
     /*
      * handle self messages in order to send next packet or check timeouts
      */

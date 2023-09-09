@@ -1,15 +1,15 @@
-file 467 1689594711                                             
+file 101664 1690477594                                          
 version 2
-run General-0-20230717-11:48:27-8262
+run General-0-20230727-19:06:13-41571
 attr configname General
-attr datetime 20230717-11:48:27
+attr datetime 20230727-19:06:13
 attr experiment General
 attr inifile lin.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Lin
-attr processid 8262
+attr processid 41571
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -17,5 +17,11 @@ attr runnumber 0
 attr seedset 0
 
 vector 0 Lin.LMaster "" ETV
-0	372 94 2 314 0.01 0.07 7 9 50 212 8544
+vector 1 Lin.LMaster "" ETV
+vector 2 Lin.LMaster "" ETV
+vector 3 Lin.LMaster "" ETV
+0	458 48575 2 313666 0.01 60 2840 0 39 56205 1486881
+1	49033 401 106 303304 0.03 58.02 23 40 49 1027 46021
+2	49434 14881 314 313613 0.07 59.99 857 50 59 46827 2565343
+3	64315 37348 733 313457 0.15 59.96 2280 1 4 5700 17100
 

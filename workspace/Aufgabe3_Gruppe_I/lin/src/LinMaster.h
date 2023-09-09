@@ -28,7 +28,12 @@ public:
     cMessage *checkAntwort;
     std::list<int> collisionId;
     int collision ;
-    cOutVector recordMsgId;
+    cOutVector recUnconditional;
+    cOutVector eventTriggered;
+    cOutVector sporadicMsgId;
+    cOutVector anzahlKollision;
+    cOutVector recievedMsg;
+   // cLongHistogram msgHistogram;
 protected:
 
     /* This is a message to simulate some kind of system dynamics.

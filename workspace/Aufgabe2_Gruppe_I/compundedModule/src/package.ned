@@ -1,0 +1,3 @@
+package compundedmodule;
+
+@license(LGPL);

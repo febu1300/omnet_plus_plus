@@ -30,7 +30,9 @@ void LinSlave::receiveFrame(cMessage *msg) {
 
     if (getIndex() == responseMessageId || (hasUpdatedData() && isResponsibleForEventTriggered(responseMessageId))) {
 
-        EV << "Recieved Message ID  " << responseMessageId << "\n";
+        EV << "Slave Recieved frame Message ID  " << responseMessageId << "\n";
+
+
         sendLinResponse(responseMessageId, getResponse());
 
     }

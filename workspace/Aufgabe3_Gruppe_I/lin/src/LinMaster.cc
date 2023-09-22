@@ -30,6 +30,7 @@ LinMaster::~LinMaster() {
 void LinMaster::initialize() {
     needSporadic = true;
     changeSporadic = new cMessage("changeSporadic");
+
     scheduleAt(
             simTime()
                     + SimTime(omnetpp::uniform(getRNG(0), 2, 4),
@@ -47,6 +48,11 @@ void LinMaster::initialize() {
     scheduleAt(
             simTime()
                     + 0.01, selfEvent);
+
+   recUnconditional.setName("Unconditional");
+   eventTriggered.setName("Event Trigger");
+   sporadicMsgId.setName("Sporadic");
+   anzahlKollision.setName("Collision");
 
 }
 
@@ -69,7 +75,6 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
     //EV <<"currtime "<< currentTime <<"Message  "<< msg;
     if (msg == changeSporadic) {
         needSporadic = true;
-
         EV << "Master send a new selfmessage changeSporadic" << endl;
         scheduleAt(simTime() + SimTime(omnetpp::uniform(getRNG(0), 2, 4), SimTimeUnit::SIMTIME_S), changeSporadic);
     }
@@ -78,8 +83,8 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
         EV << "checkAntwort"<< checkAntwort << endl;
         if (collision > 1){
             EV << "collision > 0 :"<< checkAntwort << endl;
-
-            collision = UNCONDITIONALS_PER_EVENT_TRIGGERED;}
+            collision = UNCONDITIONALS_PER_EVENT_TRIGGERED;
+        }
         else {
             collision = 0;
             collisionId.clear();
@@ -93,18 +98,20 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
 
             eventTriggered.record(messageId);
             // msgHistogram.collect(messageId);
+
             sendLinRequest(messageId);
             EV << "Event triggered message" << messageId << "\n";
 
             scheduleAt(simTime() + 0.001, checkAntwort);
 
-        } else if (millisecondTime % 30 == 0 && needSporadic) {
+
+        }
+       else if ( needSporadic) {
 
             int messageId = getRandomMessageId(FRAME_TYPE::SPORADIC_FRAME);
             EV << "Master send a new sporadic message to salves : " << messageId
                       << endl;
             sporadicMsgId.record(messageId);
-            // msgHistogram.collect(messageId);
 
             sendLinRequest(messageId);
 
@@ -132,7 +139,7 @@ void LinMaster::handleSelfMessage(cMessage *msg) {
             EV << "Master send a new unconditional message to salves : "
                       << messageId << endl;
             recUnconditional.record(messageId);
-            //  msgHistogram.collect(messageId);
+
 
             sendLinRequest(messageId);
 
@@ -165,7 +172,6 @@ void LinMaster::receiveFrame(cMessage *msg) {
 
     } else if (receivedMessageId >= 40 && receivedMessageId <= 49) {
         EV << "Recieve Sporadic Message" << receivedMessageId <<needSporadic<< "\n";
-
         needSporadic = false;
     }
     if (receivedMessageId >= 0 && receivedMessageId <= 39) {
@@ -173,7 +179,7 @@ void LinMaster::receiveFrame(cMessage *msg) {
         EV << "recieve frame 30" << receivedMessageId << "\n";
     }
 
- //   msgHistogram.collect(receivedMessageId);
+   // msgHistogram.collect(receivedMessageId);
     /*Sind zwei Frames zur gleichen Zeit an der Reihe, soll nur das
      versendet werden, das ein längeres Interval hat. Es darf nur und muss ein einziges Frame
      pro Zeitslot versendet werden!

@@ -1,0 +1,228 @@
+version 3
+run General-0-20230626-00:01:57-8446
+attr configname General
+attr datetime 20230626-00:01:57
+attr datetimef 20230626-000157
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Network
+attr processid 8446
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Network
+config sim-time-limit 2s
+config Network.cmodule[0].isMaster true
+config Network.cmodule[1].isMaster false
+config Network.cmodule[2].isMaster false
+config record-eventlog true
+
+par Network.cmodule[0].app_l.appOut[0].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[0].app_l.appOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[0].app_l.appOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].tstamp_l.tstampOut[0].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[0].tstamp_l.tstampOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[0].tstamp_l.tstampOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].app_l.appOut[1].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[0].app_l.appOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[0].app_l.appOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].tstamp_l.tstampOut[1].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[0].tstamp_l.tstampOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[0].tstamp_l.tstampOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].tstamp_l.tstampOut[2].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[0].tstamp_l.tstampOut[2].channel disabled false
+attr mutable ""
+par Network.cmodule[0].tstamp_l.tstampOut[2].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].in[0].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[0].in[0].channel disabled false
+attr mutable ""
+par Network.cmodule[0].in[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].tstamp_l.tstampOut[3].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[0].tstamp_l.tstampOut[3].channel disabled false
+attr mutable ""
+par Network.cmodule[0].tstamp_l.tstampOut[3].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].in[1].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[0].in[1].channel disabled false
+attr mutable ""
+par Network.cmodule[0].in[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[0].app_l typename "\"aufgabe2gruppei.ApplicationLayer\""
+par Network.cmodule[0].app_l isMaster true
+statistic Network.cmodule[0].app_l Priority
+field count 52
+field mean 1.7884615384615
+field stddev 0.74981143934334
+field min 1
+field max 3
+field sum 93
+field sqrsum 195
+bin	-inf	0
+bin	0	0
+bin	1	21
+bin	2	21
+bin	3	10
+bin	4	0
+par Network.cmodule[0].tstamp_l typename "\"aufgabe2gruppei.TimestampLayer\""
+par Network.cmodule[0] typename "\"aufgabe2gruppei.CompoundedModule\""
+par Network.cmodule[0] isMaster true
+par Network.cmodule[1].app_l.appOut[0].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[1].app_l.appOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[1].app_l.appOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].tstamp_l.tstampOut[0].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[1].tstamp_l.tstampOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[1].tstamp_l.tstampOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].app_l.appOut[1].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[1].app_l.appOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[1].app_l.appOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].tstamp_l.tstampOut[1].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[1].tstamp_l.tstampOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[1].tstamp_l.tstampOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].tstamp_l.tstampOut[2].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[1].tstamp_l.tstampOut[2].channel disabled false
+attr mutable ""
+par Network.cmodule[1].tstamp_l.tstampOut[2].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].in[0].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[1].in[0].channel disabled false
+attr mutable ""
+par Network.cmodule[1].in[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].tstamp_l.tstampOut[3].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[1].tstamp_l.tstampOut[3].channel disabled false
+attr mutable ""
+par Network.cmodule[1].tstamp_l.tstampOut[3].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].in[1].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[1].in[1].channel disabled false
+attr mutable ""
+par Network.cmodule[1].in[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[1].app_l typename "\"aufgabe2gruppei.ApplicationLayer\""
+par Network.cmodule[1].app_l isMaster true
+statistic Network.cmodule[1].app_l Priority
+field count 52
+field mean 1.9807692307692
+field stddev 0.80416525019608
+field min 1
+field max 3
+field sum 103
+field sqrsum 237
+bin	-inf	0
+bin	0	0
+bin	1	17
+bin	2	19
+bin	3	16
+bin	4	0
+par Network.cmodule[1].tstamp_l typename "\"aufgabe2gruppei.TimestampLayer\""
+par Network.cmodule[1] typename "\"aufgabe2gruppei.CompoundedModule\""
+par Network.cmodule[1] isMaster false
+par Network.cmodule[2].app_l.appOut[0].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[2].app_l.appOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[2].app_l.appOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].tstamp_l.tstampOut[0].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[2].tstamp_l.tstampOut[0].channel disabled false
+attr mutable ""
+par Network.cmodule[2].tstamp_l.tstampOut[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].app_l.appOut[1].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[2].app_l.appOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[2].app_l.appOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].tstamp_l.tstampOut[1].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[2].tstamp_l.tstampOut[1].channel disabled false
+attr mutable ""
+par Network.cmodule[2].tstamp_l.tstampOut[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].tstamp_l.tstampOut[2].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[2].tstamp_l.tstampOut[2].channel disabled false
+attr mutable ""
+par Network.cmodule[2].tstamp_l.tstampOut[2].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].in[0].channel typename "\"aufgabe2gruppei.Channel1\""
+par Network.cmodule[2].in[0].channel disabled false
+attr mutable ""
+par Network.cmodule[2].in[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].tstamp_l.tstampOut[3].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[2].tstamp_l.tstampOut[3].channel disabled false
+attr mutable ""
+par Network.cmodule[2].tstamp_l.tstampOut[3].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].in[1].channel typename "\"aufgabe2gruppei.Channel2\""
+par Network.cmodule[2].in[1].channel disabled false
+attr mutable ""
+par Network.cmodule[2].in[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Network.cmodule[2].app_l typename "\"aufgabe2gruppei.ApplicationLayer\""
+par Network.cmodule[2].app_l isMaster true
+statistic Network.cmodule[2].app_l Priority
+field count 52
+field mean 2.0384615384615
+field stddev 0.71294854368509
+field min 1
+field max 3
+field sum 106
+field sqrsum 242
+bin	-inf	0
+bin	0	0
+bin	1	12
+bin	2	26
+bin	3	14
+bin	4	0
+par Network.cmodule[2].tstamp_l typename "\"aufgabe2gruppei.TimestampLayer\""
+par Network.cmodule[2] typename "\"aufgabe2gruppei.CompoundedModule\""
+par Network.cmodule[2] isMaster false
+par Network typename "\"aufgabe2gruppei.Network\""
+

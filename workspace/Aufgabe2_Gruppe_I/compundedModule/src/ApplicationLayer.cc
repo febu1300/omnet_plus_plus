@@ -1,8 +1,6 @@
 //
 // This file is part of an OMNeT++/OMNEST simulation example.
 //
-// Copyright (C) 2003-2015 Andras Varga
-//
 // This file is distributed WITHOUT ANY WARRANTY. See the file
 // `license' for details on this and other legal matters.
 //
@@ -29,6 +27,7 @@ private:
     cHistogram prioStats;
     cOutVector prioVector;
 
+    int msgcount;
 public:
     ApplicationLayer();
     virtual ~ApplicationLayer();
@@ -60,6 +59,9 @@ ApplicationLayer::~ApplicationLayer()
 
 void ApplicationLayer::initialize()
 {
+    latencyVector.setName("latency Vector");
+    prioVector.setName("Priority Vector");
+
     srand(getpid());
     selfMsg = generateSelfMsg();
 
@@ -73,16 +75,18 @@ void ApplicationLayer::initialize()
             send(myMsg, "appOut", i);
         }
     }
-    latencyVector.setName("latency Vector");
+
+
 }
 
 void ApplicationLayer::handleMessage(cMessage *msg)
 {
     MyMessage *receivedMsg = check_and_cast<MyMessage *>(msg);
+    auto priority = receivedMsg->getPriority();
+
     if(receivedMsg == myMsg){
         EV<<"Is the received message my message "<<endl;
     }
-
             if(receivedMsg == selfMsg && par("isMaster").boolValue()){
 
         selfMsg = generateSelfMsg();
@@ -101,17 +105,24 @@ void ApplicationLayer::handleMessage(cMessage *msg)
         int gateIndex = arrivalGate->getIndex();
         // the 2 delays, the processingDelay can also use a selfMessage, but here we use sendDelayed, it not influence the results and the structure is simpler.
         simtime_t processingDelay = truncnormal(200,100)/1000000;
-        simtime_t responseDelay = receivedMsg->getPriority()*0.01;
+        simtime_t responseDelay = priority*0.01;
+
+
+
         EV<<"With Delay Arrived"<<endl;
         EV << "Message arrived, after Processing delay"<<processingDelay<<"and Response delay"<<responseDelay<<"secs... send message back so Master\n";
         sendDelayed(receivedMsg, processingDelay+responseDelay, "appOut", gateIndex);
+
     }
     else if(receivedMsg != selfMsg && par("isMaster").boolValue()){
         EV << "Master received message, the delivery is over."<<endl;
         simtime_t latency = simTime()-receivedMsg->getTimestamp();
-       // latencyVector.record(latency);
+        latencyVector.record(latency);
+
 
      }
+            cancelAndDelete(receivedMsg);
+
 }
 
 MyMessage *ApplicationLayer::generateMessage()
@@ -121,12 +132,14 @@ MyMessage *ApplicationLayer::generateMessage()
     int priority = rand()% 3+1;
     EV << "The priority of this message is:"<<priority<<endl;
     //update statistics
-    prioVector.record(priority);
-    prioStats.collect(priority);
+
     bool hastimestamp = 1;
     msg -> setTimestamp(simTime());
     msg -> setPriority(priority);
     msg -> setHastimestamp(hastimestamp);
+
+    prioVector.record(priority);
+     prioStats.collect(priority);
 
     return msg;
 }
@@ -138,6 +151,8 @@ MyMessage *ApplicationLayer::generateSelfMsg()
 }
 
 void ApplicationLayer::finish(){
-    prioStats.recordAs("Priority");
+
+  prioStats.recordAs("Priority");
+
 }
 

@@ -33,7 +33,7 @@ public:
     cOutVector sporadicMsgId;
     cOutVector anzahlKollision;
     cOutVector recievedMsg;
-   // cLongHistogram msgHistogram;
+
 protected:
 
     /* This is a message to simulate some kind of system dynamics.

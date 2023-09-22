@@ -25,19 +25,23 @@ network Lin
     parameters:
         //number of slaves in the LIN network
         int numSlaves = 50;
-		
-	@signal[recordVector](type="vector");
+
+        @signal[recordVector](type="vector");
+        @statistic[hopCount](title="hop count"; source="arrival"; record=vector,stats; interpolationmode=none);
         @display("bgb=730,367");
     submodules:
         // place the slaves and master node. define the number of gates for the master
-        LSlave[numSlaves]: LinSlave{@display("p=300,100,ri,100");}
-        LMaster: LinMaster{@display("p=400,200");}
-        
-        
+        LSlave[numSlaves]: LinSlave {
+            @display("p=300,100,ri,100");
+        }
+        LMaster: LinMaster {
+            @display("p=400,221");
+        }
+
+
     connections:
         //todo: connect each slave with the master
         for i=0..numSlaves-1 {
-        
             LMaster.gate++ <--> LSlave[i].gate;
         }
 

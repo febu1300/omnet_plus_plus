@@ -1,27 +1,27 @@
-file 101664 1690477594                                          
+file 101710 1694700953                                          
 version 2
-run General-0-20230727-19:06:13-41571
+run General-0-20230914-16:15:34-37545
 attr configname General
-attr datetime 20230727-19:06:13
+attr datetime 20230914-16:15:34
 attr experiment General
 attr inifile lin.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Lin
-attr processid 41571
+attr processid 37545
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-vector 0 Lin.LMaster "" ETV
-vector 1 Lin.LMaster "" ETV
-vector 2 Lin.LMaster "" ETV
-vector 3 Lin.LMaster "" ETV
-0	458 48575 2 313666 0.01 60 2840 0 39 56205 1486881
-1	49033 401 106 303304 0.03 58.02 23 40 49 1027 46021
-2	49434 14881 314 313613 0.07 59.99 857 50 59 46827 2565343
-3	64315 37348 733 313457 0.15 59.96 2280 1 4 5700 17100
+vector 0 Lin.LMaster Sporadic ETV
+vector 1 Lin.LMaster Unconditional ETV
+vector 2 Lin.LMaster "Event Trigger" ETV
+vector 3 Lin.LMaster Collision ETV
+0	495 399 2 303221 0.01 58.01 23 40 49 1022 45548
+1	894 48823 54 313635 0.02 60 2856 0 39 56461 1492013
+2	49717 14881 314 313582 0.07 59.99 857 50 59 46854 2568378
+3	64598 37111 733 313426 0.15 59.96 2264 1 4 5660 16980
 

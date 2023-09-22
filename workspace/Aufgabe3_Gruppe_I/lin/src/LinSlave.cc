@@ -29,15 +29,12 @@ void LinSlave::receiveFrame(cMessage *msg) {
     int responseMessageId = receivedFrame->getMessageId();
 
     if (getIndex() == responseMessageId || (hasUpdatedData() && isResponsibleForEventTriggered(responseMessageId))) {
-
         EV << "Slave Recieved frame Message ID  " << responseMessageId << "\n";
-
-
         sendLinResponse(responseMessageId, getResponse());
-
     }
 
     delete msg;
+
 }
 
 void LinSlave::sendLinResponse(int messageId, int response) {
@@ -50,6 +47,7 @@ void LinSlave::sendLinResponse(int messageId, int response) {
 }
 
 int LinSlave::getResponse() const {
+
     return getFrameType(getIndex()) != SPORADIC_FRAME ? 42 : omnetpp::intuniform(getRNG(2), 0, 1);
 }
 

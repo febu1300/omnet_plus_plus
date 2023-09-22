@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 5.6 from veins/modules/messages/AirFrame11p.msg.
+// Generated file, do not edit! Created by nedtool 5.7 from veins/modules/messages/AirFrame11p.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:

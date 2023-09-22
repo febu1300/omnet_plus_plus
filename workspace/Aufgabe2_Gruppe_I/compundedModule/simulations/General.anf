@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
   <inputs>
     <inputs name="/compundedModule/simulations/results/General-#0.vec"/>
     <inputs name="/compundedModule/simulations/results/General-#0.sca"/>
   </inputs>
-  <datasets/>
-  <chartSheets/>
+  <datasets>
+    <datasets name="Latenzvektoren">
+      <items xsi:type="scave:Add" filterPattern="file(/compundedModule/simulations/results/General-#0.vec) AND attr:configname(General) AND attr:runnumber(0) AND module(Network.cmodule[0].app_l) AND name(&quot;Priority Vector&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Group" name="">
+        <items xsi:type="scave:ScatterChart" name="Latenzvektor1" xDataPattern="module(Network.cmodule[0].app_l) AND name(&quot;mean(Priority Vector)&quot;)">
+          <properties name="Graph.Title" value="Latenzvektor1"/>
+        </items>
+      </items>
+      <items xsi:type="scave:Add" filterPattern="file(/compundedModule/simulations/results/General-#0.vec) AND attr:configname(General) AND attr:runnumber(0) AND module(Network.cmodule[1].app_l) AND name(&quot;Priority Vector&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Group">
+        <items xsi:type="scave:ScatterChart" name="Latenzvektor2" xDataPattern="module(Network.cmodule[0].app_l) AND name(&quot;mean(Priority Vector)&quot;)">
+          <properties name="Graph.Title" value="Latenzvektor2"/>
+        </items>
+      </items>
+      <items xsi:type="scave:Add" filterPattern="file(/compundedModule/simulations/results/General-#0.vec) AND attr:configname(General) AND attr:runnumber(0) AND module(Network.cmodule[2].app_l) AND name(&quot;Priority Vector&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Group">
+        <items xsi:type="scave:ScatterChart" name="Latenzvektor3" xDataPattern="module(Network.cmodule[0].app_l) AND name(&quot;mean(Priority Vector)&quot;)">
+          <properties name="Graph.Title" value="Latenzvektor3"/>
+          <properties name="Legend.Display" value="true"/>
+          <properties name="Legend.Anchoring" value="SouthEast"/>
+        </items>
+      </items>
+    </datasets>
+  </datasets>
+  <chartSheets>
+    <chartSheets name="default" charts="//@datasets/@datasets.0/@items.1/@items.0 //@datasets/@datasets.0/@items.3/@items.0 //@datasets/@datasets.0/@items.5/@items.0"/>
+  </chartSheets>
 </scave:Analysis>
